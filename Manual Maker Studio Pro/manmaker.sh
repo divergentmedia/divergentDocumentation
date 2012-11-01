@@ -16,6 +16,6 @@ cp -R $ASSETS_PATH/* $TMP_PATH
 
 cat $ASSETS_PATH/$HTML_EXTRAS_PATH/pre.html $TMP_PATH/markdownbody.html $ASSETS_PATH/$HTML_EXTRAS_PATH/post.html > $TMP_PATH/fullmanual.html
 
-$TOOLCHAIN_PATH/wkhtmltopdf.app/Contents/MacOS/wkhtmltopdf toc --xsl-style-sheet $TMP_PATH/pdfextras/toc.xsl page $TMP_PATH/fullmanual.html --header-html $TMP_PATH/pdfextras/header.html --footer-html $TMP_PATH/pdfextras/footer.html $2
+$TOOLCHAIN_PATH/wkhtmltopdf toc --xsl-style-sheet $TMP_PATH/pdfextras/toc.xsl page $TMP_PATH/fullmanual.html --header-html $TMP_PATH/pdfextras/header.html --footer-html $TMP_PATH/pdfextras/footer.html $2
 
 exit 0

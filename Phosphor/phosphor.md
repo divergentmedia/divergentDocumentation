@@ -52,3 +52,8 @@ Phosphor outputs standard image files, in either JPG, PNG or TIFF format.  These
 When editing Phosphor images, it’s important that you don’t resize the images.  If the overall resolution of the file changes, the Phosphor library will no longer be able to display the composition.
 
 # **4** Troubleshooting #
+
+
+# **A** Appendix A #
+
+Phosphor makes use of the libjpeg library from the [Independent JPEG Group](http://www.ijg.org).

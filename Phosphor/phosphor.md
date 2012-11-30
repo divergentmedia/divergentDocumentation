@@ -12,8 +12,12 @@ Using Phosphor is simple and fun.  This manual will walk you through the basics,
 
 Upon launch, Phosphor displays a grid of previously accessed media, as well as an assortment of sample source material.  If you’re still in the process of getting familiar with Phosphor, the sample media gives you the opportunity to begin experimenting immediately.  You can use the “open” button (or select open from the file menu) to open any other modern QuickTime movie on your computer.
 
+![Phosphor File Browser](images/PhosphorMain.png)
+
 ## Supported Media ##
 Phosphor can open most modern QuickTime files, including H.264 and ProRes.  The composition output by Phosphor will be the same resolution as your source movie, so a 1920x1080 source movie will result in a 1920x1080 output.  See chapter three for tips on how to prepare media for Phosphor.
+
+![Phosphor Document](images/PhosphorDocument.png)
 
 ## Exporting ##
 Once you’ve loaded your movie into Phosphor, you can adjust a variety of settings, including format, quality, and background color.

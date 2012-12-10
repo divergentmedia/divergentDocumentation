@@ -155,6 +155,10 @@ The Phosphor Framework is relatively straightforward, and should be easy to cust
 
 # **6** Troubleshooting #
 
+## Source Formats ##
+
+Phosphor supports QuickTime videos which are encoded using H.264 and Apple ProRes.  Future versions of Phosphor will support loading image sequences.
+
 ## Compatibility ##
 Phosphor compositions should work in any browser that supports the canvas tag.  In some cases, older browsers which do not natively support the canvas tag can gain that support via the [excanvas javascript library](http://excanvas.sourceforge.net).
 

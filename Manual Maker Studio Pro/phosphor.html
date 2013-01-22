@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ScopeBox Manual</title>
+<link rel="stylesheet" href="assets/css/reset.css" />
+<link rel="stylesheet" href="assets/css/text.css" />
+<link rel="stylesheet" href="assets/css/demo.css" />
+</head>
+<body>
+	<a name="#TOC"><h1>Table of Contents</h1></a>
+	<ul>
+ <li><a href="#welcome-to-phosphor"><strong>1</strong> Welcome to Phosphor</a><ul>
+ <li><a href="#welcome">Welcome</a></li>
+ </ul></li>
+ <li><a href="#getting-started"><strong>2</strong> Getting Started</a><ul>
+ <li><a href="#interface-basics">Interface Basics</a></li>
+ <li><a href="#supported-media">Supported Media</a></li>
+ <li><a href="#exporting">Exporting</a><ul>
+ <li><a href="#png-export">PNG Export</a></li>
+ <li><a href="#jpg-export">JPG Export</a></li>
+ <li><a href="#tiff-export">TIFF Export</a></li>
+ <li><a href="#interactive-mode">Interactive Mode</a></li>
+ </ul></li>
+ <li><a href="#the-export-process">The Export Process</a></li>
+ </ul></li>
+ <li><a href="#optimizing-media-for-phosphor"><strong>3</strong> Optimizing Media for Phosphor</a><ul>
+ <li><a href="#types-of-source-material">Types of Source Material</a></li>
+ <li><a href="#framerate">Framerate</a></li>
+ <li><a href="#duration">Duration</a></li>
+ <li><a href="#compressing-phosphor-compositions">Compressing Phosphor Compositions</a></li>
+ </ul></li>
+ <li><a href="#troubleshooting"><strong>4</strong> Troubleshooting</a></li>
+ </ul>
+	<h1 id="welcome-to-phosphor"><a href="#TOC"><strong>1</strong> Welcome to Phosphor</a></h1>
+ <h2 id="welcome"><a href="#TOC">Welcome</a></h2>
+ <p>Phosphor is a new way of bringing animation and video to the web. Starting with a standard QuickTime file, Phosphor creates crossplatform, web-standards compliant assets which can be played on desktop and mobile devices without plugins or even video decoding capabilities. As long as a browser supports Javascript and the ability to show images, it can display Phosphor content.</p>
+ <p>Using Phosphor is simple and fun. This manual will walk you through the basics, and will explore the situations in which Phosphor is most appropriate.</p>
+ <h1 id="getting-started"><a href="#TOC"><strong>2</strong> Getting Started</a></h1>
+ <h2 id="interface-basics"><a href="#TOC">Interface Basics</a></h2>
+ <p>Upon launch, Phosphor displays a grid of previously accessed media, as well as an assortment of sample source material. If you’re still in the process of getting familiar with Phosphor, the sample media gives you the opportunity to begin experimenting immediately. You can use the “open” button (or select open from the file menu) to open any other QuickTime movie on your computer.</p>
+ <h2 id="supported-media"><a href="#TOC">Supported Media</a></h2>
+ <p>Phosphor can open most modern QuickTime files, including H.264 and ProRes. The composition output by Phosphor will be the same resolution as your source movie, so a 1920x1080 source movie will result in a 1920x1080 output. See chapter three for tips on how to prepare media for Phosphor.</p>
+ <h2 id="exporting"><a href="#TOC">Exporting</a></h2>
+ <p>Once you’ve loaded your movie into Phosphor, you can begin the export process. Click “Export movie” to reveal the export dialog. From this menu, you can choose and export format, as well as some playback options.</p>
+ <h3 id="png-export"><a href="#TOC">PNG Export</a></h3>
+ <p>PNG files are a good choice for movies which include an alpha layer. The transparency will be preserved, allowing you to integrate your Phosphor composition with an existing background design on your website.</p>
+ <h3 id="jpg-export"><a href="#TOC">JPG Export</a></h3>
+ <p>JPEG files are the best choice for most types of content, as the files are highly compressed and easily worked with.</p>
+ <h3 id="tiff-export"><a href="#TOC">TIFF Export</a></h3>
+ <p>TIFF files are uncompressed, and are not suitable for use directly within a webpage. Use this option if you’ll be compressing your files separately, using an external tool.</p>
+ <h3 id="interactive-mode"><a href="#TOC">Interactive Mode</a></h3>
+ <p>Interactive Mode will allow users to scrub back and forth through your composition using their mouse or a touch interface. This is ideal for product demonstrations and 3d visualizations. The compositions generated in interactive mode will be larger than non-interactive mode.</p>
+ <h2 id="the-export-process"><a href="#TOC">The Export Process</a></h2>
+ <p>Once you’ve selected an export format, you can begin the export. Phosphor will analyze your content and figure out the most efficient way to prepare it for delivery. With a longer movie, this can be time consuming.</p>
+ <p>You can work with additional movies within Phosphor during an export - simply select “open” from the “file” menu to begin working on another composition.</p>
+ <h1 id="optimizing-media-for-phosphor"><a href="#TOC"><strong>3</strong> Optimizing Media for Phosphor</a></h1>
+ <h2 id="types-of-source-material"><a href="#TOC">Types of Source Material</a></h2>
+ <p>Phosphor works best with short movies which do not contain a lot of visual noise. Visual noise includes things like static on a television screen, a snow storm, or ripping water.</p>
+ <h2 id="framerate"><a href="#TOC">Framerate</a></h2>
+ <p>Video typically runs at 30 frames per second. In many cases, you can achieve fluid motion with a lower framerate, and thus benefit from greater efficiency. Using your video editing software to convert your media to 15 frames per second will substantially reduce the size of your composition.</p>
+ <h2 id="duration"><a href="#TOC">Duration</a></h2>
+ <p>Videos longer than approximately 30 seconds will generally result in large compositions, which may not work well on mobile devices or devices with limited memory. For these types of content, a more traditional video embed is more appropriate.</p>
+ <h2 id="compressing-phosphor-compositions"><a href="#TOC">Compressing Phosphor Compositions</a></h2>
+ <p>Phosphor outputs standard image files, in either JPG, PNG or TIFF format. These files can be modified with traditional image manipulation tools. For example, the free <a href="http://imageoptim.com">ImageOptim</a> application can often substantially reduce the size of PNG and JPG files, without an additional reduction in quality.</p>
+ <p>When editing Phosphor images, it’s important that you don’t resize the images. If the overall resolution of the file changes, the Phosphor library will no longer be able to display the composition.</p>
+ <h1 id="troubleshooting"><a href="#TOC"><strong>4</strong> Troubleshooting</a></h1>
+	</body>
+</html>

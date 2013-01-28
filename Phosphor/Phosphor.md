@@ -15,7 +15,7 @@ Upon launch, Phosphor displays a grid of previously accessed media, as well as a
 ![Phosphor File Browser](images/PhosphorMain.png)
 
 ## Supported Media ##
-Phosphor can open most modern QuickTime files, including H.264 and ProRes.  The composition output by Phosphor will be the same resolution as your source movie, so a 1920x1080 source movie will result in a 1920x1080 output.  See chapter three for tips on how to prepare media for Phosphor.
+Phosphor can open most modern QuickTime files, including H.264 and ProRes.  See chapter three for tips on how to prepare media for Phosphor.
 
 ![Phosphor Document](images/PhosphorDocument.png)
 
@@ -151,7 +151,7 @@ Jump to a particular frame within the composition.
 
 ## Customization ##
 
-The Phosphor Framework is relatively straightforward, and should be easy to customize by developers looking for functionality not available out of the box.  We'd love to see what you build - send us your results at <support@divergentmedia.com>.
+The Phosphor Framework is relatively straightforward, and should be easy to customize by developers looking for functionality not available out of the box.  We'd love to see what you build - send us your results at <support@divergentmedia.com> or fork the [framework on GitHub](https://github.com/mikewoodworth/phosphorframework).
 
 # **6** Troubleshooting #
 
@@ -162,7 +162,7 @@ Phosphor supports QuickTime videos which are encoded using H.264 and Apple ProRe
 ## Compatibility ##
 Phosphor compositions should work in any browser that supports the canvas tag.  In some cases, older browsers which do not natively support the canvas tag can gain that support via the [excanvas javascript library](http://excanvas.sourceforge.net).
 
-Running multiple Phosphor compositions on one page may lead to performacne problems on older mobile devices (smartphones) and should be avoided for sites which are likely to be heavily trafficed by mobile browsers.
+Running multiple Phosphor compositions on one page may lead to performance problems on older mobile devices (smartphones) and should be avoided for sites which are likely to be heavily trafficked by mobile browsers.
 
 # **A** Appendix A #
 

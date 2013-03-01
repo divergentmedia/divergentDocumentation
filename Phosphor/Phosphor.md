@@ -15,7 +15,9 @@ Upon launch, Phosphor displays a grid of previously accessed media, as well as a
 ![Phosphor File Browser](images/PhosphorMain.png)
 
 ## Supported Media ##
-Phosphor can open most modern QuickTime files, including H.264 and ProRes.  See chapter three for tips on how to prepare media for Phosphor.
+Phosphor can open most modern QuickTime files, including H.264 and ProRes.  In addition, Phosphor can open image sequences in any standard format (PNG, JPG, etc).
+
+See chapter three for tips on how to prepare media for Phosphor.
 
 ![Phosphor Document](images/PhosphorDocument.png)
 
@@ -40,8 +42,11 @@ The loop setting will cause your composition to loop when played in a webbrowser
 ### Zoom and Sizing ###
 If you're working with content captured by a traditional video camera, it's very large.  You can resize your video right within Phosphor, using either the "zoom" adjustment, or by entering height and width values.  The lock icon will allow you to adjust the aspect ratio of your image.
 
+### Rate ###
+The rate control allows you to adjust how fast your Phosphor compositon plays in the browser.  The default is 100%, meaning the composition will play at the same rate as the source file.
+
 ### Background Color ###
-If your source media is in the ProRes 4444 format, and contains alpha (transparency) information, you can use the color picker to adjust the background color.  This color will be composited into your image when exporting in the JPEG format, which does not support transparency.  If your target format supports transparency (PNG or TIFF), the transparency in your source video will be preserved.
+If your source media is in the ProRes 4444 format, and contains alpha (transparency) information, you can use the adjust the background color using the "Set Background Color" menu option (under the "encode" menu).  This color will be composited into your image when exporting in the JPEG format, which does not support transparency.  If your target format supports transparency (PNG or TIFF), the transparency in your source video will be preserved.
 
 ## The Export Process ##
 Once you've made your selections, press the export process to generate your Phosphor output.  Phosphor will analyze your content and figure out the most efficient way to prepare it for delivery.  With a longer movie, this can be time consuming.  
@@ -51,10 +56,14 @@ You can work with additional movies within Phosphor during an export - simply se
 # **3** Optimizing Media for Phosphor #
 
 ## Types of Source Material ##
-Phosphor works best with short movies which do not contain a lot of visual noise.  Visual noise includes things like static on a television screen, a snow storm, or ripping water.  
+Phosphor works best with short movies which do not contain a lot of visual noise.  Visual noise includes things like static on a television screen, a snow storm, or ripping water.
+
+Sources can be either QuickTime files (H.264, ProRes) or image sequences.  Image sequences should be in their own folder, and the files should be numbered sequentially.   By default, image sequences play at a rate of 20 frames per second, but this can be altered using the "rate" control.
 
 ## Framerate ##
 Video typically runs at 30 frames per second.  In many cases, you can achieve fluid motion with a lower framerate, and thus benefit from greater efficiency.  Using your video editing software to convert your media to 15 frames per second will substantially reduce the size of your composition.
+
+The "Rate" control in Phosphor allows you to control the rate at which the final composition plays, but will not alter the overall filesize.
 
 ## Duration ##
 Videos longer than approximately 30 seconds will generally result in large compositions, which may not work well on mobile devices or devices with limited memory.  For these types of content, a more traditional video embed is more appropriate.

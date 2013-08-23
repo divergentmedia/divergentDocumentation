@@ -49,7 +49,7 @@
 ##Rewrap##
 M2T and MTS files aren’t directly playable on the Macintosh. But those files actually contain media that your Mac knows how to play - MPEG-2 and H.264 video, respectively. ClipWrap unlocks that content by rewrapping your media into standard QuickTime files.
 During a rewrap, the video data within your files (called “samples”) is left untouched. It’s merely copied and restructured into a format that QuickTime can understand.
-By default, the audio tracks are decompressed and saved as raw linear PCM (LPCM), the most universal format of audio. You may turn off this decompression by unchecking the “Convert Audio to LPCM” box in the preferences (see section 5). We don’t recommend doing this unless you’re certain your workflow supports it. See section 4 for more details about this setting.
+By default, the audio tracks are decompressed and saved as raw linear PCM (LPCM), the most universal format of audio. You may turn off this decompression by unchecking the “Convert Audio to LPCM” box in the [preferences](#preferences). We don’t recommend doing this unless you’re certain your workflow supports it. See [chapter 4](#choosing-a-workflow) for more details about this setting.
 
 ##Transcode##
 The second mode that ClipWrap can operate in is Transcode. In this mode, ClipWrap decompresses your video samples, and recompresses them into industry standard post production formats like Apple intermediate, Avid DNxHD or Apple ProRes.

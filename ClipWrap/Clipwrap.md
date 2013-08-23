@@ -59,7 +59,7 @@
 ##Spanned Clips##
 Many devices are limited to recording files in 2 gigabyte chunks, due to filesystem limitations. To get around this limitation, these devices record media across multiple files. These files need to be rejoined during a rewrap or transcode to ensure glitch-free playback.
 
-![Joined Files](images/newJoinedFiles.png)
+![Joined Files](images/NewJoinedFiles.png)
 
 ###HDV###
 HDV cameras and recording devices generally signify spanned files via file naming. When you add the first file from a spanned HDV sequence, ClipWrap automatically scans for additional clips in the sequence, and if possible, adds them into a single composition.

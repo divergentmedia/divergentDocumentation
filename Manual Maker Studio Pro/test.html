@@ -1,72 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="utf-8" />
-<title>ScopeBox Manual</title>
-<link rel="stylesheet" href="assets/css/reset.css" />
-<link rel="stylesheet" href="assets/css/text.css" />
-<link rel="stylesheet" href="assets/css/demo.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="assets/css/demo.css" type="text/css" />
 </head>
 <body>
-	<a name="#TOC"><h1>Table of Contents</h1></a>
-	<ul>
- <li><a href="#welcome-to-phosphor"><strong>1</strong> Welcome to Phosphor</a><ul>
- <li><a href="#welcome">Welcome</a></li>
- </ul></li>
- <li><a href="#getting-started"><strong>2</strong> Getting Started</a><ul>
- <li><a href="#interface-basics">Interface Basics</a></li>
- <li><a href="#supported-media">Supported Media</a></li>
- <li><a href="#exporting">Exporting</a><ul>
- <li><a href="#png-export">PNG Export</a></li>
- <li><a href="#jpg-export">JPG Export</a></li>
- <li><a href="#tiff-export">TIFF Export</a></li>
- <li><a href="#interactive-mode">Interactive Mode</a></li>
- </ul></li>
- <li><a href="#the-export-process">The Export Process</a></li>
- </ul></li>
- <li><a href="#optimizing-media-for-phosphor"><strong>3</strong> Optimizing Media for Phosphor</a><ul>
- <li><a href="#types-of-source-material">Types of Source Material</a></li>
- <li><a href="#framerate">Framerate</a></li>
- <li><a href="#duration">Duration</a></li>
- <li><a href="#compressing-phosphor-compositions">Compressing Phosphor Compositions</a></li>
- </ul></li>
- <li><a href="#troubleshooting"><strong>4</strong> Troubleshooting</a></li>
- <li><a href="#a-appendix-a"><strong>A</strong> Appendix A</a></li>
- </ul>
-	<h1 id="welcome-to-phosphor"><a href="#TOC"><strong>1</strong> Welcome to Phosphor</a></h1>
- <h2 id="welcome"><a href="#TOC">Welcome</a></h2>
- <p>Phosphor is a new way of bringing animation and video to the web. Starting with a standard QuickTime file, Phosphor creates crossplatform, web-standards compliant assets which can be played on desktop and mobile devices without plugins or even video decoding capabilities. As long as a browser supports Javascript and the ability to show images, it can display Phosphor content.</p>
- <p>Using Phosphor is simple and fun. This manual will walk you through the basics, and will explore the situations in which Phosphor is most appropriate.</p>
- <h1 id="getting-started"><a href="#TOC"><strong>2</strong> Getting Started</a></h1>
- <h2 id="interface-basics"><a href="#TOC">Interface Basics</a></h2>
- <p>Upon launch, Phosphor displays a grid of previously accessed media, as well as an assortment of sample source material. If you’re still in the process of getting familiar with Phosphor, the sample media gives you the opportunity to begin experimenting immediately. You can use the “open” button (or select open from the file menu) to open any other QuickTime movie on your computer.</p>
- <h2 id="supported-media"><a href="#TOC">Supported Media</a></h2>
- <p>Phosphor can open most modern QuickTime files, including H.264 and ProRes. The composition output by Phosphor will be the same resolution as your source movie, so a 1920x1080 source movie will result in a 1920x1080 output. See chapter three for tips on how to prepare media for Phosphor.</p>
- <h2 id="exporting"><a href="#TOC">Exporting</a></h2>
- <p>Once you’ve loaded your movie into Phosphor, you can begin the export process. Click “Export movie” to reveal the export dialog. From this menu, you can choose and export format, as well as some playback options.</p>
- <h3 id="png-export"><a href="#TOC">PNG Export</a></h3>
- <p>PNG files are a good choice for movies which include an alpha layer. The transparency will be preserved, allowing you to integrate your Phosphor composition with an existing background design on your website.</p>
- <h3 id="jpg-export"><a href="#TOC">JPG Export</a></h3>
- <p>JPEG files are the best choice for most types of content, as the files are highly compressed and easily worked with.</p>
- <h3 id="tiff-export"><a href="#TOC">TIFF Export</a></h3>
- <p>TIFF files are uncompressed, and are not suitable for use directly within a webpage. Use this option if you’ll be compressing your files separately, using an external tool.</p>
- <h3 id="interactive-mode"><a href="#TOC">Interactive Mode</a></h3>
- <p>Interactive Mode will allow users to scrub back and forth through your composition using their mouse or a touch interface. This is ideal for product demonstrations and 3d visualizations. The compositions generated in interactive mode will be larger than non-interactive mode.</p>
- <h2 id="the-export-process"><a href="#TOC">The Export Process</a></h2>
- <p>Once you’ve selected an export format, you can begin the export. Phosphor will analyze your content and figure out the most efficient way to prepare it for delivery. With a longer movie, this can be time consuming.</p>
- <p>You can work with additional movies within Phosphor during an export - simply select “open” from the “file” menu to begin working on another composition.</p>
- <h1 id="optimizing-media-for-phosphor"><a href="#TOC"><strong>3</strong> Optimizing Media for Phosphor</a></h1>
- <h2 id="types-of-source-material"><a href="#TOC">Types of Source Material</a></h2>
- <p>Phosphor works best with short movies which do not contain a lot of visual noise. Visual noise includes things like static on a television screen, a snow storm, or ripping water.</p>
- <h2 id="framerate"><a href="#TOC">Framerate</a></h2>
- <p>Video typically runs at 30 frames per second. In many cases, you can achieve fluid motion with a lower framerate, and thus benefit from greater efficiency. Using your video editing software to convert your media to 15 frames per second will substantially reduce the size of your composition.</p>
- <h2 id="duration"><a href="#TOC">Duration</a></h2>
- <p>Videos longer than approximately 30 seconds will generally result in large compositions, which may not work well on mobile devices or devices with limited memory. For these types of content, a more traditional video embed is more appropriate.</p>
- <h2 id="compressing-phosphor-compositions"><a href="#TOC">Compressing Phosphor Compositions</a></h2>
- <p>Phosphor outputs standard image files, in either JPG, PNG or TIFF format. These files can be modified with traditional image manipulation tools. For example, the free <a href="http://imageoptim.com">ImageOptim</a> application can often substantially reduce the size of PNG and JPG files, without an additional reduction in quality.</p>
- <p>When editing Phosphor images, it’s important that you don’t resize the images. If the overall resolution of the file changes, the Phosphor library will no longer be able to display the composition.</p>
- <h1 id="troubleshooting"><a href="#TOC"><strong>4</strong> Troubleshooting</a></h1>
- <h1 id="a-appendix-a"><a href="#TOC"><strong>A</strong> Appendix A</a></h1>
- <p>Phosphor makes use of the libjpeg library from the <a href="http://www.ijg.org">Independent JPEG Group</a>.</p>
-	</body>
+<div id="TOC">
+<ul>
+<li><a href="#welcome">Welcome</a></li>
+<li><a href="#whats-new-in-scopebox-3">What’s new in ScopeBox 3</a><ul>
+<li><a href="#fail-safe-capture">Fail-Safe Capture</a></li>
+<li><a href="#alerts-and-logging">Alerts and Logging</a></li>
+<li><a href="#adaptive-kernel-engine">Adaptive Kernel Engine</a></li>
+<li><a href="#transcoded-recording">Transcoded Recording</a></li>
+<li><a href="#channel-plot-palette">Channel Plot Palette</a></li>
+</ul></li>
+<li><a href="#getting-started"><strong>2</strong> Getting Started</a><ul>
+<li><a href="#installing">Installing</a></li>
+<li><a href="#uninstalling">Uninstalling</a></li>
+<li><a href="#registering">Registering</a></li>
+<li><a href="#updating">Updating</a></li>
+</ul></li>
+</ul>
+</div>
+<p>#<strong>1</strong> Welcome To ScopeBox 3#</p>
+<h2 id="welcome"><a href="#welcome">Welcome</a></h2>
+<p>ScopeBox transforms your Mac into a suite of high-end video analysis tools, replacing a cart full of heavy and expensive components with one simple application.</p>
+<p>This manual will walk you through the basics of using ScopeBox, and will also introduce you to some of the theory behind video quality analysis.</p>
+<p>For the latest updates, news and support, be sure to visit <a href="http://www.divergentmedia.com/">http://www.divergentmedia.com/</a>.</p>
+<h2 id="whats-new-in-scopebox-3"><a href="#whats-new-in-scopebox-3">What’s new in ScopeBox 3</a></h2>
+<p>ScopeBox 3 takes the market-leading feature set of ScopeBox 2, and adds a host of new features and enhancements. While introduced here, refer to the appropriate sections later in the manual for a more thorough explanation.</p>
+<h3 id="fail-safe-capture"><a href="#fail-safe-capture">Fail-Safe Capture</a></h3>
+<p>Fail-Safe Capture gives you unparalleled peace of mind during the capture process. Whether you lose power, have a system glitch or just knock a cable loose, Fail-Safe Capture ensures that you’re always left with a playable movie.</p>
+<h3 id="alerts-and-logging"><a href="#alerts-and-logging">Alerts and Logging</a></h3>
+<p>Alerts let you set threshold values for all of the key aspects of your video and audio signals - exposure values, peak levels, etc. No need to worry about always keeping an eye on your scopes. Even better, the alerts can be exported for easy correction during post production.</p>
+<h3 id="adaptive-kernel-engine"><a href="#adaptive-kernel-engine">Adaptive Kernel Engine</a></h3>
+<p>ScopeBox 3 is all-new behind the scenes. The Adaptive Kernel Engine optimizes each palette as it’s opened, tuning it to the exact specifications of your individual Mac. With ScopeBox 3, you can be certain that you’re using every bit of performance your machine offers.</p>
+<h3 id="transcoded-recording"><a href="#transcoded-recording">Transcoded Recording</a></h3>
+<p>Most video capture devices (PCI cards, Thunderbolt boxes, etc) deliver uncompressed video to your computer. Unless you’ve got a serious RAID array, capturing uncompressed video is usually out of the question. ScopeBox 3 adds realtime transcoding to records, so you can capture directly to popular formats like Apple ProRes and Avid DNxHD.</p>
+<h3 id="channel-plot-palette"><a href="#channel-plot-palette">Channel Plot Palette</a></h3>
+<p>The new Channel Plot palette gives you flexibility to monitor how your signal will map between the YCbCr and RGB colorspaces.</p>
+<h1 id="getting-started"><a href="#getting-started"><strong>2</strong> Getting Started</a></h1>
+<h2 id="installing"><a href="#installing">Installing</a></h2>
+<p>ScopeBox is a self-contained application. Just drag and drop the application to your Applications folder or any other location on your hard disk, and you’re ready to start using it.</p>
+<p>Some input devices may need additional software installed to work with ScopeBox. For example, HDV and DVCProHD cameras will not work without the addition of decoders for those formats. These components are installed with Final Cut Studio. Other devices such as capture cards require drivers provided by their manufacturers.</p>
+<p>As a rule of thumb, if your device works with other QuickTime applications, it should work within ScopeBox.</p>
+<h2 id="uninstalling"><a href="#uninstalling">Uninstalling</a></h2>
+<p>If you want to uninstall ScopeBox, simply drag the application to the trash. ScopeBox stores its preferences in a file named “com.divergentmedia.scopebox.plist” in your &lt;username&gt;/Library/Preferences/ folder. Layouts and saved source settings are stored in &lt;username&gt;/Library/ Application Support/.</p>
+<h2 id="registering"><a href="#registering">Registering</a></h2>
+<p>When you first launch ScopeBox, it will run as ScopeBox Lite. To enable the full feature set of ScopeBox, you must enter a serial num- ber in the Registration dialog. You may also visit <a href="http://www.divergentmedia.com/scopebox/trial">http://www.divergentmedia.com/scopebox/trial</a> to obtain a time-limited trial key, which will allow you to try all of the features of ScopeBox before buying. If you’ve already purchased ScopeBox, click the “Enter Key” button and enter your name and key exactly as it is shown in your registration information.</p>
+<div class="figure">
+<img src="images/registration.png" alt="Registration Screenshot" /><p class="caption">Registration Screenshot</p>
+</div>
+<h2 id="updating"><a href="#updating">Updating</a></h2>
+<p><em>ScopeBox can only check for updates if you are currently connected to the internet. If your ScopeBox system is not connected, you can always download an updated copy from <http://www.divergentmedia.com/scopebox></em> ScopeBox automatically checks for updates during startup. If you’d like to force it to check for an update, select “Check for Updates” from the ScopeBox menu. You can disable automatic updates via the “General” tab of the preferences dialog.</p>
+</body>
 </html>

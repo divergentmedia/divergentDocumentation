@@ -15,7 +15,7 @@ perl $TOOLCHAIN_PATH/Markdown_1.0.1/Markdown.pl --html4tags $1 > $TMP_PATH/markd
 cp -R $ASSETS_PATH/* $TMP_PATH
 
 cat $ASSETS_PATH/$HTML_EXTRAS_PATH/pre.html $TMP_PATH/markdownbody.html $ASSETS_PATH/$HTML_EXTRAS_PATH/post.html > $TMP_PATH/fullmanual.html
-
+exit 0;
 $TOOLCHAIN_PATH/wkhtmltopdf toc --xsl-style-sheet $TMP_PATH/pdfextras/toc.xsl page $TMP_PATH/fullmanual.html --header-html $TMP_PATH/pdfextras/header.html --footer-html $TMP_PATH/pdfextras/footer.html $2
 
 exit 0

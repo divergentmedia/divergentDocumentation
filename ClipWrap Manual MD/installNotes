@@ -1,0 +1,7 @@
+sudo tlmgr update --self
+sudo tlmgr install sectsty
+sudo tlmgr install titlesec
+sudo tlmgr install adjustbox
+sudo tlmgr install collectbox
+
+pandoc -B coverpage.tex -s -S --toc -V documentclass=report --template=customTemplate.tex --variable fontsize=12pt ClipWrap\ manual.md --latex-engine=xelatex -o test.pdf; open test.pdf

@@ -1,1 +1,0 @@
-~/.cabal/bin/pandoc --smart --toc --template template.html -f markdown test.md -o test.html

@@ -1,0 +1,108 @@
+body {
+  color: #333;
+  font-size: 12px;
+  height: auto;
+  padding-bottom: 20px;
+	position: relative;
+	width: 500px;
+	margin-left:auto;
+	margin-right:auto;
+	background:#fff;
+	padding-left: 240px;
+	padding-right: 80px;
+}
+
+a {
+  color: #aaaaff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+	
+page-break-before:always;
+  font-family: Georgia, serif;
+  font-weight: normal;
+font-size: 40px;
+text-align:left;
+border-bottom:thin solid #000000;
+margin-bottom:40px;
+}
+
+h1 strong {
+  font-family: Georgia, serif;
+  font-weight: normal;
+font-size: 140px;
+  text-align: left;
+position: relative;
+display: block;
+ left: -200px;
+top: 100px;
+width: 200px;
+}
+
+h2 {
+	position: relative;
+	text-align:left;
+	margin-bottom:10px;
+}
+
+h3 {
+	position: relative;
+	text-align:left;
+	margin-bottom:10px;
+}
+
+p {
+	font-family: serif;
+  	text-align: left;
+	display: block;
+	margin-bottom:20px;
+	font-size: 1.5em;
+	word-wrap: break-word;
+}
+
+em {
+	background-image:url('../images/caution_flattened.png');
+	background-repeat:no-repeat;
+	background-position: 0px 0px; 
+	padding-top: 60px;
+
+	border-bottom:20px solid #eee;
+	
+	position: absolute;
+	display: block;
+	font-size: 1em;
+	left: 20px;
+	width: 190px;
+	word-wrap: break-word;
+}
+
+img {
+	padding-bottom:30px;
+}
+
+.clearfix:before,
+.clearfix:after,
+.page:before,
+.page:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}

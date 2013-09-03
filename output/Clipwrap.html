@@ -19,6 +19,7 @@
 <li><a href="#uninstalling">Uninstalling</a></li>
 <li><a href="#registering">Registering</a></li>
 <li><a href="#updating">Updating</a></li>
+<li><a href="#reinstalling">Reinstalling</a></li>
 </ul></li>
 <li><a href="#application-overview">Application Overview</a><ul>
 <li><a href="#basic-usage">Basic Usage</a></li>
@@ -47,6 +48,8 @@
 <li><a href="#general-preferences">General Preferences</a><ul>
 <li><a href="#preserve-source-file-creation-time">Preserve Source File Creation Time</a></li>
 <li><a href="#show-advanced-settings">Show Advanced Settings</a></li>
+<li><a href="#show-codec-conflict-alert">Show Codec Conflict Alert</a></li>
+<li><a href="#open-converted-files-in">Open Converted Files In</a></li>
 </ul></li>
 <li><a href="#audio-preferences">Audio Preferences</a><ul>
 <li><a href="#convert-audio-to-lpcm">Convert Audio to LPCM</a></li>
@@ -59,6 +62,7 @@
 <li><a href="#check-for-conflicting-codecs">Check for conflicting codecs</a></li>
 <li><a href="#tips-for-contacting-support">Tips for Contacting Support</a></li>
 </ul></li>
+<li><a href="#command-line-interface">Command Line Interface</a></li>
 <li><a href="#other-resources">Other Resources</a><ul>
 <li><a href="#support-on-the-web">Support on the Web</a></li>
 <li><a href="#email-support">Email support</a></li>
@@ -74,16 +78,18 @@
 <p>ClipWrap bridges the gap, giving you the flexibility to design the workflow that works best for you.</p>
 <h1 id="getting-started"><a href="#getting-started">Getting Started</a></h1>
 <h2 id="installing"><a href="#installing">Installing</a></h2>
-<p>ClipWrap is a self-contained application for Intel and PowerPC Macintoshes. Just drag and drop ClipWrap to your Applications folder and you’re ready to start using it.</p>
+<p>ClipWrap is a self-contained application for Intel Macintoshes. Just drag and drop ClipWrap to your Applications folder and you’re ready to start using it.</p>
 <p>Some transcode options may require additional software to be installed. Codecs such as Apple’s ProRes or Avid’s DNxHD are installed by third party applications or installers. See Chapter 5 for more information.</p>
 <h2 id="uninstalling"><a href="#uninstalling">Uninstalling</a></h2>
 <p>If you want to uninstall ClipWrap, simply drag the application to the trash.</p>
-<p>ClipWrap stores its preferences in a file named <code>com.divergentmedia.clipwrap.plist</code> in your <username>/Library/Preferences/ folder.</p>
+<p>ClipWrap stores its preferences in a file named <code>com.divergentmedia.clipwrap.plist</code> in your ~/Library/Preferences/ folder.</p>
 <h2 id="registering"><a href="#registering">Registering</a></h2>
 <p>When you first launch ClipWrap, it will run in trial mode, which will only rewrap or transcode the first minute of each clip. To lift this restriction, you must purchase a serial number and enter it in the Registration dialog.</p>
 <p>Serial numbers can be purchased directly from divergent media by visiting our web store at <a href="https://store.divergentmedia.com">https://store.divergentmedia.com</a>. You can also purchase via the Mac App Store. If you’ve already purchased ClipWrap, click the “Enter Key” button and enter your name and key exactly as it is shown in your registration information. You may display this menu at any time by selecting “Registration” from the ClipWrap menu.</p>
 <h2 id="updating"><a href="#updating">Updating</a></h2>
-<p>ClipWrap automatically checks for updates during startup. If you’d like to force it to check for an update, select “Check for Updates” from the ClipWrap menu. ##Reinstalling## If you’ve purchased from our website, you can download a “fresh” copy at any time from <a href="http://www.divergentmedia.com/filedownload/clipwrap">http://www.divergentmedia.com/filedownload/clipwrap</a>. After downloading, you can unlock it with your key. If you’ve lost your key, you can look it up at <a href="http://www.divergentmedia.com/divergent/keylookup">http://www.divergentmedia.com/divergent/keylookup</a>.</p>
+<p>ClipWrap automatically checks for updates during startup. If you’d like to force it to check for an update, select “Check for Updates” from the ClipWrap menu.</p>
+<h2 id="reinstalling"><a href="#reinstalling">Reinstalling</a></h2>
+<p>If you’ve purchased from our website, you can download a “fresh” copy at any time from <a href="http://www.divergentmedia.com/filedownload/clipwrap">http://www.divergentmedia.com/filedownload/clipwrap</a>. After downloading, you can unlock it with your key. If you’ve lost your key, you can look it up at <a href="http://www.divergentmedia.com/divergent/keylookup">http://www.divergentmedia.com/divergent/keylookup</a>.</p>
 <h1 id="application-overview"><a href="#application-overview">Application Overview</a></h1>
 <p>ClipWrap accepts files in the .mts, .m2t and .m2ts format, and converts them to a variety of QuickTime compatible formats.</p>
 <div class="figure">
@@ -104,20 +110,20 @@
 <h3 id="hdv"><a href="#hdv">HDV</a></h3>
 <p>HDV cameras and recording devices generally signify spanned files via file naming. When you add the first file from a spanned HDV sequence, ClipWrap automatically scans for additional clips in the sequence, and if possible, adds them into a single composition.</p>
 <h3 id="avchd"><a href="#avchd">AVCHD</a></h3>
-<p>AVCHD cameras store each clip numbered sequentially, and seperate metadata that denotes which files should be rejoined later. If you’re working with an AVCHD camera, and have the complete folder hierarchy (“BDMV,” etc) you can drag the folder structure to ClipWrap. ClipWrap will parse the metadata from the camera to determine clip spanning.</p>
+<p>AVCHD cameras store each clip numbered sequentially, and separate metadata that denotes which files should be rejoined later. If you’re working with an AVCHD camera, and have the complete folder hierarchy (“BDMV,” etc) you can drag the folder structure to ClipWrap. ClipWrap will parse the metadata from the camera to determine clip spanning.</p>
 <h2 id="manually-spanning"><a href="#manually-spanning">Manually Spanning</a></h2>
 <p>There may be times when ClipWrap can’t automatically detect the clips in a sequence. Often this happens when files have been renamed or moved, or if a camera is using a non-standard naming scheme. <strong>Only join clips that were split during recording.</strong> If you join other clips, you’ll likely encounter sync issues or visual glitches. For joining discrete clips, we recommend using <a href="https://itunes.apple.com/us/app/addmovie/id426306166?mt=12">Add Movie</a> after converting your files with ClipWrap.</p>
 <p>In these cases, you can manually span clips. You can select “Open Multiple” from the “File” menu to join a set of clips. Alternatively, you can add all of your clips to the ClipWrap window. Select the first clip in the sequence, then hold down the shift key and click the last key in the sequence.</p>
 <p>Select “Clip” from the menubar, and click “join clips.” This will build a multiclip composition.</p>
 <div class="figure">
-<img src="images/ClipMenu.jpg" alt="Clip Menu" /><p class="caption">Clip Menu</p>
+<img src="images/ClipMenu.png" alt="Clip Menu" /><p class="caption">Clip Menu</p>
 </div>
 <h3 id="splitting-spanned-groups"><a href="#splitting-spanned-groups">Splitting Spanned Groups</a></h3>
 <p>In rare cases, ClipWrap may incorrectly identify clips as spanned, even when they shouldn’t be. To correct this, simply highlight the clip, then select the “Clip” menu and click “Separate Selected Clips.”</p>
 <h3 id="rearranging-clips-in-a-spanned-group"><a href="#rearranging-clips-in-a-spanned-group">Rearranging Clips in a Spanned Group</a></h3>
 <p>You can manually rearrange clips in a group. Click the triangle to the left of the composition to reveal all of the clips. Click and drag the individual clips to rearrange them.</p>
 <h2 id="file-naming"><a href="#file-naming">File Naming</a></h2>
-<p>ClipWrap maps input filenames directly to the output. So, a clip labelled “00000.mts” will become “00000.mov.” When dealing with spans, output clips will take the name of the first file in the span. If you set a reel name, it will be prepended to the file name. If there are multiple files in a batch with the same name, they will overwrite each other. When processing multiple cards in a single batch, you may need to rename the source files before bringing them in to ClipWrap. Alternatively, you can convert multiple batches simultaneously, with different destinations, by opening additional ClipWrap windows. To open additional windows, use the “New Window” option under the “File” menu.</p>
+<p>ClipWrap maps input filenames directly to the output. So, a clip labeled “00000.mts” will become “00000.mov.” When dealing with spans, output clips will take the name of the first file in the span. If you set a reel name, it will be prepended to the file name. If there are multiple files in a batch with the same name, they will overwrite each other. When processing multiple cards in a single batch, you may need to rename the source files before bringing them in to ClipWrap. Alternatively, you can convert multiple batches simultaneously, with different destinations, by opening additional ClipWrap windows. To open additional windows, use the “New Window” option under the “File” menu.</p>
 <h2 id="optimize-output"><a href="#optimize-output">Optimize Output</a></h2>
 <p>If you know that your workflow will be primarily based in a particular application (Final Cut Pro X, Premiere Pro, etc), you can use the “Optimize Output” dropdown to create files tailored for that application. By targeting a specific application, ClipWrap can create files that will perform better and more consistently. If you aren’t sure which application you’ll be using, or need to move between multiple applications, leave the dropdown set to “General.”</p>
 <h2 id="advanced-options"><a href="#advanced-options">Advanced Options</a></h2>
@@ -142,14 +148,18 @@
 <h3 id="preserve-source-file-creation-time"><a href="#preserve-source-file-creation-time">Preserve Source File Creation Time</a></h3>
 <p>When this option is enabled, files created by ClipWrap will be given creation and modification times that match the source file (the MTS or M2T file from your camera). This means that when importing into a program like Aperture or Final Cut Pro X, your files will be organized according to the original creation time.</p>
 <h3 id="show-advanced-settings"><a href="#show-advanced-settings">Show Advanced Settings</a></h3>
-<p>This setting reveal some additional options within the ClipWrap window. You’ll be able to adjust the framerate of your converted files, and set a reel name. ###Show Codec Conflict Alert### By default, ClipWrap will warn you if you have codecs installed on your system which are known to cause conflicts or instability. If you’d like to suppress these alerts, you can check this box. Please note that this <strong>may impact stability.</strong>###Open Converted Files In### This option allows you to assign an application that will be opened after each rewrap or transcode is completed. The list is prepopulated with common choices, but you may select any application capable of opening QuickTime files by choosing the “Other …” option in the dropdown. Media 100 users will notice that Media 100 overrides the application selection, though the feature may still be disabled altogether.</p>
+<p>This setting reveal some additional options within the ClipWrap window. You’ll be able to adjust the framerate of your converted files, and set a reel name.</p>
+<h3 id="show-codec-conflict-alert"><a href="#show-codec-conflict-alert">Show Codec Conflict Alert</a></h3>
+<p>By default, ClipWrap will warn you if you have codecs installed on your system which are known to cause conflicts or instability. If you’d like to suppress these alerts, you can check this box. Please note that this <strong>may impact stability.</strong></p>
+<h3 id="open-converted-files-in"><a href="#open-converted-files-in">Open Converted Files In</a></h3>
+<p>This option allows you to assign an application that will be opened after each rewrap or transcode is completed. The list is prepopulated with common choices, but you may select any application capable of opening QuickTime files by choosing the “Other …” option in the dropdown. Media 100 users will notice that Media 100 overrides the application selection, though the feature may still be disabled altogether.</p>
 <h2 id="audio-preferences"><a href="#audio-preferences">Audio Preferences</a></h2>
 <h3 id="convert-audio-to-lpcm"><a href="#convert-audio-to-lpcm">Convert Audio to LPCM</a></h3>
 <p>ClipWrap provides two options for dealing with the audio in your media. AVCHD cameras generally record in a format called AC3, in either stereo or 5.1 surround sound. Editing applications generally work better with uncompressed “raw” audio, in a format called LPCM. For most users, we recommend leaving the “Convert Audio to LPCM” box checked. If you know that you’ll be playing your media on a device that handles AC3 decoding (like a surround sound receiver), you can uncheck that box to maintain the audio format. Converting Audio to LPCM will result in larger files than your source media.</p>
 <h3 id="audio-mixdown-settings"><a href="#audio-mixdown-settings">Audio Mixdown Settings</a></h3>
 <p>By default, ClipWrap will convert AC-3 5.1 channel surround sound audio into 6 discrete channels of audio. This allows you to have complete control over your audio layout. However, if you are editing in an older application, or are mixing 5.1 audio with more traditional stereo audio, you may wish to convert your 5.1 audio to 2 channel stereo. On most computers, you may adjust this “mixdown” setting within the ClipWrap preferences. However, if you have the Perian QuickTime plugin installed, you will need to adjust the setting within the Perian preferences. ClipWrap will alert you if this is the case. Within the Perian preferences, you can toggle between “stereo” and “multichannel” output (ignore the other settings).</p>
 <h1 id="troubleshooting"><a href="#troubleshooting">Troubleshooting</a></h1>
-<p>We’ve strived to make ClipWrap as easy to use and as reliable as possible. However, there may be situations in which you experience a crash or a failed conversion. We’re always happy to support you via our support address, <script type="text/javascript">
+<p>We strive to make ClipWrap as easy to use and as reliable as possible. However, there may be situations in which you experience a crash or a failed conversion. We’re always happy to support you via our support address, <script type="text/javascript">
 <!--
 h='&#100;&#x69;&#118;&#x65;&#114;&#x67;&#x65;&#110;&#116;&#x6d;&#x65;&#100;&#x69;&#x61;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;';e=n+a+h;
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
@@ -160,8 +170,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
 <h2 id="confirm-your-target-drive-is-writable"><a href="#confirm-your-target-drive-is-writable">Confirm your target drive is writable</a></h2>
 <p>Mac OS X cannot natively write files to NTFS formatted harddrives. If you select an NTFS formatted drive as your output destination, your clip will fail to convert. This can occur if a Windows user has provided a harddisk with media. You may also encounter issues when writing to FAT32 formatted drives. This is typically the format for external harddisk, unless they’ve been reformatted for the Macintosh. The FAT32 filesystem is limited to 2 gigabyte files, and transcoded files often exceed that size. Other drives (network shares, etc) may experience similar issues. When in doubt, select your Desktop as the destination to confirm that there isn’t a writeability issue.</p>
 <h2 id="check-for-conflicting-codecs"><a href="#check-for-conflicting-codecs">Check for conflicting codecs</a></h2>
-<p>Media Producers often have a wide range of software installed on their computers. Occasionally, this software will conflict with ClipWrap. ClipWrap will warn In particular, there are a handful of QuickTime plugins which we’ve identified as potential issues.</p>
-<p><img src="images/codecConflict.png" alt="Codec Conflict Alert" /> ClipWrap will warn you if you’ve got codecs that are known to cause problems. If you’d like to check yourself, you can use the information below.</p>
+<p>Media Producers often have a wide range of software installed on their computers. Occasionally, this software will conflict with ClipWrap. In particular, there are a handful of QuickTime plugins which we’ve identified as potential issues.</p>
+<p><img src="images/codecConflict.png" alt="Codec Conflict Alert" /> ClipWrap will alert you if you’ve got codecs that are known to cause problems. If you’d like to check yourself, you can use the information below.</p>
 <ul>
 <li>EyeTV MPEG Support.component</li>
 <li>Perian.component</li>
@@ -177,9 +187,44 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
 </ul>
 <p>To test whether these files are causing your issue, drag them to the desktop, then relaunch ClipWrap and try your conversion again.</p>
 <h2 id="tips-for-contacting-support"><a href="#tips-for-contacting-support">Tips for Contacting Support</a></h2>
-<p>When contacting support, there are a few bits of information you can provide that will speed the support process. Tell us the type of computer you’re using, the version of OS X, and the version of ClipWrap. Also let us know what type of camera your media came from, being as specific as possible. Tell us whether the problem occurs when transcoding, rewrapping, or both. If you’ve experienced a crash, you can submit a crash report the next time you launch ClipWrap. Please include your email address when submitting the crash report so we can follow up with you. #Command Line Interface# ClipWrap provides a command line interface which can be used to automate the rewrap process. <strong>Please note, the command line interface is not available in copies of ClipWrap purchased from the Mac App Store. Email support@divergentmedia.com for a command-line capable version if you purchased via the App Store.</strong> The command line interface accepts the following input: ``` ./ClipWrap -action <action> (-convertAudio yes/no) (-optimizeOutput <destApp>) (-reel <reelname>) (-adjustFramerate <framerate>) -srcFile <Source File> -dstFile <Destination File> Optimize Output Options: general imovie premiere fcpx fcp7</p>
-<p>Actions: wrap (default) prores422sq prores422hq prores4444 proresproxy proreslt dnxhd36 dnxhd145 dnxhd220 dv hdv dvcprohd aic xdcamex xdcamhd</p>
-<p>Framerate should be one of: f239 f24p f25p f30i f30p f50p f60p ```</p>
+<p>When contacting support, there are a few bits of information you can provide that will speed the support process. Tell us the type of computer you’re using, the version of OS X, and the version of ClipWrap. Also let us know what type of camera your media came from, being as specific as possible. Tell us whether the problem occurs when transcoding, rewrapping, or both. If you’ve experienced a crash, you can submit a crash report the next time you launch ClipWrap. Please include your email address when submitting the crash report so we can follow up with you.</p>
+<h1 id="command-line-interface"><a href="#command-line-interface">Command Line Interface</a></h1>
+<p>ClipWrap provides a command line interface which can be used to automate the rewrap process. <strong>Please note, the command line interface is not available in copies of ClipWrap purchased from the Mac App Store. Email support@divergentmedia.com for a command-line capable version if you purchased via the App Store.</strong> The command line interface accepts the following input:</p>
+<pre><code>./ClipWrap -action &lt;action&gt; (-convertAudio yes/no) (-optimizeOutput &lt;destApp&gt;) (-reel &lt;reelname&gt;)   
+(-adjustFramerate &lt;framerate&gt;) -srcFile &lt;Source File&gt; -dstFile &lt;Destination File&gt;
+
+Optimize Output Options:
+    general
+    imovie
+    premiere
+    fcpx
+    fcp7
+
+Actions:
+    wrap (default)
+    prores422sq
+    prores422hq
+    prores4444
+    proresproxy
+    proreslt
+    dnxhd36
+    dnxhd145
+    dnxhd220
+    dv
+    hdv
+    dvcprohd
+    aic
+    xdcamex
+    xdcamhd
+
+Framerate should be one of:
+    f239
+    f24p
+    f25p
+    f30i
+    f30p
+    f50p
+    f60p</code></pre>
 <p>You can use “./ClipWrap -help” to get a full list of available commands.</p>
 <h1 id="other-resources"><a href="#other-resources">Other Resources</a></h1>
 <p>If you need additional support using ClipWrap, please try the resources listed below.</p>

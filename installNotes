@@ -10,4 +10,5 @@ sudo tlmgr install sectsty
 sudo tlmgr install titlesec
 sudo tlmgr install adjustbox
 sudo tlmgr install collectbox
+sudo tlmgr install pdftex
 

@@ -27,6 +27,9 @@ Most video capture devices (PCI cards, Thunderbolt boxes, etc) deliver uncompres
 ###Channel Plot Palette###
 The new Channel Plot palette gives you flexibility to monitor how your signal will map between the YCbCr and RGB colorspaces.
 
+###ScopeLink###
+ScopeLink provides a set of plugins for other applications on your system, so that they can feed video directly into ScopeBox.  This means you can access the world-class scopes of ScopeBox, whether you're working in Adobe Premiere Pro, Final Cut Pro X, or a variety of other applications.
+
 #Getting Started#
 
 ##Installing##
@@ -82,7 +85,7 @@ To reveal the Recorder and Clip List, click the icon in the lower left corner of
 
 The recorder settings bar has fields for the name of each file to be recorded, the reel info embedded in QuickTime movies, and the start time, end time and current duration of any recordings in progress. In addition, clicking on the bar reveals the in-depth settings for each recorder.
 
-Beneath this is the cliplist. This list allows you to review at a glance all the day's prior recordings, and change names or reel info.
+Beneath this is the [clip list](#the-clip-list). This list allows you to review at a glance all the day's prior recordings, and change names or reel info.  
 
 You can toggle to a thumbnail view of your recordings using the second icon from the left, which looks like a series of horizontal lines.
 
@@ -97,9 +100,9 @@ The Source menu allows you to add new sources. In addition, new sources can be a
 
 ![Opening a new source from the Source menu.](images/AddingSource.png)
 
-By default, you will be presented with the options "Add Live Source" and "Add Movie Source." You may see additional sources, depending on installed plug-ins. All standard FireWire cameras and QuickTime compatible capture cards will appear under the "Add Live Source" menu.
+By default, you will be presented with the options "Add Live Source," "Add Movie Source," "Add ScopeLink Source," and "Add Test Patterns." You may see additional sources, depending on installed plug-ins. All standard FireWire cameras and QuickTime compatible capture cards will appear under the "Add Live Source" menu.
 
-The "Movie Source" menu allows you to open any QuickTime-compatible video within ScopeBox.
+The "Movie Source" menu allows you to open any QuickTime-compatible video within ScopeBox.  ScopeLink is covered in a [separate chapter](#scopelink).
 
 ###Unavailable Sources###
 If a source is unavailable, it will be grayed-out in the menu. A source may be unavailable for many reasons:
@@ -164,12 +167,14 @@ If your device is connected via FireWire and supports AVC protocols (DV, DVCProH
 
 Because serial deck control does not provide information about the timecode format of the device, you'll also need to choose the appropriate timecode format to tag incoming timecode.
 
-###Preview Adjustments###
+###Preview Adjustments (LUTs)###
 It's often helpful to preview a signal with adjustments applied, to get a sense of how an image will look after color correction is applied or other changes are made. For example, when shooting in the log space, you may wish to preview the image in the linear space. The Preview Adjustments section of the source settings allow you to apply these adjustments via LUTs (look up tables)
 
 ScopeBox supports two LUT formats, cube (1d and 3d) and 3dl. To apply a LUT, check the Preview Adjustments box and then click Set Path. This will allow you to load a LUT in one of the supported formats. You may easily toggle the LUT on and off by checking the Preview Adjustments box.
 
 LUTs impact all of the palettes, including the preview and any scopes. LUTs **do not** impact recorded files. LUTs are automatically reloaded if they contents of the LUT file changes on disk.
+
+> **We support a variety of LUT formats in ScopeBox, but many production pipelines use custom LUTs.  If you've got a LUT that isn't working with ScopeBox, send us a copy at <support@divergentmedia.com>, along with a brief description of what the LUT is intended to do.**
 
 ##Drop Frame Warnings##
 Periodically, under high usage you may see a yellow caution icon appear next to the video preview in the source palette. This is ScopeBox's warning that the source has dropped one or more frames. You can reset this warning by right-clicking on the source palette and choosing "Reset Drop Frame Warnings."
@@ -563,6 +568,10 @@ The triangle in the bottom left of the window will open the Clip List which show
 
 By right clicking on a clip in the Clip List, you can choose to open a movie in QuickTime Player, to show the file in the finder, or to open the clip as a new source in ScopeBox.
 
+###Restore Previous Clips###
+Within the "Recording" tab of the ScopeBox preferences, you'll find the "Restore Previous Clips on Launch" checkbox.  When checked, ScopeBox will maintain your clip list, even when quitting and restarting the application.  This can be helpful when working on a multi day shoot.  To clear the list, click the "reset" button within preferences.  You may also remove individual clips from the clip list by right clicking on them and selecting "remove."  This does not delete the recorded file, it merely removes the clip from the clip list.
+
+
 ###Thumbnail Mode###
 The button to the right of the show/hide Clip List button allows you to toggle the Clip List between list mode and thumbnail mode. In thumbnail mode you can easily see the first frame of each clip.
 
@@ -634,15 +643,17 @@ The CSV export format will generate a Microsoft Excel compatible CSV spreadsheet
 There are two XML options, for both Final Cut Pro 5 and later, and for Final Cut Pro X. When opened in Final Cut Pro, this XML will attempt to load the recorded files associated with each alert. Final Cut Pro will place markers within the video for each alert. This can be used to quickly find and correct issues within your source recording.
 
 #ScopeLink#
-ScopeLink allows you to monitor the signal from other applications on your computer, without any special hardware. Once installed, ScopeLink appears as an output option within supported applications, just like a traditional hardware output device. ScopeLink requires Mac OS X 10.8 ("Mountain Lion") or later.
+ScopeLink allows you to monitor the signal from other applications on your computer, without any special hardware. Once installed, ScopeLink appears as an output option within supported applications, just like a traditional hardware output device. **ScopeLink requires Mac OS X 10.8 ("Mountain Lion") or later.**
 
-Within ScopeBox, you can add the ScopeLink device from the source menu, just like any other source.
+Within ScopeBox, you can add the ScopeLink device from the source menu, just like any other source.  Select the application you'll be using with ScopeLink.
 
 ![Adding a ScopeLink Source](images/scopelinkSource.png)
 
+
+
 ##Installing ScopeLink##
 
-Installing ScopeLink requires administrator privileges on your computer. The first time you attempt to add the ScopeLink source, you'll be prompted to install ScopeLink. You can manually initiate the installation by selecting "Install Additional Software" from the ScopeBox menu.
+Installing ScopeLink requires administrator privileges on your computer. The first time you attempt to add a ScopeLink source, you'll be prompted to install ScopeLink. You can manually initiate the installation by selecting "Install Additional Software" from the ScopeBox menu.
 
 The installation will prompt for your administrator password and install the ScopeLink software on your system.
 
@@ -667,8 +678,26 @@ Click "OK" and then relaunch After Effects.
 
 When used with After Effects, ScopeLink will use the CCIR 601 colorspace for standard definition frame sizes, and Rec. 709 for high definition frame sizes.
 
+###Final Cut Pro X###
+Launch Final Cut Pro X and open the Preferences.  Select ScopeLink in the "A/V Output" dropdown.
+
+![Select ScopeLink in the A/V Output dropdown](images/FCPXPreferences.png)
+
+Close the preferences and select the "Window" menu from the top of the screen.  Click "A/V Output" to enable live output of your sequence.
+
+![Select A/V Output from the Window menu](images/AVOutput.png)
+
+Restart Final Cut Pro X to begin using ScopeLink.
+
 ###Other Applications###
 Other applications which support either QuickTime-based output or Adobe Transmit-based output may work with ScopeLink. Contact support if you'd like information on using a specific application with ScopeLink.
+
+##ScopeLink Settings##
+Depending on the application hosting ScopeLink, there are a variety of settings you may adjust.  After adding a ScopeLink source, click on the source palette to highlight it.  In some applications, you'll be able to set frame size, colorspace and frame format.  
+
+These changes alter the type of frame being sent by the host application.  After changing these settings, you'll need to restart the host application.
+
+Depending on your host application, selecting a non-native format (for example, requesting RGB frames from a YCbCr sequence) may increase system overhead.
 
 #View Menu#
 The View menu allows you to customize the look and feel of the main ScopeBox window. Each of the major sections of the window - the source bar, sidebar, and the clip list - can be shown or hidden from the View menu. In addition, you can save and recall preset palette layouts and configurations.

@@ -18,6 +18,7 @@
 <li><a href="#adaptive-kernel-engine">Adaptive Kernel Engine</a></li>
 <li><a href="#transcoded-recording">Transcoded Recording</a></li>
 <li><a href="#channel-plot-palette">Channel Plot Palette</a></li>
+<li><a href="#scopelink">ScopeLink</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#getting-started">Getting Started</a><ul>
@@ -42,7 +43,7 @@
 <li><a href="#video">Video</a></li>
 <li><a href="#audio">Audio</a></li>
 <li><a href="#timecode">Timecode</a></li>
-<li><a href="#preview-adjustments">Preview Adjustments</a></li>
+<li><a href="#preview-adjustments-luts">Preview Adjustments (LUTs)</a></li>
 </ul></li>
 <li><a href="#drop-frame-warnings">Drop Frame Warnings</a></li>
 <li><a href="#saving-and-recalling-sources">Saving and Recalling Sources</a></li>
@@ -159,6 +160,7 @@
 <li><a href="#alerts">Alerts</a></li>
 </ul></li>
 <li><a href="#the-clip-list">The Clip List</a><ul>
+<li><a href="#restore-previous-clips">Restore Previous Clips</a></li>
 <li><a href="#thumbnail-mode">Thumbnail Mode</a></li>
 </ul></li>
 <li><a href="#drop-frame-warnings-1">Drop Frame Warnings</a></li>
@@ -182,13 +184,15 @@
 <li><a href="#fcp-and-fcpx-xml">FCP and FCPX XML</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#scopelink">ScopeLink</a><ul>
+<li><a href="#scopelink-1">ScopeLink</a><ul>
 <li><a href="#installing-scopelink">Installing ScopeLink</a></li>
 <li><a href="#configuring-scopelink">Configuring ScopeLink</a><ul>
 <li><a href="#adobe-premiere-and-prelude">Adobe Premiere and Prelude</a></li>
 <li><a href="#adobe-after-effects">Adobe After Effects</a></li>
+<li><a href="#final-cut-pro-x">Final Cut Pro X</a></li>
 <li><a href="#other-applications">Other Applications</a></li>
 </ul></li>
+<li><a href="#scopelink-settings">ScopeLink Settings</a></li>
 </ul></li>
 <li><a href="#view-menu">View Menu</a><ul>
 <li><a href="#saving-a-new-layout">Saving a new layout</a></li>
@@ -230,6 +234,8 @@
 <p>Most video capture devices (PCI cards, Thunderbolt boxes, etc) deliver uncompressed video to your computer. Unless you’ve got a serious RAID array, capturing uncompressed video is usually out of the question. ScopeBox 3 adds realtime transcoding to records, so you can capture directly to popular formats like Apple ProRes and Avid DNxHD.</p>
 <h3 id="channel-plot-palette"><a href="#channel-plot-palette">Channel Plot Palette</a></h3>
 <p>The new Channel Plot palette gives you flexibility to monitor how your signal will map between the YCbCr and RGB colorspaces.</p>
+<h3 id="scopelink"><a href="#scopelink">ScopeLink</a></h3>
+<p>ScopeLink provides a set of plugins for other applications on your system, so that they can feed video directly into ScopeBox. This means you can access the world-class scopes of ScopeBox, whether you’re working in Adobe Premiere Pro, Final Cut Pro X, or a variety of other applications.</p>
 <h1 id="getting-started"><a href="#getting-started">Getting Started</a></h1>
 <h2 id="installing"><a href="#installing">Installing</a></h2>
 <p>ScopeBox is a self-contained application. Just drag and drop the application to your Applications folder or any other location on your hard disk, and you’re ready to start using it.</p>
@@ -270,7 +276,7 @@
 </div>
 <p>To reveal the Recorder and Clip List, click the icon in the lower left corner of the window. You’ll see a bar for each source. This is your recorder settings bar. It works in tandem with the record button in the source palette to allow you to set up video and audio records, as well as get feedback for records currently happening. You’ll see a separate color-coded recorder settings bar for each recordable source currently open.</p>
 <p>The recorder settings bar has fields for the name of each file to be recorded, the reel info embedded in QuickTime movies, and the start time, end time and current duration of any recordings in progress. In addition, clicking on the bar reveals the in-depth settings for each recorder.</p>
-<p>Beneath this is the cliplist. This list allows you to review at a glance all the day’s prior recordings, and change names or reel info.</p>
+<p>Beneath this is the <a href="#the-clip-list">clip list</a>. This list allows you to review at a glance all the day’s prior recordings, and change names or reel info.</p>
 <p>You can toggle to a thumbnail view of your recordings using the second icon from the left, which looks like a series of horizontal lines.</p>
 <div class="figure">
 <img src="images/cliplist.png" alt="List View" /><p class="caption">List View</p>
@@ -284,8 +290,8 @@
 <div class="figure">
 <img src="images/AddingSource.png" alt="Opening a new source from the Source menu." /><p class="caption">Opening a new source from the Source menu.</p>
 </div>
-<p>By default, you will be presented with the options “Add Live Source” and “Add Movie Source.” You may see additional sources, depending on installed plug-ins. All standard FireWire cameras and QuickTime compatible capture cards will appear under the “Add Live Source” menu.</p>
-<p>The “Movie Source” menu allows you to open any QuickTime-compatible video within ScopeBox.</p>
+<p>By default, you will be presented with the options “Add Live Source,” “Add Movie Source,” “Add ScopeLink Source,” and “Add Test Patterns.” You may see additional sources, depending on installed plug-ins. All standard FireWire cameras and QuickTime compatible capture cards will appear under the “Add Live Source” menu.</p>
+<p>The “Movie Source” menu allows you to open any QuickTime-compatible video within ScopeBox. ScopeLink is covered in a <a href="#scopelink">separate chapter</a>.</p>
 <h3 id="unavailable-sources"><a href="#unavailable-sources">Unavailable Sources</a></h3>
 <p>If a source is unavailable, it will be grayed-out in the menu. A source may be unavailable for many reasons:</p>
 <ul>
@@ -335,10 +341,18 @@
 <h3 id="timecode"><a href="#timecode">Timecode</a></h3>
 <p>If your device is connected via FireWire and supports AVC protocols (DV, DVCProHD, or HDV devices) then timecode and deck control will automatically be activated and configured. If you are using any other device, you will see a popup to choose a serial port for connecting to decks or cameras via Sony rs232/rs422 protocol.</p>
 <p>Because serial deck control does not provide information about the timecode format of the device, you’ll also need to choose the appropriate timecode format to tag incoming timecode.</p>
-<h3 id="preview-adjustments"><a href="#preview-adjustments">Preview Adjustments</a></h3>
+<h3 id="preview-adjustments-luts"><a href="#preview-adjustments-luts">Preview Adjustments (LUTs)</a></h3>
 <p>It’s often helpful to preview a signal with adjustments applied, to get a sense of how an image will look after color correction is applied or other changes are made. For example, when shooting in the log space, you may wish to preview the image in the linear space. The Preview Adjustments section of the source settings allow you to apply these adjustments via LUTs (look up tables)</p>
 <p>ScopeBox supports two LUT formats, cube (1d and 3d) and 3dl. To apply a LUT, check the Preview Adjustments box and then click Set Path. This will allow you to load a LUT in one of the supported formats. You may easily toggle the LUT on and off by checking the Preview Adjustments box.</p>
 <p>LUTs impact all of the palettes, including the preview and any scopes. LUTs <strong>do not</strong> impact recorded files. LUTs are automatically reloaded if they contents of the LUT file changes on disk.</p>
+<blockquote>
+<p><strong>We support a variety of LUT formats in ScopeBox, but many production pipelines use custom LUTs. If you’ve got a LUT that isn’t working with ScopeBox, send us a copy at <script type="text/javascript">
+<!--
+h='&#100;&#x69;&#118;&#x65;&#114;&#x67;&#x65;&#110;&#116;&#x6d;&#x65;&#100;&#x69;&#x61;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#32;&#x61;&#116;&#32;&#100;&#x69;&#118;&#x65;&#114;&#x67;&#x65;&#110;&#116;&#x6d;&#x65;&#100;&#x69;&#x61;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript>, along with a brief description of what the LUT is intended to do.</strong></p>
+</blockquote>
 <h2 id="drop-frame-warnings"><a href="#drop-frame-warnings">Drop Frame Warnings</a></h2>
 <p>Periodically, under high usage you may see a yellow caution icon appear next to the video preview in the source palette. This is ScopeBox’s warning that the source has dropped one or more frames. You can reset this warning by right-clicking on the source palette and choosing “Reset Drop Frame Warnings.”</p>
 <div class="figure">
@@ -610,6 +624,8 @@
 <h2 id="the-clip-list"><a href="#the-clip-list">The Clip List</a></h2>
 <p>The triangle in the bottom left of the window will open the Clip List which shows you the history of all of your recordings. From the Clip List, you can review previous shots, change their file names or reel info, or check timecode information.</p>
 <p>By right clicking on a clip in the Clip List, you can choose to open a movie in QuickTime Player, to show the file in the finder, or to open the clip as a new source in ScopeBox.</p>
+<h3 id="restore-previous-clips"><a href="#restore-previous-clips">Restore Previous Clips</a></h3>
+<p>Within the “Recording” tab of the ScopeBox preferences, you’ll find the “Restore Previous Clips on Launch” checkbox. When checked, ScopeBox will maintain your clip list, even when quitting and restarting the application. This can be helpful when working on a multi day shoot. To clear the list, click the “reset” button within preferences. You may also remove individual clips from the clip list by right clicking on them and selecting “remove.” This does not delete the recorded file, it merely removes the clip from the clip list.</p>
 <h3 id="thumbnail-mode"><a href="#thumbnail-mode">Thumbnail Mode</a></h3>
 <p>The button to the right of the show/hide Clip List button allows you to toggle the Clip List between list mode and thumbnail mode. In thumbnail mode you can easily see the first frame of each clip.</p>
 <h2 id="drop-frame-warnings-1"><a href="#drop-frame-warnings-1">Drop Frame Warnings</a></h2>
@@ -657,14 +673,14 @@
 <p>The CSV export format will generate a Microsoft Excel compatible CSV spreadsheet, with an entry for each alert.</p>
 <h3 id="fcp-and-fcpx-xml"><a href="#fcp-and-fcpx-xml">FCP and FCPX XML</a></h3>
 <p>There are two XML options, for both Final Cut Pro 5 and later, and for Final Cut Pro X. When opened in Final Cut Pro, this XML will attempt to load the recorded files associated with each alert. Final Cut Pro will place markers within the video for each alert. This can be used to quickly find and correct issues within your source recording.</p>
-<h1 id="scopelink"><a href="#scopelink">ScopeLink</a></h1>
-<p>ScopeLink allows you to monitor the signal from other applications on your computer, without any special hardware. Once installed, ScopeLink appears as an output option within supported applications, just like a traditional hardware output device. ScopeLink requires Mac OS X 10.8 (“Mountain Lion”) or later.</p>
-<p>Within ScopeBox, you can add the ScopeLink device from the source menu, just like any other source.</p>
+<h1 id="scopelink-1"><a href="#scopelink-1">ScopeLink</a></h1>
+<p>ScopeLink allows you to monitor the signal from other applications on your computer, without any special hardware. Once installed, ScopeLink appears as an output option within supported applications, just like a traditional hardware output device. <strong>ScopeLink requires Mac OS X 10.8 (“Mountain Lion”) or later.</strong></p>
+<p>Within ScopeBox, you can add the ScopeLink device from the source menu, just like any other source. Select the application you’ll be using with ScopeLink.</p>
 <div class="figure">
 <img src="images/scopelinkSource.png" alt="Adding a ScopeLink Source" /><p class="caption">Adding a ScopeLink Source</p>
 </div>
 <h2 id="installing-scopelink"><a href="#installing-scopelink">Installing ScopeLink</a></h2>
-<p>Installing ScopeLink requires administrator privileges on your computer. The first time you attempt to add the ScopeLink source, you’ll be prompted to install ScopeLink. You can manually initiate the installation by selecting “Install Additional Software” from the ScopeBox menu.</p>
+<p>Installing ScopeLink requires administrator privileges on your computer. The first time you attempt to add a ScopeLink source, you’ll be prompted to install ScopeLink. You can manually initiate the installation by selecting “Install Additional Software” from the ScopeBox menu.</p>
 <p>The installation will prompt for your administrator password and install the ScopeLink software on your system.</p>
 <h2 id="configuring-scopelink"><a href="#configuring-scopelink">Configuring ScopeLink</a></h2>
 <p>After installing, ScopeLink must be activated within the individual applications you wish to use with ScopeBox. This should only need to be done once per application.</p>
@@ -682,8 +698,22 @@
 </div>
 <p>Click “OK” and then relaunch After Effects.</p>
 <p>When used with After Effects, ScopeLink will use the CCIR 601 colorspace for standard definition frame sizes, and Rec. 709 for high definition frame sizes.</p>
+<h3 id="final-cut-pro-x"><a href="#final-cut-pro-x">Final Cut Pro X</a></h3>
+<p>Launch Final Cut Pro X and open the Preferences. Select ScopeLink in the “A/V Output” dropdown.</p>
+<div class="figure">
+<img src="images/FCPXPreferences.png" alt="Select ScopeLink in the A/V Output dropdown" /><p class="caption">Select ScopeLink in the A/V Output dropdown</p>
+</div>
+<p>Close the preferences and select the “Window” menu from the top of the screen. Click “A/V Output” to enable live output of your sequence.</p>
+<div class="figure">
+<img src="images/AVOutput.png" alt="Select A/V Output from the Window menu" /><p class="caption">Select A/V Output from the Window menu</p>
+</div>
+<p>Restart Final Cut Pro X to begin using ScopeLink.</p>
 <h3 id="other-applications"><a href="#other-applications">Other Applications</a></h3>
 <p>Other applications which support either QuickTime-based output or Adobe Transmit-based output may work with ScopeLink. Contact support if you’d like information on using a specific application with ScopeLink.</p>
+<h2 id="scopelink-settings"><a href="#scopelink-settings">ScopeLink Settings</a></h2>
+<p>Depending on the application hosting ScopeLink, there are a variety of settings you may adjust. After adding a ScopeLink source, click on the source palette to highlight it. In some applications, you’ll be able to set frame size, colorspace and frame format.</p>
+<p>These changes alter the type of frame being sent by the host application. After changing these settings, you’ll need to restart the host application.</p>
+<p>Depending on your host application, selecting a non-native format (for example, requesting RGB frames from a YCbCr sequence) may increase system overhead.</p>
 <h1 id="view-menu"><a href="#view-menu">View Menu</a></h1>
 <p>The View menu allows you to customize the look and feel of the main ScopeBox window. Each of the major sections of the window - the source bar, sidebar, and the clip list - can be shown or hidden from the View menu. In addition, you can save and recall preset palette layouts and configurations.</p>
 <h2 id="saving-a-new-layout"><a href="#saving-a-new-layout">Saving a new layout</a></h2>

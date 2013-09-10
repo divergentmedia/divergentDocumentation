@@ -1,0 +1,14 @@
+Install 
+http://code.google.com/p/pandoc/downloads/list
+
+BasicTex
+http://www.tug.org/mactex/morepackages.html
+
+
+sudo tlmgr update --self
+sudo tlmgr install sectsty
+sudo tlmgr install titlesec
+sudo tlmgr install adjustbox
+sudo tlmgr install collectbox
+sudo tlmgr install pdftex
+

@@ -15,7 +15,7 @@
 #Getting Started#
 
 ##Installing##
-ClipWrap is a self-contained application for Intel Macintoshes. Just drag and drop ClipWrap to your Applications folder and you're ready to start using it.
+ClipWrap is a self-contained application for Intel Macs. Just drag and drop ClipWrap to your Applications folder and you're ready to start using it.
 
 Some transcode options may require additional software to be installed. Codecs such as Apple's ProRes or Avid's DNxHD are installed by third party applications or installers. See Chapter 5 for more information.
 
@@ -159,7 +159,7 @@
 ClipWrap leverages the video codecs that are already installed on your system for transcoding. This means that you will only be able to select the formats that have been previously installed on your system. ClipWrap checks you system on launch to determine which codecs you have installed, and disables any unavailable items in the format dropdown.
 In general, Apple's ProRes family of codecs are only available on systems with Final Cut Studio, Final Cut Pro X, Compressor or other Apple Pro-Apps installed.  The trial version of Final Cut Pro X also includes ProRes.  If you have Final Cut Pro X installed and do not see the ProRes option in ClipWrap, launch Final Cut Pro X and select "download additional software" from the Final Cut Pro X menu.
 Avid's DNxHD codec is available as part of the Media Composer installation, or as a download from [http://www.avid.com/dnxhd](http://www.avid.com/dnxhd).
-The Apple Intermediate Codec (AIC) is available if you have Final Cut Studio or iMovie installed, and so should be available on the vast majority of Macintoshes. 
+The Apple Intermediate Codec (AIC) is available if you have Final Cut Studio or iMovie installed, and so should be available on the vast majority of Macs. 
 
 ##Confirm your target drive is writable##
 Mac OS X cannot natively write files to NTFS formatted harddrives.

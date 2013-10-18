@@ -135,7 +135,7 @@ The "Input" dropdown allows you to select which input you would like assigned to
 
 The "Compressor" dropdown allows you to change the compression scheme used to display and record the source. ScopeBox will convert your video to the selected format in realtime. By default, this box will reflect the native format of your source. Keep in mind that compression can be very CPU-intensive.
 
-> **This isn't the area to change your record format. See chapter 17 for details on transcoding during record.**
+> **This isn't the area to change your record format. See the [recording](#recording) chapters for details on transcoding during record.**
 
 The "Preview Level" dropdown allows you to change the quality level ScopeBox uses to decompress your video before processing and displaying it. By default this will be set to High, and can be left alone unless your machine is unable to process your current source at full resolution without dropping frames.
 
@@ -561,7 +561,7 @@ Keep in mind that transcoding can be highly CPU intensive, particularly with cus
 Sometimes you only need to record audio or video. In this case, uncheck any tracks you don't need, and ScopeBox will omit them from any future recordings - saving you disk space and CPU usage.
 
 ###Alerts###
-Alerts allow you to set threshold values for your source, so that you can know when an exception has occurred, even if you're not watching your screen at that exact moment. Alerts are explained in section 19.
+Alerts allow you to set threshold values for your source, so that you can know when an exception has occurred, even if you're not watching your screen at that exact moment. Alerts are explained [in the next chapter](#alerts-1).
 
 ##The Clip List##
 The triangle in the bottom left of the window will open the Clip List which shows you the history of all of your recordings. From the Clip List, you can review previous shots, change their file names or reel info, or check timecode information.
@@ -785,7 +785,7 @@ Make sure your video input isn't in use by another application, check input cabl
 
 Also, verify that you have the proper codecs or drivers installed. While this is not a absolute assurance the device should work in ScopeBox, you can confirm your system is set up properly by checking to see if the device works in other QuickTime applications.
 
-Consult ScopeBox's Source Diagnostics dialog under the help menu for additional help determining why ScopeBox may be disabling your device. See section 18 of this manual for more info of the Source Diagnostics dialog.
+Consult ScopeBox's Source Diagnostics dialog under the help menu for additional help determining why ScopeBox may be disabling your device. See the [source diagnostics](#source-diagnostics) section of the manual for more details.
 
 ##Audio from my DV camera sounds distorted / VU meters only show one channel of audio##
 ScopeBox does not currently support the 12bit audio mode present on some DV camcorders. If you are experiencing audio distortion from a DV, DVCam, or DVCProHD camera, switch the device to 16bit mode and the audio should preview correctly.

@@ -1,4 +1,5 @@
-<div id="TOC">
+<div class="col-md-3">
+<div id="TOC" class="bs-sidebar hidden-print" data-spy="affix" data-offset-top="145">
 <ul>
 <li><a href="#welcome-to-scopebox-3">Welcome to ScopeBox 3</a><ul>
 <li><a href="#welcome">Welcome</a></li>
@@ -207,7 +208,9 @@
 <li><a href="#other-resources">Other Resources</a></li>
 </ul>
 </div>
+</div>
 
+<div class="col-md-9">
 <h1 id="welcome-to-scopebox-3"><a href="#TOC">Welcome to ScopeBox 3</a></h1>
 <h2 id="welcome"><a href="#TOC">Welcome</a></h2>
 <p>ScopeBox transforms your Mac into a suite of high-end video analysis tools, replacing a cart full of heavy and expensive components with one simple application.</p>
@@ -309,7 +312,7 @@
 </div>
 <p>The “Compressor” dropdown allows you to change the compression scheme used to display and record the source. ScopeBox will convert your video to the selected format in realtime. By default, this box will reflect the native format of your source. Keep in mind that compression can be very CPU-intensive.</p>
 <blockquote>
-<p><strong>This isn’t the area to change your record format. See chapter 17 for details on transcoding during record.</strong></p>
+<p><strong>This isn’t the area to change your record format. See the <a href="#recording">recording</a> chapters for details on transcoding during record.</strong></p>
 </blockquote>
 <p>The “Preview Level” dropdown allows you to change the quality level ScopeBox uses to decompress your video before processing and displaying it. By default this will be set to High, and can be left alone unless your machine is unable to process your current source at full resolution without dropping frames.</p>
 <p>The “Setup” dropdown allows you to change the setup level of your video. This is the baseline level for black in your video. You shouldn’t change this setting unless your black levels appear to be incorrect in the waveform palette. Additionally, before altering this setting, be sure that your capture card drive is properly configured. This setting will not impact recordings.</p>
@@ -611,7 +614,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+
 <h3 id="record-track-selections"><a href="#TOC">Record Track Selections</a></h3>
 <p>Sometimes you only need to record audio or video. In this case, uncheck any tracks you don’t need, and ScopeBox will omit them from any future recordings - saving you disk space and CPU usage.</p>
 <h3 id="alerts"><a href="#TOC">Alerts</a></h3>
-<p>Alerts allow you to set threshold values for your source, so that you can know when an exception has occurred, even if you’re not watching your screen at that exact moment. Alerts are explained in section 19.</p>
+<p>Alerts allow you to set threshold values for your source, so that you can know when an exception has occurred, even if you’re not watching your screen at that exact moment. Alerts are explained <a href="#alerts-1">in the next chapter</a>.</p>
 <h2 id="the-clip-list"><a href="#TOC">The Clip List</a></h2>
 <p>The triangle in the bottom left of the window will open the Clip List which shows you the history of all of your recordings. From the Clip List, you can review previous shots, change their file names or reel info, or check timecode information.</p>
 <p>By right clicking on a clip in the Clip List, you can choose to open a movie in QuickTime Player, to show the file in the finder, or to open the clip as a new source in ScopeBox.</p>
@@ -764,7 +767,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+
 <h2 id="my-video-input-is-not-showing-up-is-grayed-out-does-not-work"><a href="#TOC">My video input is not showing up / is grayed out/ does not work</a></h2>
 <p>Make sure your video input isn’t in use by another application, check input cabling, and restart ScopeBox. Verify that your camera is outputting video.</p>
 <p>Also, verify that you have the proper codecs or drivers installed. While this is not a absolute assurance the device should work in ScopeBox, you can confirm your system is set up properly by checking to see if the device works in other QuickTime applications.</p>
-<p>Consult ScopeBox’s Source Diagnostics dialog under the help menu for additional help determining why ScopeBox may be disabling your device. See section 18 of this manual for more info of the Source Diagnostics dialog.</p>
+<p>Consult ScopeBox’s Source Diagnostics dialog under the help menu for additional help determining why ScopeBox may be disabling your device. See the <a href="#source-diagnostics">source diagnostics</a> section of the manual for more details.</p>
 <h2 id="audio-from-my-dv-camera-sounds-distorted-vu-meters-only-show-one-channel-of-audio"><a href="#TOC">Audio from my DV camera sounds distorted / VU meters only show one channel of audio</a></h2>
 <p>ScopeBox does not currently support the 12bit audio mode present on some DV camcorders. If you are experiencing audio distortion from a DV, DVCam, or DVCProHD camera, switch the device to 16bit mode and the audio should preview correctly.</p>
 <h2 id="im-using-a-panasonic-hvx-200-and-cant-see-any-video"><a href="#TOC">I’m using a Panasonic HVX-200 and can’t see any video</a></h2>
@@ -785,4 +788,4 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+
 // -->
 </script><noscript>&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#32;&#x61;&#116;&#32;&#100;&#x69;&#118;&#x65;&#114;&#x67;&#x65;&#110;&#116;&#x6d;&#x65;&#100;&#x69;&#x61;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript></p>
 <p>Phone support toll free - 888.632.0904</p>
-
+</div>

@@ -1,9 +1,10 @@
-<div id="TOC">
+<div class="col-md-3">
+<div id="TOC" class="bs-sidebar hidden-print" data-spy="affix" data-offset-top="145">
 <ul>
-<li><a href="#welcome-to-phosphor"><strong>1</strong> Welcome to Phosphor</a><ul>
+<li><a href="#welcome-to-phosphor">Welcome to Phosphor</a><ul>
 <li><a href="#welcome">Welcome</a></li>
 </ul></li>
-<li><a href="#getting-started"><strong>2</strong> Getting Started</a><ul>
+<li><a href="#getting-started">Getting Started</a><ul>
 <li><a href="#interface-basics">Interface Basics</a></li>
 <li><a href="#supported-media">Supported Media</a></li>
 <li><a href="#exporting">Exporting</a><ul>
@@ -18,17 +19,17 @@
 </ul></li>
 <li><a href="#the-export-process">The Export Process</a></li>
 </ul></li>
-<li><a href="#optimizing-media-for-phosphor"><strong>3</strong> Optimizing Media for Phosphor</a><ul>
+<li><a href="#optimizing-media-for-phosphor">Optimizing Media for Phosphor</a><ul>
 <li><a href="#types-of-source-material">Types of Source Material</a></li>
 <li><a href="#framerate">Framerate</a></li>
 <li><a href="#duration">Duration</a></li>
 <li><a href="#compressing-phosphor-compositions">Compressing Phosphor Compositions</a></li>
 </ul></li>
-<li><a href="#working-with-content-on-the-web"><strong>4</strong> Working with Content on the Web</a><ul>
+<li><a href="#working-with-content-on-the-web">Working with Content on the Web</a><ul>
 <li><a href="#previewing-content">Previewing Content</a></li>
 <li><a href="#embedding-content">Embedding Content</a></li>
 </ul></li>
-<li><a href="#javascript-framework"><strong>5</strong> Javascript Framework</a><ul>
+<li><a href="#javascript-framework">Javascript Framework</a><ul>
 <li><a href="#callbacks">Callbacks</a><ul>
 <li><a href="#currentframecallbackframecount-metadata">currentFrameCallback(frameCount, metadata)</a></li>
 <li><a href="#onload">onLoad</a></li>
@@ -44,19 +45,21 @@
 </ul></li>
 <li><a href="#customization">Customization</a></li>
 </ul></li>
-<li><a href="#troubleshooting"><strong>6</strong> Troubleshooting</a><ul>
+<li><a href="#troubleshooting">Troubleshooting</a><ul>
 <li><a href="#source-formats">Source Formats</a></li>
 <li><a href="#compatibility">Compatibility</a></li>
 </ul></li>
-<li><a href="#a-appendix-a"><strong>A</strong> Appendix A</a></li>
+<li><a href="#appendix-a">Appendix A</a></li>
 </ul>
 </div>
+</div>
 
-<h1 id="welcome-to-phosphor"><a href="#TOC"><strong>1</strong> Welcome to Phosphor</a></h1>
+<div class="col-md-9">
+<h1 id="welcome-to-phosphor"><a href="#TOC">Welcome to Phosphor</a></h1>
 <h2 id="welcome"><a href="#TOC">Welcome</a></h2>
 <p>Phosphor is a new way of bringing animation and video to the web. Starting with a standard QuickTime file, Phosphor creates crossplatform, web-standards compliant assets which can be played on desktop and mobile devices without plugins or even video decoding capabilities. As long as a browser supports JavaScript and the ability to show images, it can display Phosphor content.</p>
 <p>Using Phosphor is simple and fun. This manual will walk you through the basics, and will explore the situations in which Phosphor is most appropriate.</p>
-<h1 id="getting-started"><a href="#TOC"><strong>2</strong> Getting Started</a></h1>
+<h1 id="getting-started"><a href="#TOC">Getting Started</a></h1>
 <h2 id="interface-basics"><a href="#TOC">Interface Basics</a></h2>
 <p>Upon launch, Phosphor displays a grid of previously accessed media, as well as an assortment of sample source material. If you’re still in the process of getting familiar with Phosphor, the sample media gives you the opportunity to begin experimenting immediately. You can use the “open” button (or select open from the file menu) to open any other modern QuickTime movie on your computer.</p>
 <div class="figure">
@@ -89,7 +92,7 @@
 <h2 id="the-export-process"><a href="#TOC">The Export Process</a></h2>
 <p>Once you’ve made your selections, press the export process to generate your Phosphor output. Phosphor will analyze your content and figure out the most efficient way to prepare it for delivery. With a longer movie, this can be time consuming.</p>
 <p>You can work with additional movies within Phosphor during an export - simply select “open” from the “file” menu to begin working on another composition.</p>
-<h1 id="optimizing-media-for-phosphor"><a href="#TOC"><strong>3</strong> Optimizing Media for Phosphor</a></h1>
+<h1 id="optimizing-media-for-phosphor"><a href="#TOC">Optimizing Media for Phosphor</a></h1>
 <h2 id="types-of-source-material"><a href="#TOC">Types of Source Material</a></h2>
 <p>Phosphor works best with short movies which do not contain a lot of visual noise. Visual noise includes things like static on a television screen, a snow storm, or ripping water.</p>
 <p>Sources can be either QuickTime files (H.264, ProRes) or image sequences. Image sequences should be in their own folder, and the files should be numbered sequentially. By default, image sequences play at a rate of 20 frames per second, but this can be altered using the “rate” control.</p>
@@ -101,7 +104,7 @@
 <h2 id="compressing-phosphor-compositions"><a href="#TOC">Compressing Phosphor Compositions</a></h2>
 <p>Phosphor outputs standard image files, in either JPG, PNG or TIFF format. These files can be modified with traditional image manipulation tools. For example, the free <a href="http://imageoptim.com">ImageOptim</a> application can often substantially reduce the size of PNG and JPG files, without an additional reduction in quality.</p>
 <p>When editing Phosphor images, it’s important that you don’t resize the images. If the overall resolution of the file changes, the Phosphor library will no longer be able to display the composition.</p>
-<h1 id="working-with-content-on-the-web"><a href="#TOC"><strong>4</strong> Working with Content on the Web</a></h1>
+<h1 id="working-with-content-on-the-web"><a href="#TOC">Working with Content on the Web</a></h1>
 <h2 id="previewing-content"><a href="#TOC">Previewing Content</a></h2>
 <p>After exporting, you will have access to a folder containing a mix of file types - HTML, JavaScript, JSON and images. In most cases, double-clicking the index.html file will allow you to preview your composition within your local webbrowser. Some security configurations or browser settings may prevent you from loading local content within your browser. In these cases, you may need to adjust a setting or load your content from a traditional webserver.</p>
 <h2 id="embedding-content"><a href="#TOC">Embedding Content</a></h2>
@@ -133,7 +136,7 @@
 
  });</code></pre>
 <p>The other code within the script block enables playback controls and interactivity - you may choose to leave those out, depending on your particular needs.</p>
-<h1 id="javascript-framework"><a href="#TOC"><strong>5</strong> Javascript Framework</a></h1>
+<h1 id="javascript-framework"><a href="#TOC">Javascript Framework</a></h1>
 <p>The sample HTML generated by Phosphor shows an example of a basic phosphor composition (see Chapter 4). However, there are further opportunities for customization for users familiar with Javascript development.</p>
 <h2 id="callbacks"><a href="#TOC">Callbacks</a></h2>
 <p>The Phosphor Framework has three callbacks which may be specified as parameters on the load_animation function. These allow you to trigger custom actions based on events which occur within the Phosphor framework.</p>
@@ -164,12 +167,12 @@ h='&#100;&#x69;&#118;&#x65;&#114;&#x67;&#x65;&#110;&#116;&#x6d;&#x65;&#100;&#x69
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+'a'+'>');
 // -->
 </script><noscript>&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#32;&#x61;&#116;&#32;&#100;&#x69;&#118;&#x65;&#114;&#x67;&#x65;&#110;&#116;&#x6d;&#x65;&#100;&#x69;&#x61;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript> or fork the <a href="https://github.com/mikewoodworth/phosphorframework">framework on GitHub</a>.</p>
-<h1 id="troubleshooting"><a href="#TOC"><strong>6</strong> Troubleshooting</a></h1>
+<h1 id="troubleshooting"><a href="#TOC">Troubleshooting</a></h1>
 <h2 id="source-formats"><a href="#TOC">Source Formats</a></h2>
 <p>Phosphor supports QuickTime videos which are encoded using H.264 and Apple ProRes. Future versions of Phosphor will support loading image sequences.</p>
 <h2 id="compatibility"><a href="#TOC">Compatibility</a></h2>
 <p>Phosphor compositions should work in any browser that supports the canvas tag. In some cases, older browsers which do not natively support the canvas tag can gain that support via the <a href="http://excanvas.sourceforge.net">excanvas javascript library</a>.</p>
 <p>Running multiple Phosphor compositions on one page may lead to performance problems on older mobile devices (smartphones) and should be avoided for sites which are likely to be heavily trafficked by mobile browsers.</p>
-<h1 id="a-appendix-a"><a href="#TOC"><strong>A</strong> Appendix A</a></h1>
+<h1 id="appendix-a"><a href="#TOC">Appendix A</a></h1>
 <p>Phosphor makes use of the libjpeg library from the <a href="http://www.ijg.org">Independent JPEG Group</a>.</p>
-
+</div>

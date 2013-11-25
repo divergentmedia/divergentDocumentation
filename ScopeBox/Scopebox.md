@@ -681,7 +681,7 @@ When used with After Effects, ScopeLink will use the CCIR 601 colorspace for sta
 ###Adobe SpeedGrade###
 Begin by launching SpeedGrade.  Click the "wrench" icon to open the SpeedGrade preferences, and then select the "Display" option.  Click the "enable" box and then select ScopeLink from the Device dropdown.  
 
-![Configuring Adobe After Effects](images/speedgrade.png)
+![Configuring Adobe SpeedGrade](images/speedgrade.png)
 
 ###Final Cut Pro X###
 Launch Final Cut Pro X and open the Preferences.  Select ScopeLink in the "A/V Output" dropdown.

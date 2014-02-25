@@ -685,6 +685,7 @@ Launch Speedgrade, open the preferences, and enable the Mercury Transmit device.
 
 ![Configuring Adobe SpeedGrade](images/speedgrade.png)
 
+When ScopeLink is enabled, SpeedGrade will no longer show previews within the application.
 
 ###Final Cut Pro X###
 Launch Final Cut Pro X and open the Preferences.  Select ScopeLink in the "A/V Output" dropdown.

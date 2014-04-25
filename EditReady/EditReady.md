@@ -23,7 +23,7 @@ EditReady can also generate high quality proxy media, so that you can take all o
 
 ## Installing ##
 
-EditReady is available as a direct download from [http://www.divergentmedia.com](www.divergentmedia.com) and as a purchase from the Mac App Store.  If you've downloaded it from our website, just drag and drop the application into your Applications folder.  If you've purchased from the Mac App Store, EditReady should already be in your Applications folder - no installation necessary.
+EditReady is available as a direct download from [http://www.divergentmedia.com](www.divergentmedia.com).  After you've downloaded it from our website, just drag and drop the application into your Applications folder.  
 
 
 In order to convert footage to or from the Avid DNxHD Codec, you'll need to have the free DNxHD plugin installed.  It can be downloaded from [http://www.avid.com/dnxhd/](http://www.avid.com/dnxhd/).  
@@ -33,7 +33,7 @@ In order to convert footage to or from the Avid DNxHD Codec, you'll need to have
 To remove EditReady, simply drag it to your trash.
 
 ## Registering ##
-When you first launch EditReady, it will run in trial mode, which will only transcode the first minute of each clip. To lift this restriction, you must purchase an unlock key from <http://store.divergentmedia.com>, or purchase a copy from the Mac App Store.
+When you first launch EditReady, it will run in trial mode, which will only transcode the first minute of each clip. To lift this restriction, you must purchase an unlock key from <http://store.divergentmedia.com>.
 
 If you've already purchased EditReady, click the "Enter Key" button and enter your name and key exactly as it is shown in your registration information. You may display this menu at any time by selecting "Registration" from the EditReady menu.  Make sure you don't have any extra spaces or other stray characters in the "key" field, as this can cause the key to be rejected.
 
@@ -55,29 +55,37 @@ While you can customize many parts of the conversion process, EditReady includes
 
 Clips can be added to EditReady by selecting "Open" under the "File" menu, or by dragging clips into the EditReady window.  Your clips will appear with thumbnails in the EditReady window.  You may toggle between "list view" and "thumbnail" view using the selector in the toolbar.
 
-If you'd like to convert all of your clips, simply click the "convert all" button at the top of the window.  If you'd only like to convert some clips <<FLAG CLIPS>>.
+If you'd like to convert all of your clips, simply click the "convert all" button on the right.  If you'd only like to convert some clips, you can select them by clicking the "flag" icon (or selecting "Flag Clip" from the Clip menu).  Then click "Convert Flagged."
 
-Clicking the convert button will reveal the batch settings pane.  EditReady includes a variety of presets for popular editing formats like ProRes and DNxHD.  You can customize these further by creating [custom presets](#custom-presets).
+EditReady includes a variety of presets for popular editing formats like ProRes and DNxHD.  You can customize these further by creating [custom presets](#custom-presets).
 
 Regardless of the preset you select, you have the option of adjusting the destination folder and destination file name.  See ["Naming your Files"](#naming-your-files) for details.
 
-When you're ready to go, click Convert.
 
 ## Monitoring Progress ##
 
 Each clip will show a progress indicator below the thumbnail.  In addition, you can see batch progress within the toolbar.  You may pause or resume conversion using the play/pause indicator in the timeline.
 
+# Previewing Files #
+
+EditReady allows you to preview your files before conversion.  To access the player, select "Open Preview" from the Clip menu, or press command-3 on the keyboard.  
+
+## Applying LUTs during Playback ##
+Click the "Add LUT" icon to apply a LUT to your file during playback.  This allows you to quickly preview any conversions you'd like to apply.  For details on LUT support in EditReady, see the [LUTs](#LUTs) chapter. 
+
+Keep in mind that LUTs can be compute-intensive, particularly on 4K files.  Slower computers (or computers with slower graphics cards) may have trouble with realtime playback. 
+
 
 # Metadata #
 
-One of the most powerful features in EditReady is the ability to view and edit the metadata contained in your files.  Clicking the blue <<carrot??>> will reveal the most common metadata from your file.  Clicking the "Show all" button will open a separate window with all of the metadata.
+One of the most powerful features in EditReady is the ability to view and edit the metadata contained in your files.  You can access metadata for a clip by selecting "Edit Metadata" from the "Clip" menu, or by pressing command-2 on your 
 
 
 ## Browsing Metadata ##
 
 Metadata may include camera settings like F-Stop, Iris, and Shutter, as well as items like Location (if your camera has GPS), media serial numbers, or even diagnostic data.  
 
-In some cases, there may be multiple entries for a single category of metadata.  For example, your camera may store a "Creation date" in a variety of places throughout the file.  In this case, EditReady will display "Multiple Values" and provide a disclosure triangle to reveal the individual entries.
+In some cases, there may be multiple entries for a single category of metadata.  For example, your camera may store a "Creation date" in a variety of places throughout the file.  In this case, EditReady will display "Conflicting Values" and provide a disclosure triangle to reveal the individual entries.  If you'd like to normalize all of these keys to a single value, click the checkbox to the right of the value you'd like to preserve.  Any other value will be replaced.
 
 If your camera includes GPS data in the metadata, those fields will have a "map" button, allowing you to view the clip location on a map.  Dates within your metadata will be normalized to the current timezone of your computer.  
 
@@ -90,18 +98,24 @@ One of the most powerful futures in EditReady is the ability to edit your metada
 
 ## Adding Metadata ##
 
-To add a new entry <<STUFF HERE>>
+To add a new entry click the "add metadata" icon.  You'll be able to select from a variety of categories and metadata keys.  If you'd like to customize this selection, see [appendix a](#appendix-a).  Some metadata keys will restrict the types of data you can enter (for example, timecode entries must be valid timecode values).
+
+Keys that already exist in your file will be disabled from the "add metadata" screen.  
 
 ## Removing Metadata ##
 
 To remove a metadata entry, click the minus sign to the right of the entry.
 
 
+## Global Metadata ##
+
+EditReady allows you to set metadata across a set of files with a single operation.  From the Metadata menu, select either "Set Metadata for All" or "Set Metadata For Flagged."  Select a category and metadata key, and then enter a value.  This value will be set across all of the target files, and will replace any existing values for that key.
+
 # Naming Your Files #
 
 EditReady includes powerful file naming features, so that you can keep track of all the files in your post production pipeline.
 
-The popup menu to the right of the <<"Dest File Name">> label is pre-populated with a handful of options.  You may, for example, choose to have your output file names match the input file names, or have them be named with an automatically incrementing number.  
+The popup menu to the right of the "Dest File Name" label is pre-populated with a handful of options.  You may, for example, choose to have your output file names match the input file names, or have them be named with an automatically incrementing number.  
 
 ## Customizing File Names ##
 In addition to the presets, you can add additional values from your file's metadata to the file naming scheme.  When viewing your file's metadata (see the [previous chapter](#browsing-metadata)), you will notice a small "tag" icon next to each metadata entry.
@@ -188,4 +202,16 @@ We'll contact you via email after we investigate.
 
 ## Email support ##
 <support@divergentmedia.com>
+
+
+
+# Appendix A #
+## Editing Metadata Options ##
+If you're comfortable with the JSON format, you can customize the metadata keys EditReady presents in the "Add metadata" screen.  To access this file, control-click on EditReady in Finder and select "Show Package Contents," then browse to the Contents/Resources folder.  The metadataLookup.json file controls all of the values presented within EditReady.  We recommend using a JSON-validation tool when making changes - invalid JSON files may cause glitches or other issues in the application.
+
+## Command Line Interface ##
+
+EditReady can be automated via its command line interface.  For an explanation of the command line options, you can run the following command from Terminal (assuming EditReady is in your Applications folder):
+
+`/Applications/EditReady.app/Contents/MacOS/EditReady -help`
 

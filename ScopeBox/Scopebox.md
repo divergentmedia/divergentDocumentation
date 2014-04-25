@@ -670,7 +670,9 @@ Check the box next to the ScopeLink device. You may also activate other devices 
 If you're having problems, try creating a new sequence within Premiere.
 
 ###Adobe After Effects###
-To use ScopeLink with Adobe After Effects, begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Set ScopeLink as the Output Device and Output Mode. We recommend checking all of the boxes in the "output during" section.
+To use ScopeLink with Adobe After Effects, begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "Video Preview." If you're runnin the current Adobe Creative Cloud release of After Effects, select "Mercury Transmit" in the "Video Preview" dropdown (in older versions of After Effects, you don't need to do this).  
+
+Set ScopeLink as the Output Device and Output Mode. We recommend checking all of the boxes in the "output during" section.
 
 ![Configuring Adobe After Effects](images/AfterEffects.png)
 

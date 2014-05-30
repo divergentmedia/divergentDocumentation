@@ -247,9 +247,10 @@ We'll contact you via email after we investigate.
 ## Email support ##
 <support@divergentmedia.com>
 
+
 ## Phone Support ##
 
-(888) 632-0904
+888-632-0904
 
 
 # Appendix A #

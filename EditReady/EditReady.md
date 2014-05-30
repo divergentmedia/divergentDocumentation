@@ -4,7 +4,7 @@
 
 EditReady provides easy, powerful, and fast transcoding for video professionals.  
 
-This manual will introduce you to the basic of EditReady, and provide suggestions for ways to use it within your post-production workflow.
+This manual will introduce you to the basics of EditReady, and provide suggestions for ways to use it within your post-production workflow.
 
 
 For news, updates, and support regarding EditReady, or to learn about other products from Divergent Media, visit [http://www.divergentmedia.com](http://www.divergentmedia.com).
@@ -73,32 +73,32 @@ Regardless of the preset you select, you have the option of adjusting the destin
 
 ![Two batches processing](images/multiplebatches.png)
 
-Each clip will show a progress indicator below the thumbnail.  In addition, you can see batch progress within the toolbar.  You may pause or resume conversion using the play/pause indicator in the timeline.
+Each clip will show a progress indicator below the thumbnail.  In addition, you can see batch progress within the toolbar.  You may pause or resume conversion using the play/pause indicator next to the batch's progress.
 
 
 
 # Previewing Files #
 
-EditReady allows you to preview your files before conversion.  To access the player, select "Open Preview" from the Clip menu, or press command-3 on the keyboard.  
+EditReady allows you to preview your files before conversion.  To access the player, select the clip and choose "Open Preview" from the Clip menu, or press command-3 on the keyboard.  
 
 ![Preview Window](images/player.png)
 
 ## Applying LUTs during Playback ##
-Click the "Add LUT" icon to apply a LUT to your file during playback.  This allows you to quickly preview any conversions you'd like to apply.  For details on LUT support in EditReady, see the [LUTs](#LUTs) chapter. 
+Click the "Add LUT" icon to apply a LUT to your file during playback.  This allows you to quickly preview any conversions you'd like to apply.  For details on LUT support in EditReady, see the [LUTs](#luts) chapter. 
 
 Keep in mind that LUTs can be compute-intensive, particularly on 4K files.  Slower computers (or computers with slower graphics cards) may have trouble with realtime playback. 
 
 
 # Metadata #
 
-One of the most powerful features in EditReady is the ability to view and edit the metadata contained in your files.  You can access metadata for a clip by selecting "Edit Metadata" from the "Clip" menu, or by pressing command-2 on your keyboard.
+One of the most powerful features in EditReady is the ability to view and edit the metadata contained in your files.  You can access metadata for a clip by selecting the clip and then choosing "Edit Metadata" from the "Clip" menu, or by pressing command-2 on your keyboard.
 
 
 ## Browsing Metadata ##
 
 Metadata may include camera settings like F-Stop, Iris, and Shutter, as well as items like Location (if your camera has GPS), media serial numbers, or even diagnostic data.  
 
-In some cases, there may be multiple entries for a single category of metadata.  For example, your camera may store a "Creation date" in a variety of places throughout the file.  In this case, EditReady will display "Conflicting Values" and provide a disclosure triangle to reveal the individual entries.  If you'd like to normalize all of these keys to a single value, click the checkbox to the right of the value you'd like to preserve.  Any other value will be replaced.
+In some cases, there may be multiple entries for a single category of metadata.  For example, your camera may store a "Creation date" in a variety of places throughout the file.  If the values within the key don't match, EditReady will display "Conflicting Values" and provide a disclosure triangle to reveal the individual entries.  If you'd like to unify all of these entries with a single value, click the checkbox to the right of the value you'd like to preserve.  Any other value will be replaced.
 
 ![Metadata Window](images/conflict.png)
 
@@ -106,7 +106,7 @@ In some cases, there may be multiple entries for a single category of metadata. 
 
 \break
 
-If your camera includes GPS data in the metadata, those fields will have a "map" button, allowing you to view the clip location on a map.  Dates within your metadata will be normalized to the current timezone of your computer.  
+If your camera includes GPS data in the metadata, those fields will have a "pin" icon, allowing you to view the clip location on a map.    
 
 ![Map visualization](images/erwithmaps.png)
 
@@ -115,11 +115,11 @@ Some metadata is intended only for use by the camera manufacturer during trouble
 
 ## Editing Metadata ##
 
-One of the most powerful futures in EditReady is the ability to edit your metadata.  To edit an entry, simply double click and begin typing.  Depending on the field, EditReady may enforce requirements on the type of information you can entry (for example, date fields may only contain a valid date).
+To edit an entry, simply double click and begin typing.  Depending on the field, EditReady may enforce requirements on the type of information you can enter (for example, date fields may only contain a valid date).
 
 ## Adding Metadata ##
 
-To add a new entry click the "add metadata" icon.  You'll be able to select from a variety of categories and metadata keys.  If you'd like to customize this selection, see [appendix a](#appendix-a).  Some metadata keys will restrict the types of data you can enter (for example, timecode entries must be valid timecode values).
+To add a new entry click the "add metadata" icon in the upper right corner of the Metadata window.  You'll be able to select from a variety of categories and metadata keys.  If you'd like to customize this selection, see [appendix a](#appendix-a).  Some metadata keys will restrict the types of data you can enter (for example, timecode entries must be valid timecode values).
 
 ![Adding Metadata](images/addmetadata.png)
 
@@ -143,13 +143,14 @@ The popup menu to the right of the "Dest File Name" label is pre-populated with 
 ![Naming options](images/naming.png)
 
 ## Customizing File Names ##
-In addition to the presets, you can add additional values from your file's metadata to the file naming scheme.  When viewing your file's metadata (see the [previous chapter](#browsing-metadata)), you will notice a small "tag" icon next to each metadata entry.
+
+In addition to the presets, you can add additional values from your file's metadata to the file naming scheme.  When viewing your file's metadata (see the [previous chapter](#browsing-metadata)), you will notice a small "tag" icon next to each metadata key.
 
 Drag that tag to the "dest file name" field to include that metadata element in the destination filename.
 
 ![Dragging the "Reel" tag](images/draggingreel.png)
 
-For example, you may wish to add the "Reel" key and the "Creation date" keys to the existing "auto-increment" entry.  You can drag and drop to rearrange values within the "dest file name" field, and you can type to add characters like dashes or underscores.  So, you could easily have all of your output files named "<Reel>-<CreationDate>-<Auto-increment>.mov".  
+For example, you may wish to add the "Reel" key and the "Creation date" keys to the existing "auto-increment" entry.  You can drag and drop to rearrange values within the "dest file name" field, and you can type to add characters like dashes or underscores.  So, you could easily have all of your output files named "(Reel)-(CreationDate)-(Auto-increment).mov".  
 
 \break
 
@@ -165,7 +166,8 @@ EditReady will not allow you to proceed if your destination files will overwrite
 EditReady is an integral part of a post production workflow. To make the usage even more seamless, you can create custom presets that match your workflow needs.  Begin by selecting the "custom" preset in the preset dropdown.  
 
 ## Video Format ##
-EditReady allows you convert to Apple ProRes, Avid DNxHD and H.264.  You may also choose to pass the input video directly to the output file (using the "passthrough" option).  This is helpful if you only need to adjust the audio track of your file.
+
+EditReady allows you convert to Apple ProRes, Avid DNxHD and H.264.  You may also choose to pass the input video directly to the output file (using the "passthrough" option).  This is helpful if you only need to adjust the audio track or metadata of your file.
 
 ### Apple ProRes ###
 
@@ -188,19 +190,24 @@ If you'd like to see a full chart of the bitrates used by DNxHD, take a look at 
 If you'd like to use EditReady for generating files for distribution, or for creating very small proxy files, the H.264 setting is a good option.  This setting will automatically select a bitrate high enough to preserve the quality of your source footage without introducing substantial artifacts.
 
 ## Audio Formats ##
-EditReady includes three options for audio formats - Uncompressed, AAC, and Passthrough.  Passthrough will preserve your source audio and is useful if you only wish to make changes to the video component of your file.
+
+EditReady includes three options for audio formats - Uncompressed, AAC, and Passthrough.  Passthrough will preserve your source audio and is useful if you only wish to make changes to the video component or metadata of your file.
 
 ### Uncompressed (PCM) ###
+
 Uncompressed PCM audio is the most common and interoperable method for working with audio on a computer.  This is the recommended option for any editing platform.
 
 ### AAC ###
+
 AAC compressed audio is an ideal choice if you'll be creating H.264 compressed files for distribution. 
 
 ### None ###
+
 Remove the audio entirely.
 
 ## Framerate ##
-If your audio format is set to "none", EditReady will allow you to adjust the output framerate of your file during conversion.  **This setting adjusts the playback rate of your media**, it does not add or remove frames from your footage.  This setting is especially useful when creating "slow motion" footage with a source that shoots at 60 or 120 frames per second (or higher).  
+
+If your audio format is set to "none", EditReady will allow you to adjust the output framerate of your file during conversion.  This is sometimes called conforming.  **This setting adjusts the playback rate of your media**, it does not add or remove frames from your footage.  This setting is especially useful when creating "slow motion" footage with a source that shoots at 60 or 120 frames per second (or higher).  
 
 
 # LUTs #
@@ -223,7 +230,7 @@ Some issues may be caused by invalid output destinations.  To test whether this 
 
 ## Submitting File Diagnostics ##
 
-If you'd like additional help with a problematic file, you may submit some file diagnostics to Divergent Media.  Highlight a file (or multiple files) within the EditReady interface, and then select "submit selected clip" from the Help menu.  You'll be prompted to supply a brief explanation of the issue, as well as your email address.  This process submits the file header and additional diagnostic data, but does not send us the actual video content of your file.
+If you'd like additional help with a problematic file, you may submit some file diagnostics to Divergent Media.  Highlight a file (or multiple files) within the EditReady interface, and then select "submit selected" from the Help menu.  You'll be prompted to supply a brief explanation of the issue, as well as your email address.  This process submits the file header and additional diagnostic data, but does not send us the actual video content of your file.
 
 We'll contact you via email after we investigate. 
 
@@ -240,6 +247,9 @@ We'll contact you via email after we investigate.
 ## Email support ##
 <support@divergentmedia.com>
 
+## Phone Support ##
+
+(888) 632-0904
 
 
 # Appendix A #

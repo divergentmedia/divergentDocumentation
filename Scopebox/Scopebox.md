@@ -669,10 +669,19 @@ Check the box next to the ScopeLink device. You may also activate other devices 
 
 When used with Adobe Premiere Pro or Adobe Prelude, ScopeLink will transmit 8bit Rec. 709 signals, and ScopeBox will default to viewing within the Rec. 709 colorspace.
 
-###Adobe After Effects###
-To use ScopeLink with Adobe After Effects, begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Set ScopeLink as the Output Device and Output Mode. We recommend checking all of the boxes in the "output during" section.
+###Adobe After Effects 2014###
+To use ScopeLink with Adobe After Effects 2014, begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Enable Mercury Transmit, then set ScopeLink as the Video Device. We recommend unchecking "disable video output when in background".
 
-![Configuring Adobe After Effects](images/AfterEffects.png)
+![Configuring Adobe After Effects 2014](images/AfterEffects2014.png)
+
+Click "OK" and then relaunch After Effects.
+
+When used with After Effects, ScopeLink will use the CCIR 601 colorspace for standard definition frame sizes, and Rec. 709 for high definition frame sizes.
+
+###Adobe After Effects (Legacy)###
+To use ScopeLink with pre-2014 versions of Adobe After Effects , begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Set ScopeLink as the Output Device and Output Mode. We recommend checking all of the boxes in the "output during" section.
+
+![Configuring Adobe After Effects (Legacy)](images/AfterEffects.png)
 
 Click "OK" and then relaunch After Effects.
 

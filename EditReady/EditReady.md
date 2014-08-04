@@ -207,7 +207,7 @@ Remove the audio entirely.
 
 ## Framerate ##
 
-If your audio format is set to "none", EditReady will allow you to adjust the output framerate of your file during conversion.  This is sometimes called conforming.  **This setting adjusts the playback rate of your media**, it does not add or remove frames from your footage.  This setting is especially useful when creating "slow motion" footage with a source that shoots at 60 or 120 frames per second (or higher).  
+EditReady allows you to adjust the output framerate of your file during conversion.  This is sometimes called conforming.  **This setting adjusts the playback rate of your media**, it does not add or remove frames from your footage.  This setting is especially useful when creating "slow motion" footage with a source that shoots at 60 or 120 frames per second (or higher). Framerate adjustment is not available when using "passthrough" settings. 
 
 
 # LUTs #

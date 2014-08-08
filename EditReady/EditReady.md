@@ -257,6 +257,11 @@ We'll contact you via email after we investigate.
 ## Editing Metadata Options ##
 If you're comfortable with the JSON format, you can customize the metadata keys EditReady presents in the "Add metadata" screen.  To access this file, control-click on EditReady in Finder and select "Show Package Contents," then browse to the Contents/Resources folder.  The metadataLookup.json file controls all of the values presented within EditReady.  We recommend using a JSON-validation tool when making changes - invalid JSON files may cause glitches or other issues in the application.
 
+## Running EditReady on Mac OS X 10.8 (Mountain Lion) ##
+
+EditReady 1.0.3 and later supports running on Mac OS X 10.8 Mountain Lion.  There are a few caveats when running on this version of the OS.  Hardware accelerated H.264 encode/decode is not available on Mac OS X 10.8.  Additionally, 10.8 doesn't include the Maps application, so location pins from GPS metadata will not display on a map.
+
+
 ## Command Line Interface ##
 
 EditReady can be automated via its command line interface.  For an explanation of the command line options, you can run the following command from Terminal (assuming EditReady is in your Applications folder):

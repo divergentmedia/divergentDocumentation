@@ -11,7 +11,7 @@ For news, updates, and support regarding EditReady, or to learn about other prod
 
 ## Overview ##
 
-Modern production pipelines often involve generating QuickTime files with a variety of codecs.  A single production may use a mix of "A-Camera" files in ProRes422, "B-Camera" footage in H.264, as well as archive footage in formats like Apple Intermediate Codec.  
+Modern production pipelines often involve generating QuickTime or MXF files with a variety of codecs.  A single production may use a mix of "A-Camera" files in ProRes422, "B-Camera" footage in H.264, as well as archive footage in formats like Apple Intermediate Codec.  
 
 
 EditReady lets you take this mix of files and convert them into a single mezzanine format, offering your post-production pipeline simplicity, reliability, and performance.
@@ -50,7 +50,7 @@ When you first launch EditReady, it will run in trial mode, which will only tran
 
 # Application Overview #
 
-EditReady accepts files in the QuickTime MOV, MP4 and M4V formats. In general, if a file plays in QuickTime Player, it'll play in EditReady.
+EditReady accepts files in the QuickTime MOV, MP4 and M4V formats, as well as MXF files from most cameras that record to the MXF format. In general, if a file plays in QuickTime Player (for MOV/MP4/M4V files) or VLC (for MXF files), it'll play in EditReady.
 
 ![EditReady](images/cleanapp.png)
 
@@ -224,9 +224,15 @@ There are a few basic steps you can take when troubleshooting problems with Edit
 
 ## Errors during Conversion##
 
+Some issues may be caused by invalid output destinations.  To test whether this is the case, try setting the "dest folder" option to your desktop.
+
+### QuickTime (MOV, MP4, M4V) files ###
+
 Does your file play within QuickTime player?  If QuickTime player reports that the file is unplayable, EditReady is unlikely to be able to convert it.  If QuickTime reports that you need additional components to play the file, you should download and install those to resolve the issue.
 
-Some issues may be caused by invalid output destinations.  To test whether this is the case, try setting the "dest folder" option to your desktop.
+### MXF Files ###
+
+You can test whether your MXF file is valid by trying to play it with the free VLC player, from [www.videolan.org](http://www.videolan.org).  If the file plays in VLC but won't open or convert in EditReady, please [contact support](mailto:support@divergentmedia.com).
 
 ## Submitting File Diagnostics ##
 
@@ -268,3 +274,6 @@ EditReady can be automated via its command line interface.  For an explanation o
 
 `/Applications/EditReady.app/Contents/MacOS/EditReady -help`
 
+# Appendix B #
+
+EditReady makes use of MXF parsing libraries from the [FFmpeg Project](http://ffmpeg.org) under the LGPLv2.1.  [Download the FFmpeg source code](https://github.com/FFmpeg/FFmpeg/commit/f406bf3fa933be089bd76a95f75ea57b0942f8c5).

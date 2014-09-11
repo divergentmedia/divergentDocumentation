@@ -85,7 +85,7 @@ To reveal the Recorder and Clip List, click the icon in the lower left corner of
 
 The recorder settings bar has fields for the name of each file to be recorded, the reel info embedded in QuickTime movies, and the start time, end time and current duration of any recordings in progress. In addition, clicking on the bar reveals the in-depth settings for each recorder.
 
-Beneath this is the [clip list](#the-clip-list). This list allows you to review at a glance all the day's prior recordings, and change names or reel info.
+Beneath this is the [clip list](#the-clip-list). This list allows you to review at a glance all the day's prior recordings, and change names or reel info.  
 
 You can toggle to a thumbnail view of your recordings using the second icon from the left, which looks like a series of horizontal lines.
 
@@ -147,7 +147,7 @@ HDV FireWire devices will have a checkbox to enable I-Frame only decompression. 
 
 DV and DVCProHD FireWire devices will have a "Remove Duplicate Frames" checkbox. If your camera supports pulled up progressive formats, this allows you to strip any duplicate frames from the signal, and record a progressive movie, without wasting the disk space on redundant frames.
 
-Currently ScopeBox can properly process duplicate frames in:
+Currently ScopeBox can properly process duplicate frames in: 
 
 * DV24pA
 * DVCproHD 720p24
@@ -658,6 +658,7 @@ Installing ScopeLink requires administrator privileges on your computer. The fir
 The installation will prompt for your administrator password and install the ScopeLink software on your system.
 
 ##Configuring ScopeLink##
+
 After installing, ScopeLink must be activated within the individual applications you wish to use with ScopeBox. This should only need to be done once per application.
 
 ###Adobe Premiere and Prelude###
@@ -665,29 +666,25 @@ To configure ScopeLink with Adobe Premiere Pro, or Adobe Prelude, begin by launc
 
 ![Configuring Adobe Premiere](images/PremierePreferences.png)
 
-Check the box next to the ScopeLink device. You may also activate other devices if you wish. Click "OK," and then restart the application.  We also recommend creating a new sequence after adjusting these settings.
+Check the box next to the ScopeLink device. You may also activate other devices if you wish. Click "OK," and then restart the application.
 
-If you're having problems, try creating a new sequence within Premiere.
+When used with Adobe Premiere Pro or Adobe Prelude, ScopeLink will transmit 8bit Rec. 709 signals, and ScopeBox will default to viewing within the Rec. 709 colorspace.
 
-###Adobe After Effects###
-To use ScopeLink with Adobe After Effects, begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "Video Preview." If you're runnin the current Adobe Creative Cloud release of After Effects, select "Mercury Transmit" in the "Video Preview" dropdown (in older versions of After Effects, you don't need to do this).  
+###Adobe After Effects 2014###
+To use ScopeLink with Adobe After Effects 2014, begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Enable Mercury Transmit, then set ScopeLink as the Video Device. We recommend unchecking "disable video output when in background".
 
-Set ScopeLink as the Output Device and Output Mode. We recommend checking all of the boxes in the "output during" section.
-
-![Configuring Adobe After Effects](images/AfterEffects.png)
+![Configuring Adobe After Effects 2014](images/AfterEffects2014.png)
 
 Click "OK" and then relaunch After Effects.
 
-When used with After Effects, ScopeLink will use the CCIR 601 colorspace for standard definition frame sizes, and Rec. 709 for high definition frame sizes.
+###Adobe After Effects (Legacy)###
+To use ScopeLink with pre-2014 versions of Adobe After Effects , begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Set ScopeLink as the Output Device and Output Mode. We recommend checking all of the boxes in the "output during" section.
 
-###Adobe SpeedGrade###
-To use ScopeLink with Adobe SpeedGrade, begin by making sure you're running SpeedGrade 7.2.0 or later.
+![Configuring Adobe After Effects (Legacy)](images/AfterEffects.png)
 
-Launch Speedgrade, open the preferences, and enable the Mercury Transmit device. Select ScopeLink and an appropriate resolution.  Click close.  You may be prompted to restart the application.
+Click "OK" and then relaunch After Effects.
 
-![Configuring Adobe SpeedGrade](images/speedgrade.png)
-
-When ScopeLink is enabled, SpeedGrade will no longer show previews within the application.
+When used with pre-2014 versions of After Effects, ScopeLink will use the CCIR 601 colorspace for standard definition frame sizes, and Rec. 709 for high definition frame sizes.
 
 ###Final Cut Pro X###
 Launch Final Cut Pro X and open the Preferences.  Select ScopeLink in the "A/V Output" dropdown.
@@ -704,7 +701,7 @@ Restart Final Cut Pro X to begin using ScopeLink.
 Other applications which support either QuickTime-based output or Adobe Transmit-based output may work with ScopeLink. Contact support if you'd like information on using a specific application with ScopeLink.
 
 ##ScopeLink Settings##
-Depending on the application hosting ScopeLink, there are a variety of settings you may adjust.  After adding a ScopeLink source, click on the source palette to highlight it.  In some applications, you'll be able to set frame size, colorspace and frame format.
+Depending on the application hosting ScopeLink, there are a variety of settings you may adjust.  After adding a ScopeLink source, click on the source palette to highlight it.  In some applications, you'll be able to set frame size, colorspace and frame format.  
 
 These changes alter the type of frame being sent by the host application.  After changing these settings, you'll need to restart the host application.
 

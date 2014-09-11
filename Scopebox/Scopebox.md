@@ -767,7 +767,6 @@ If none of these actions work then you may need more RAM, a faster video card or
 ScopeBox is a flexible application that can be used with many hardware configurations. System requirements will vary drastically based on your specific usage and hardware. The following are guidelines for the minimum system required to run ScopeBox in its default layout.
 
 * Intel-base Macintosh
-* Graphics card with support for Quartz Extreme.
 * 1.25 GB of RAM.
 * 75 MB of disk space.
 * External drive for recording.

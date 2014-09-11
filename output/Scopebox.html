@@ -180,6 +180,7 @@
 <li><a href="#configuring-scopelink">Configuring ScopeLink</a><ul>
 <li><a href="#adobe-premiere-and-prelude">Adobe Premiere and Prelude</a></li>
 <li><a href="#adobe-after-effects">Adobe After Effects</a></li>
+<li><a href="#adobe-speedgrade">Adobe SpeedGrade</a></li>
 <li><a href="#final-cut-pro-x">Final Cut Pro X</a></li>
 <li><a href="#other-applications">Other Applications</a></li>
 </ul></li>
@@ -683,8 +684,8 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+
 <div class="figure">
 <img src="images/PremierePreferences.png" alt="Configuring Adobe Premiere" /><p class="caption">Configuring Adobe Premiere</p>
 </div>
-<p>Check the box next to the ScopeLink device. You may also activate other devices if you wish. Click “OK,” and then restart the application.</p>
-<p>When used with Adobe Premiere Pro or Adobe Prelude, ScopeLink will transmit 8bit Rec. 709 signals, and ScopeBox will default to viewing within the Rec. 709 colorspace.</p>
+<p>Check the box next to the ScopeLink device. You may also activate other devices if you wish. Click “OK,” and then restart the application. We also recommend creating a new sequence after adjusting these settings.</p>
+<p>If you’re having problems, try creating a new sequence within Premiere.</p>
 <h3 id="adobe-after-effects"><a href="#TOC">Adobe After Effects</a></h3>
 <p>To use ScopeLink with Adobe After Effects, begin by launching After Effects. Select “Preferences” from the “After Effects” menu, and then “View Preview.” Set ScopeLink as the Output Device and Output Mode. We recommend checking all of the boxes in the “output during” section.</p>
 <div class="figure">
@@ -692,6 +693,13 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'<code>'+e+'</code>'+'<\/'+
 </div>
 <p>Click “OK” and then relaunch After Effects.</p>
 <p>When used with After Effects, ScopeLink will use the CCIR 601 colorspace for standard definition frame sizes, and Rec. 709 for high definition frame sizes.</p>
+<h3 id="adobe-speedgrade"><a href="#TOC">Adobe SpeedGrade</a></h3>
+<p>To use ScopeLink with Adobe SpeedGrade, begin by making sure you’re running SpeedGrade 7.2.0 or later.</p>
+<p>Launch Speedgrade, open the preferences, and enable the Mercury Transmit device. Select ScopeLink and an appropriate resolution. Click close. You may be prompted to restart the application.</p>
+<div class="figure">
+<img src="images/speedgrade.png" alt="Configuring Adobe SpeedGrade" /><p class="caption">Configuring Adobe SpeedGrade</p>
+</div>
+<p>When ScopeLink is enabled, SpeedGrade will no longer show previews within the application.</p>
 <h3 id="final-cut-pro-x"><a href="#TOC">Final Cut Pro X</a></h3>
 <p>Launch Final Cut Pro X and open the Preferences. Select ScopeLink in the “A/V Output” dropdown.</p>
 <div class="figure">

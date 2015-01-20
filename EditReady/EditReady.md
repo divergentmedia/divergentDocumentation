@@ -25,7 +25,6 @@ EditReady can also generate high quality proxy media, so that you can take all o
 
 EditReady is available as a direct download from [http://www.divergentmedia.com](www.divergentmedia.com).  After you've downloaded it from our website, just drag and drop the application into your Applications folder.
 
-
 In order to convert footage to or from the Avid DNxHD Codec, you'll need to have the free DNxHD plugin installed.  It can be downloaded from [http://www.avid.com/dnxhd/](http://www.avid.com/dnxhd/).
 
 ## Uninstalling ##
@@ -40,14 +39,12 @@ If you've already purchased EditReady, click the "Enter Key" button and enter yo
 
 ![License Entry](images/regdialog1.png)
 
-
 ## Updating ##
 EditReady automatically checks for updates during startup. If you'd like to force it to check for an update, select "Check for Updates" from the EditReady menu.
 
 ## Reinstalling ##
 
 If you've purchased from our website, you can download a "fresh" copy at any time from <http://www.divergentmedia.com/filedownload/editready>.  After downloading, you can unlock it with your key.  If you've lost your key, you can look it up at <http://www.divergentmedia.com>.
-
 
 # Application Overview #
 

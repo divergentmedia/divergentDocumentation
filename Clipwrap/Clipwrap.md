@@ -36,7 +36,7 @@
 
 ## Reinstalling ##
 
-If you've purchased from our website, you can download a "fresh" copy at any time from <http://www.divergentmedia.com/filedownload/clipwrap>.  After downloading, you can unlock it with your key.  If you've lost your key, you can look it up at <http://www.divergentmedia.com/divergent/keylookup>.
+If you've purchased from our website, you can download a "fresh" copy at any time from <http://www.divergentmedia.com/filedownload/clipwrap>.  After downloading, you can unlock it with your key.  If you've lost your key, you can look it up at <http://www.divergentmedia.com/>.
 
 #Application Overview#
 ClipWrap accepts files in the .mts, .m2t and .m2ts format, and converts them to a variety of QuickTime compatible formats.

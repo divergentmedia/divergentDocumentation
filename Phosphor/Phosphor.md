@@ -160,7 +160,7 @@ Jump to a particular frame within the composition.
 
 ## Customization ##
 
-The Phosphor Framework is relatively straightforward, and should be easy to customize by developers looking for functionality not available out of the box.  We'd love to see what you build - send us your results at <support@divergentmedia.com> or fork the [framework on GitHub](https://github.com/mikewoodworth/phosphorframework).
+The Phosphor Framework is relatively straightforward, and should be easy to customize by developers looking for functionality not available out of the box.  We'd love to see what you build - send us your results at <support@divergentmedia.com> or fork the [framework on GitHub](https://github.com/divergentmedia/phosphorframework).
 
 # Troubleshooting #
 

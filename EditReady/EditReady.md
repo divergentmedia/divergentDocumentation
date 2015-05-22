@@ -226,7 +226,7 @@ Please note, LUTs require additional processing, and will slow the conversion pr
 
 ## Frame Size Adjustment ##
 
-This option allows you resize your source media to match a destination size.  Three scaling options are provided.
+This option allows you to resize your source media to match a destination size.  Three scaling options are provided.
 
 ### Source Aspect ###
 

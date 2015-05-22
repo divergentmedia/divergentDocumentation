@@ -2,10 +2,14 @@
 
 ##Welcome##
 
-ClipWrap is a Mac application designed to make HDV and AVCHD files a first class citizen in your QuickTime ecosystem.  
+ClipWrap is a Mac application designed to make HDV and AVCHD files a first class citizen in your QuickTime ecosystem.
 
 This manual will walk you through the basics of using ClipWrap as part of your post production workflow.
 For the latest updates, news and support, be sure to visit [http://www.divergentmedia.com/clipwrap](http://www.divergentmedia.com/clipwrap).
+
+
+> **A note on other formats:** ClipWrap is designed just for AVCHD and HDV files.  Many workflows now record in formats like MOV, MP4, and MXF.  If you need to support these formats in your workflow, Divergent Media has another application called EditReady.  You can check it out at [http://www.divergentmedia.com/editready](http://www.divergentmedia.com/editready).  EditReady is available at a discount to existing ClipWrap customers.
+
 
 ##Overview##
 Modern file-based cameras record to a variety of types of media (SD cards, Harddisk, Compact Flash, etc) in two primary formats, MTS and M2T. These files, called transport files, are ideal for this type of recording, but they're not ideal for post production, particularly on the Macintosh.
@@ -74,7 +78,7 @@
 ##Manually Spanning##
 There may be times when ClipWrap can't automatically detect the clips in a sequence. Often this happens when files have been renamed or moved, or if a camera is using a non-standard naming scheme.  **Only join clips that were split during recording.**  If you join other clips, you'll likely encounter sync issues or visual glitches.  For joining discrete clips, we recommend using [Add Movie](https://itunes.apple.com/us/app/addmovie/id426306166?mt=12) after converting your files with ClipWrap.
 
-In these cases, you can manually span clips. You can select "Open Multiple" from the "File" menu to join a set of clips. Alternatively, you can add all of your clips to the ClipWrap window. Select the first clip in the sequence, then hold down the shift key and click the last key in the sequence.  
+In these cases, you can manually span clips. You can select "Open Multiple" from the "File" menu to join a set of clips. Alternatively, you can add all of your clips to the ClipWrap window. Select the first clip in the sequence, then hold down the shift key and click the last key in the sequence.
 
 Select "Clip" from the menubar, and click "join clips." This will build a multiclip composition.
 
@@ -86,7 +90,7 @@
 In rare cases, ClipWrap may incorrectly identify clips as spanned, even when they shouldn't be. To correct this, simply highlight the clip, then select the "Clip" menu and click "Separate Selected Clips."
 
 ###Rearranging Clips in a Spanned Group###
-You can manually rearrange clips in a group. Click the triangle to the left of the composition to reveal all of the clips. Click and drag the individual clips to rearrange them.  
+You can manually rearrange clips in a group. Click the triangle to the left of the composition to reveal all of the clips. Click and drag the individual clips to rearrange them.
 
 ##File Naming##
 ClipWrap maps input filenames directly to the output. So, a clip labeled "00000.mts" will become "00000.mov." When dealing with spans, output clips will take the name of the first file in the span.  If you set a reel name, it will be prepended to the file name.
@@ -106,7 +110,7 @@
 The reel name is a text field which will be added to the filename of your converted files, and will be embedded in the file's metadata.  The reel will then be available within Final Cut Pro and other apps that conform to the QuickTime reel specification.
 
 ###Adjust Framerate###
-The framerate adjustment drop down allows you to override the framerate of your output.  This is most commonly used for producing a "slow motion" effect with 50p or 60p content.  
+The framerate adjustment drop down allows you to override the framerate of your output.  This is most commonly used for producing a "slow motion" effect with 50p or 60p content.
 
 #Choosing a Workflow#
 While every situation is different, we can offer some general advice for choosing a workflow when using ClipWrap.
@@ -159,7 +163,7 @@
 ClipWrap leverages the video codecs that are already installed on your system for transcoding. This means that you will only be able to select the formats that have been previously installed on your system. ClipWrap checks you system on launch to determine which codecs you have installed, and disables any unavailable items in the format dropdown.
 In general, Apple's ProRes family of codecs are only available on systems with Final Cut Studio, Final Cut Pro X, Compressor or other Apple Pro-Apps installed.  The trial version of Final Cut Pro X also includes ProRes.  If you have Final Cut Pro X installed and do not see the ProRes option in ClipWrap, launch Final Cut Pro X and select "download additional software" from the Final Cut Pro X menu.
 Avid's DNxHD codec is available as part of the Media Composer installation, or as a download from [http://www.avid.com/dnxhd](http://www.avid.com/dnxhd).
-The Apple Intermediate Codec (AIC) is available if you have Final Cut Studio or iMovie installed, and so should be available on the vast majority of Macs. 
+The Apple Intermediate Codec (AIC) is available if you have Final Cut Studio or iMovie installed, and so should be available on the vast majority of Macs.
 
 ##Confirm your target drive is writable##
 Mac OS X cannot natively write files to NTFS formatted harddrives.
@@ -173,9 +177,9 @@
 ![Codec Conflict Alert](images/codecConflict.png)
 ClipWrap will alert you if you've got codecs that are known to cause problems.  If you'd like to check yourself, you can use the information below.
 
-* EyeTV MPEG Support.component 
+* EyeTV MPEG Support.component
 * Perian.component
-* A52.component 
+* A52.component
 * AC3Codec.component
 
 They may be found in any of the following locations on your computer:
@@ -197,7 +201,7 @@
 The command line interface accepts the following input:
 
 ```
-./ClipWrap -action <action> (-convertAudio yes/no) (-optimizeOutput <destApp>) (-reel <reelname>)   
+./ClipWrap -action <action> (-convertAudio yes/no) (-optimizeOutput <destApp>) (-reel <reelname>)
 (-adjustFramerate <framerate>) -srcFile <Source File> -dstFile <Destination File>
 
 Optimize Output Options:
@@ -233,7 +237,7 @@
 	f50p
 	f60p
 ```
-	
+
 You can use "./ClipWrap -help" to get a full list of available commands.
 
 

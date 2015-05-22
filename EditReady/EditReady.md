@@ -11,7 +11,7 @@ For news, updates, and support regarding EditReady, or to learn about other prod
 
 ## Overview ##
 
-Modern production pipelines often involve generating QuickTime or MXF files with a variety of codecs.  A single production may use a mix of "A-Camera" files in ProRes422, "B-Camera" footage in H.264, as well as archive footage in formats like Apple Intermediate Codec.
+Modern production pipelines often involve generating a wide mix of QuickTime, MXF, AVCHD, and HDV files.  A single production may use a mix of "A-Camera" files in ProRes422, "B-Camera" footage in H.264, as well as archive footage in formats like Apple Intermediate Codec.
 
 
 EditReady lets you take this mix of files and convert them into a single mezzanine format, offering your post-production pipeline simplicity, reliability, and performance.
@@ -48,7 +48,7 @@ If you've purchased from our website, you can download a "fresh" copy at any tim
 
 # Application Overview #
 
-EditReady accepts files in the QuickTime MOV, MP4 and M4V formats, as well as MXF files from most cameras that record to the MXF format. In general, if a file plays in QuickTime Player (for MOV/MP4/M4V files) or VLC (for MXF files), it'll play in EditReady.
+EditReady accepts files in the QuickTime MOV, MP4 and M4V formats, as well as MXF files from most cameras that record to the MXF format.  In addition, it supports files in the AVCHD and HDV formats, which generally use the M2T, MTS and M2TS extensions.  In general, if a file plays in QuickTime Player (for MOV/MP4/M4V files) or VLC (for MXF, M2T and MTS files), it'll play in EditReady.
 
 ![EditReady](images/cleanapp.png)
 
@@ -75,8 +75,7 @@ You can open multiple windows by selecting "New Window" from the File menu.  Thi
 
 ![Two batches processing](images/multiplebatches.png)
 
-Each clip will show a progress indicator below the thumbnail.  In addition, you can see batch progress within the toolbar.  You may pause or resume conversion using the play/pause indicator next to the batch's progress.
-
+After starting a batch, the sidebar will toggle to the progress tab, which will show you progress information for each clip.  The top of the EditReady window will show you progress information for the overall batch (or batches).
 
 
 # Previewing Files #
@@ -207,18 +206,61 @@ AAC compressed audio is an ideal choice if you'll be creating H.264 compressed f
 
 Remove the audio entirely.
 
-## Framerate ##
+# Options Library #
+
+EditReady provides a set of additional adjustments that can be added to your batch.  These are available via the "Options Library" which can be found in the Batch menu.  Each library entry has a set of adjustments, and is saved as part of your presets.
+
+
+## Framerate Adjustment ##
 
 EditReady allows you to adjust the output framerate of your file during conversion.  This is sometimes called conforming.  **This setting adjusts the playback rate of your media**, it does not add or remove frames from your footage.  This setting is especially useful when creating "slow motion" footage with a source that shoots at 60 or 120 frames per second (or higher). Framerate adjustment is not available when using "passthrough" settings.
 
 
-# LUTs #
+## LUTs ##
 
 EditReady allows you to load LUTs ("Look up Table") which can apply color grading looks to your footage during conversion.  This can be very powerful if, for example, your camera records in the log space, but you wish to edit with a linear mapping.  EditReady supports LUTs in the 3DL and Cube formats.  If you attempt to load a LUT in an unsupported format, EditReady will prompt you to submit the file to Divergent Media, so we can evaluate adding support for that format in the future.
 
 If you save a new preset with a LUT, that LUT will be included in the preset.
 
 Please note, LUTs require additional processing, and will slow the conversion process.
+
+## Frame Size Adjustment ##
+
+This option allows you resize your source media to match a destination size.  Three scaling options are provided.
+
+### Source Aspect ###
+
+Maintain the aspect ratio of the source clip, and fit it within the target size.  For example, a 4096x2160 source clip with a 1920x1080 target size would be scaled to 1920x1012 in order to maintain the aspect ratio.
+
+### Destination Size (pad) ###
+
+Add padding (black bars) to fit the scaled source within the target size.  A 4096x2160 source with a 1920x1080 target would have small black bars at the top and bottom.
+
+### Destination Size (stretch) ###
+
+Stretch the source to fit the target size, regardless of the aspect ratio.
+
+## H.264 Options ##
+
+This entry is specifically for presets that use the H.264 codec.  By default, EditReady does a high quality H.264 encode which aims to preserve the image quality of your source.  This setting allows you to adjust a variety of H.264 parameters.  These settings will be disabled if your destination codec is something other than H.264.
+
+### Target Bitrate ###
+
+This will instruct EditReady to aim for this bitrate as an average for the file.  The automatic setting will adjust automatically to maintain a high quality image.
+
+### Keyframes ###
+
+This is a control for the number of keyframes (I-frames) per second in the output stream.  
+
+### Profile ###
+
+H.264 has a wide variety of profiles for encoding.  EditReady will choose the appropriate sub-profile based on the bitrate, keyframe, entropy coding, and resolution settings.
+
+### Entropy ###
+
+H.264 provides two types of entropy coding.  In general, CABAC is more efficient, but may require additional CPU power for playback and may not be supported on old devices.  In those cases, you may wish you use the CAVLAC setting.
+
+
 
 # Troubleshooting
 
@@ -232,9 +274,9 @@ Some issues may be caused by invalid output destinations.  To test whether this 
 
 Does your file play within QuickTime player?  If QuickTime player reports that the file is unplayable, EditReady is unlikely to be able to convert it.  If QuickTime reports that you need additional components to play the file, you should download and install those to resolve the issue.
 
-### MXF Files ###
+### MXF, HDV (M2T), and AVCHD (MTS) Files ###
 
-You can test whether your MXF file is valid by trying to play it with the free VLC player, from [www.videolan.org](http://www.videolan.org).  If the file plays in VLC but won't open or convert in EditReady, please [contact support](mailto:support@divergentmedia.com).
+You can test whether your MXF or AVCHD/HDV (MTS/M2T) file is valid by trying to play it with the free VLC player, from [www.videolan.org](http://www.videolan.org).  If the file plays in VLC but won't open or convert in EditReady, please [contact support](mailto:support@divergentmedia.com).
 
 ## Submitting File Diagnostics ##
 
@@ -280,4 +322,4 @@ EditReady can be automated via its command line interface.  For an explanation o
 
 # Appendix B #
 
-EditReady makes use of MXF parsing libraries from the [FFmpeg Project](http://ffmpeg.org) under the LGPLv2.1.  [Download the FFmpeg source code](https://github.com/FFmpeg/FFmpeg/commit/f406bf3fa933be089bd76a95f75ea57b0942f8c5).
+EditReady makes use of libraries from the [FFmpeg Project](http://ffmpeg.org) under the LGPLv2.1.  [Download the FFmpeg source code](https://github.com/FFmpeg/FFmpeg/commit/f406bf3fa933be089bd76a95f75ea57b0942f8c5).

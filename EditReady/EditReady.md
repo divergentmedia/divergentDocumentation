@@ -210,6 +210,8 @@ Remove the audio entirely.
 
 EditReady provides a set of additional adjustments that can be added to your batch.  These are available via the "Options Library" which can be found in the Batch menu.  Each library entry has a set of adjustments, and is saved as part of your presets.
 
+![Options Library](images/library.png)
+
 
 ## Framerate Adjustment ##
 

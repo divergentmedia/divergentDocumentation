@@ -34,10 +34,10 @@ To remove EditReady, simply drag it to your trash.
 ## Registering ##
 When you first launch EditReady, it will run in trial mode, which will only transcode the first minute of each clip. To lift this restriction, you must purchase an unlock key from <http://store.divergentmedia.com>.
 
-![Registration Window](images/regdialog2.png)
+![Registration Window](images/regdialog1.png)
 If you've already purchased EditReady, click the "Enter Key" button and enter your name and key exactly as it is shown in your registration information. You may display this menu at any time by selecting "Registration" from the EditReady menu.
 
-![License Entry](images/regdialog1.png)
+![License Entry](images/regdialog2.png)
 
 ## Updating ##
 EditReady automatically checks for updates during startup. If you'd like to force it to check for an update, select "Check for Updates" from the EditReady menu.

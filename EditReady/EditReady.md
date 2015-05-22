@@ -73,7 +73,7 @@ You can open multiple windows by selecting "New Window" from the File menu.  Thi
 ## Monitoring Progress ##
 
 
-![Two batches processing](images/multiplebatches.png)
+![A Batch Processing](images/multiplebatches.png)
 
 After starting a batch, the sidebar will toggle to the progress tab, which will show you progress information for each clip.  The top of the EditReady window will show you progress information for the overall batch (or batches).
 

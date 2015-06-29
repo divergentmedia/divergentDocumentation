@@ -206,9 +206,9 @@ AAC compressed audio is an ideal choice if you'll be creating H.264 compressed f
 
 Remove the audio entirely.
 
-# Options Library #
+# Additional Batch Options #
 
-EditReady provides a set of additional adjustments that can be added to your batch.  These are available via the "Options Library" which can be found in the Batch menu.  Each library entry has a set of adjustments, and is saved as part of your presets.
+EditReady provides a set of additional adjustments that can be added to your batch.  These are available via "Show Additional Options" which can be found in the Batch menu.  Each library entry has a set of adjustments, and is saved as part of your presets.
 
 ![Options Library](images/library.png)
 

@@ -135,6 +135,31 @@ To remove a metadata entry, click the minus sign to the right of the entry.
 
 EditReady allows you to set metadata across a set of files with a single operation.  From the Metadata menu, select either "Set Metadata for All" or "Set Metadata For Flagged."  Select a category and metadata key, and then enter a value.  This value will be set across all of the target files, and will replace any existing values for that key.
 
+# Joining Files #
+
+There are a number of ways in which EditReady can join media, depending on the type of source you're working with.
+
+## Manually Joining Files ##
+
+To manually join files, select the files you wish to join within EditReady, and then select "join" from the "clip" menu.  You may also split joins using the "split" command in that menu.
+
+EditReady will only allow you to join media if the files all have the same frame size and framerate.  If there's a mismatch, the join menu option will be disabled.
+
+## GoPro ##
+
+EditReady will automatically join files that follow the standard GoPro naming conventions. 
+
+
+## AVCHD and HDV ##
+
+AVCHD and HDV cameras and direct to disk recorders automatically split long recordings across multiple files.  This split happens at a low level, so the files need to be recombined *before* they're converted.  If you add the root AVCHD folder from a card, or a set of HDV files with a known naming scheme, EditReady will automatically join them.
+
+If you only have the MTS files, without the rest of the card metadata, you may still manually join the files (see above).  EditReady will attempt to detect whether the files are from a consecutive group, and will take the appropriate action to join them.
+
+## MXF Files ##
+
+Most cameras that work with the MXF format do not have limited file sizes.  However, some Canon cameras do split long recordings across multiple files.  In these cases, EditReady will attempt to automatically join the files.
+
 # Naming Your Files #
 
 EditReady includes powerful file naming features, so that you can keep track of all the files in your post production pipeline.

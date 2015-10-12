@@ -178,6 +178,8 @@ Drag that tag to the "dest file name" field to include that metadata element in 
 
 For example, you may wish to add the "Reel" key and the "Creation date" keys to the existing "auto-increment" entry.  You can drag and drop to rearrange values within the "dest file name" field, and you can type to add characters like dashes or underscores.  So, you could easily have all of your output files named "(Reel)-(CreationDate)-(Auto-increment).mov".
 
+You can also use a forward slash ("/") to include folders in your output naming scheme.  So you could use "(Reel)/(Source Name)" to generate a new folder for each reel in your batch.
+
 \break
 
 ## Overwriting Existing Files ##
@@ -186,6 +188,10 @@ EditReady will not allow you to proceed if your destination files will overwrite
 
 
 ![File conflict alert](images/overwrite.png)
+
+## Destination Folder ##
+
+You can click the icon to the right of "Dest Folder" to select an output folder for your batch.  Within the dialog, you will also have the option to select "same as source" (In Mac OS X 10.11, "El Capitan," click the options button).  That will cause EditReady to store your output files in the same folders as the source files. Please note, EditReady will not allow you to overwrite your source media, so make sure your file naming scheme doesn't conflict with your existing files.
 
 # Custom Presets
 
@@ -210,6 +216,12 @@ These choices may be confusing if you're used to seeing DNxHD listed with a vari
 For example, if your source is 1920x1080i60, the Low, Medium, and High settings correspond to DNxHD 100, 145 and 220, respectively.  For a 1920x1080p24 file, the bitrates are 36, 80 and 176.
 
 If you'd like to see a full chart of the bitrates used by DNxHD, take a look at the [DNxHD whitepaper](http://www.avid.com/static/resources/US/documents/dnxhd.pdf) from Avid.
+
+### Avid DNxHR ###
+
+Avid DNxHR is designed for larger-than-HD sources, like 2k and 4k.  EditReady suppots DNxHR, but you'll need to create a custom preset in order to use it.  Select "custom" from the preset dropdown, and then select the desired DNxHR codec from the "Video Format" dropdown.  We strongly recommend using PCM audio with this format.  You can save that preset for reuse later by selecting "save current preset" from the batch menu.  
+
+For details on the framerates, frame sizes, and bitrates that DNxHR supports, see [Avid's format table](http://avid.force.com/pkb/articles/en_US/White_Paper/DNxHR-Codec-Bandwidth-Specifications).
 
 ### H.264 ###
 
@@ -287,6 +299,9 @@ H.264 has a wide variety of profiles for encoding.  EditReady will choose the ap
 
 H.264 provides two types of entropy coding.  In general, CABAC is more efficient, but may require additional CPU power for playback and may not be supported on old devices.  In those cases, you may wish you use the CAVLAC setting.
 
+## Remove Unused Audio Tracks ##
+
+Many cameras now record four or eight tracks of audio.  In almost all cases, only one or two tracks are actually used.  By enabling this option, EditReady will scan for silent tracks and remove them during conversion.  EditReady will only remove tracks that are truly silent (digital silence - all zeros) and not tracks that are just very quiet (for example, an XLR connector without a mic attached).
 
 
 # Troubleshooting

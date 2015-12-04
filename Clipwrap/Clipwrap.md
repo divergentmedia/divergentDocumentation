@@ -32,7 +32,7 @@
 When you first launch ClipWrap, it will run in trial mode, which will only rewrap or transcode the first minute of each clip. To lift this restriction, you must purchase a serial number and enter it in the Registration dialog.
 
 Serial numbers can be purchased directly from divergent media by visiting our web store at
-<https://store.divergentmedia.com>.  You can also purchase via the Mac App Store.
+<https://store.divergentmedia.com>.
 If you've already purchased ClipWrap, click the "Enter Key" button and enter your name and key exactly as it is shown in your registration information. You may display this menu at any time by selecting "Registration" from the ClipWrap menu.
 
 ##Updating##

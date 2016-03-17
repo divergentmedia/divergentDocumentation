@@ -6,7 +6,7 @@
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage[export]{adjustbox}
-\usepackage{tikz} 
+\usepackage{tikz}
 \usepackage{fixltx2e} % provides \textsubscript
 
 
@@ -71,7 +71,7 @@ $endif$
 % COLIN CHANGES
 
 
-
+\def\tightlist{}
 \usepackage[margin=1in]{geometry}
 
 
@@ -182,7 +182,7 @@ $endif$
  \catcode`\@=11\relax%
  \gdef\includegraphics{\@ifnextchar[{\Oldincludegraphics}{\Oldincludegraphics[width=\maxwidth]}}%
 }
- 
+
 %$endif$
 
 \ifxetex

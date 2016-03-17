@@ -89,6 +89,11 @@ Click the "Add LUT" icon to apply a LUT to your file during playback.  This allo
 
 Keep in mind that LUTs can be compute-intensive, particularly on 4K files.  Slower computers (or computers with slower graphics cards) may have trouble with realtime playback.
 
+## ScopeLink ##
+
+EditReady integrates directly with our [ScopeBox](http://www.divergentmedia.com/scopebox) application to provide realtime video scopes while playing files in EditReady.  If you've got ScopeBox installed, simply add the "EditReady" ScopeLink source.  EditReady will send the signal from your front-most, playing Preview window to ScopeBox.
+
+We offer a [free trial](http://www.divergentmedia.com/scopebox#trial) of ScopeBox if you're not already a user.
 
 # Metadata #
 
@@ -147,7 +152,7 @@ EditReady will only allow you to join media if the files all have the same frame
 
 ## GoPro ##
 
-EditReady will automatically join files that follow the standard GoPro naming conventions. 
+EditReady will automatically join files that follow the standard GoPro naming conventions.
 
 
 ## AVCHD and HDV ##
@@ -219,7 +224,7 @@ If you'd like to see a full chart of the bitrates used by DNxHD, take a look at 
 
 ### Avid DNxHR ###
 
-Avid DNxHR is designed for larger-than-HD sources, like 2k and 4k.  EditReady suppots DNxHR, but you'll need to create a custom preset in order to use it.  Select "custom" from the preset dropdown, and then select the desired DNxHR codec from the "Video Format" dropdown.  We strongly recommend using PCM audio with this format.  You can save that preset for reuse later by selecting "save current preset" from the batch menu.  
+Avid DNxHR is designed for larger-than-HD sources, like 2k and 4k.  EditReady suppots DNxHR, but you'll need to create a custom preset in order to use it.  Select "custom" from the preset dropdown, and then select the desired DNxHR codec from the "Video Format" dropdown.  We strongly recommend using PCM audio with this format.  You can save that preset for reuse later by selecting "save current preset" from the batch menu.
 
 For details on the framerates, frame sizes, and bitrates that DNxHR supports, see [Avid's format table](http://avid.force.com/pkb/articles/en_US/White_Paper/DNxHR-Codec-Bandwidth-Specifications).
 
@@ -289,7 +294,7 @@ This will instruct EditReady to aim for this bitrate as an average for the file.
 
 ### Keyframes ###
 
-This is a control for the number of keyframes (I-frames) per second in the output stream.  
+This is a control for the number of keyframes (I-frames) per second in the output stream.
 
 ### Profile ###
 

@@ -39,6 +39,10 @@ If you've already purchased EditReady, click the "Enter Key" button and enter yo
 
 ![License Entry](images/regdialog2.png)
 
+## Upgrading from EditReady 1.0 ##
+
+If you're updating to EditReady 2.0 from an older copy, you'll need a new key.  Head to [our store](http://store.divergentmedia.com) to learn about upgrading, or [contact us](mailto:support@divergentmedia.com) for more information.
+
 ## Updating ##
 EditReady automatically checks for updates during startup. If you'd like to force it to check for an update, select "Check for Updates" from the EditReady menu.
 
@@ -48,7 +52,7 @@ If you've purchased from our website, you can download a "fresh" copy at any tim
 
 # Application Overview #
 
-EditReady accepts files in the QuickTime MOV, MP4 and M4V formats, as well as MXF files from most cameras that record to the MXF format.  In addition, it supports files in the AVCHD and HDV formats, which generally use the M2T, MTS and M2TS extensions.  In general, if a file plays in QuickTime Player (for MOV/MP4/M4V files) or VLC (for MXF, M2T and MTS files), it'll play in EditReady.
+EditReady accepts files in the QuickTime MOV, MP4 and M4V formats, as well as files from most cameras that record to the MXF, AVCHD and HDV formats.
 
 ![EditReady](images/cleanapp.png)
 
@@ -198,6 +202,10 @@ EditReady will not allow you to proceed if your destination files will overwrite
 
 You can click the icon to the right of "Dest Folder" to select an output folder for your batch.  Within the dialog, you will also have the option to select "same as source" (In Mac OS X 10.11, "El Capitan," click the options button).  That will cause EditReady to store your output files in the same folders as the source files. Please note, EditReady will not allow you to overwrite your source media, so make sure your file naming scheme doesn't conflict with your existing files.
 
+## File Format ##
+
+In most cases, EditReady outputs QuickTime (.mov) files.  However, when DNxHD or DNxHR are the destination video formats, you may optionally choose to output in either the OP-1A or OP-Atom formats, using the "File Format" dropdown.  In all other cases, that dropdown will be disabled.  
+
 # Custom Presets
 
 EditReady is an integral part of a post production workflow. To make the usage even more seamless, you can create custom presets that match your workflow needs.  Begin by selecting the "custom" preset in the preset dropdown.
@@ -247,6 +255,8 @@ AAC compressed audio is an ideal choice if you'll be creating H.264 compressed f
 ### None ###
 
 Remove the audio entirely.
+
+
 
 # Additional Batch Options #
 
@@ -308,6 +318,31 @@ H.264 provides two types of entropy coding.  In general, CABAC is more efficient
 
 Many cameras now record four or eight tracks of audio.  In almost all cases, only one or two tracks are actually used.  By enabling this option, EditReady will scan for silent tracks and remove them during conversion.  EditReady will only remove tracks that are truly silent (digital silence - all zeros) and not tracks that are just very quiet (for example, an XLR connector without a mic attached).
 
+
+## Video Overlays ##
+
+The Video Overlays option provides a powerful toolset for creating custom overlays on your videos.  These can be used to burn in timecode, add watermarking, scene labels, and much more.  After enabling the "Video Overlays" option click "Launch Editor" to launch the graphical overlay builder.  Overlays are saved as part of presets.
+
+### Text Overlays ###
+
+To add custom text to your overlay, click the "T" icon in the upper right corner.  A new text box will be added to your overlay.  You can click and drag to move the text box, or resize it.  Click in the box to edit the text.  You can use the controls on the right side of the window to adjust your font size, color, background and more.  By default, text will have a black background.  Adjust the background opacity to remove the background.
+
+![Text Overlay](images/textoverlay.png)
+
+### Image Overlays ###
+
+Image overlays make it easy to add graphical watermarks to your video. To add an image, click the image icon in the upper right corner, then select any image file from your Mac.  EditReady supports transparency in overlay images, which makes it ideal for things like network logos.   Click and drag to move or resize your image.  
+
+![Image Overlay](images/imageoverlay.png)
+
+### Metadata Overlays ###
+
+Metadata overlays allow you to customize your overlays based on data from your video files.  For example, you can add timecode burns, or include a reel name.  To add a metadata overlay, open the Overlay Editor.  Then select a clip within EditReady and select "Edit Metadata" from the Clip Menu.  Then simply drag the metadata tag icon from the Metadata Editor to the Overlay Editor. Your metadata key will appear in the Overlay Editor, surrounded by a rounded rectangle.  You can adjust the font size and background color just like a text overlay.
+
+![Dragging a Metadata Key](images/dragoverlay.png)
+
+
+![Timecode Overlay](images/tcoverlay.png)
 
 # Troubleshooting
 

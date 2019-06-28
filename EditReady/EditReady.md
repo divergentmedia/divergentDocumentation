@@ -34,10 +34,10 @@ To remove EditReady, simply drag it to your trash.
 ## Registering ##
 When you first launch EditReady, it will run in trial mode, which will only transcode the first minute of each clip. To lift this restriction, you must purchase an unlock key from <http://store.divergentmedia.com>.
 
-![Registration Window](images/regdialog1.png)
+![Registration Window](EditReady/images/regdialog1.png)
 If you've already purchased EditReady, click the "Enter Key" button and enter your name and key exactly as it is shown in your registration information. You may display this menu at any time by selecting "Registration" from the EditReady menu.
 
-![License Entry](images/regdialog2.png)
+![License Entry](EditReady/images/regdialog2.png)
 
 ## Upgrading from EditReady 1.0 ##
 
@@ -54,7 +54,7 @@ If you've purchased from our website, you can download a "fresh" copy at any tim
 
 EditReady accepts files in the QuickTime MOV, MP4 and M4V formats, as well as files from most cameras that record to the MXF, AVCHD and HDV formats.
 
-![EditReady](images/cleanapp.png)
+![EditReady](EditReady/images/cleanapp.png)
 
 While you can customize many parts of the conversion process, EditReady includes a variety of presets so you can get started right away.
 
@@ -77,7 +77,7 @@ You can open multiple windows by selecting "New Window" from the File menu.  Thi
 ## Monitoring Progress ##
 
 
-![A Batch Processing](images/multiplebatches.png)
+![A Batch Processing](EditReady/images/multiplebatches.png)
 
 After starting a batch, the sidebar will toggle to the progress tab, which will show you progress information for each clip.  The top of the EditReady window will show you progress information for the overall batch (or batches).
 
@@ -86,7 +86,7 @@ After starting a batch, the sidebar will toggle to the progress tab, which will 
 
 EditReady allows you to preview your files before conversion.  To access the player, select the clip and choose "Open Preview" from the Clip menu, or press command-3 on the keyboard.
 
-![Preview Window](images/player.png)
+![Preview Window](EditReady/images/player.png)
 
 ## Applying LUTs during Playback ##
 Click the "Add LUT" icon to apply a LUT to your file during playback.  This allows you to quickly preview any conversions you'd like to apply.  For details on LUT support in EditReady, see the [LUTs](#luts) chapter.
@@ -110,15 +110,15 @@ Metadata may include camera settings like F-Stop, Iris, and Shutter, as well as 
 
 In some cases, there may be multiple entries for a single category of metadata.  For example, your camera may store a "Creation date" in a variety of places throughout the file.  If the values within the key don't match, EditReady will display "Conflicting Values" and provide a disclosure triangle to reveal the individual entries.  If you'd like to unify all of these entries with a single value, click the checkbox to the right of the value you'd like to preserve.  Any other value will be replaced.
 
-![Metadata Window](images/conflict.png)
+![Metadata Window](EditReady/images/conflict.png)
 
-![Metadata Window](images/resolved.png)
+![Metadata Window](EditReady/images/resolved.png)
 
 \break
 
 If your camera includes GPS data in the metadata, those fields will have a "pin" icon, allowing you to view the clip location on a map.
 
-![Map visualization](images/erwithmaps.png)
+![Map visualization](EditReady/images/erwithmaps.png)
 
 Some metadata is intended only for use by the camera manufacturer during troubleshooting, so may appear as simply a string of numbers or letters within EditReady.
 
@@ -131,7 +131,7 @@ To edit an entry, simply double click and begin typing.  Depending on the field,
 
 To add a new entry click the "add metadata" icon in the upper right corner of the Metadata window.  You'll be able to select from a variety of categories and metadata keys.  If you'd like to customize this selection, see [appendix a](#appendix-a).  Some metadata keys will restrict the types of data you can enter (for example, timecode entries must be valid timecode values).
 
-![Adding Metadata](images/addmetadata.png)
+![Adding Metadata](EditReady/images/addmetadata.png)
 
 Keys that already exist in your file will be disabled from the "add metadata" screen.
 
@@ -175,7 +175,7 @@ EditReady includes powerful file naming features, so that you can keep track of 
 
 The popup menu to the right of the "Dest File Name" label is pre-populated with a handful of options.  You may, for example, choose to have your output file names match the input file names, or have them be named with an automatically incrementing number.
 
-![Naming options](images/naming.png)
+![Naming options](EditReady/images/naming.png)
 
 ## Customizing File Names ##
 
@@ -183,7 +183,7 @@ In addition to the presets, you can add additional values from your file's metad
 
 Drag that tag to the "dest file name" field to include that metadata element in the destination filename.
 
-![Dragging the "Reel" tag](images/draggingreel.png)
+![Dragging the "Reel" tag](EditReady/images/draggingreel.png)
 
 For example, you may wish to add the "Reel" key and the "Creation date" keys to the existing "auto-increment" entry.  You can drag and drop to rearrange values within the "dest file name" field, and you can type to add characters like dashes or underscores.  So, you could easily have all of your output files named "(Reel)-(CreationDate)-(Auto-increment).mov".
 
@@ -196,7 +196,7 @@ You can also use a forward slash ("/") to include folders in your output naming 
 EditReady will not allow you to proceed if your destination files will overwrite your source files.  In other cases where files will be overwritten, or where there is insufficient metadata to populate a filename, EditReady will alert you and allow you to continue.
 
 
-![File conflict alert](images/overwrite.png)
+![File conflict alert](EditReady/images/overwrite.png)
 
 ## Destination Folder ##
 
@@ -262,7 +262,7 @@ Remove the audio entirely.
 
 EditReady provides a set of additional adjustments that can be added to your batch.  These are available via "Show Additional Options" which can be found in the Batch menu.  Each library entry has a set of adjustments, and is saved as part of your presets.
 
-![Options Library](images/library.png)
+![Options Library](EditReady/images/library.png)
 
 
 ## Framerate Adjustment ##
@@ -327,22 +327,22 @@ The Video Overlays option provides a powerful toolset for creating custom overla
 
 To add custom text to your overlay, click the "T" icon in the upper right corner.  A new text box will be added to your overlay.  You can click and drag to move the text box, or resize it.  Click in the box to edit the text.  You can use the controls on the right side of the window to adjust your font size, color, background and more.  By default, text will have a black background.  Adjust the background opacity to remove the background.
 
-![Text Overlay](images/textoverlay.png)
+![Text Overlay](EditReady/images/textoverlay.png)
 
 ### Image Overlays ###
 
 Image overlays make it easy to add graphical watermarks to your video. To add an image, click the image icon in the upper right corner, then select any image file from your Mac.  EditReady supports transparency in overlay images, which makes it ideal for things like network logos.   Click and drag to move or resize your image.  
 
-![Image Overlay](images/imageoverlay.png)
+![Image Overlay](EditReady/images/imageoverlay.png)
 
 ### Metadata Overlays ###
 
 Metadata overlays allow you to customize your overlays based on data from your video files.  For example, you can add timecode burns, or include a reel name.  To add a metadata overlay, open the Overlay Editor.  Then select a clip within EditReady and select "Edit Metadata" from the Clip Menu.  Then simply drag the metadata tag icon from the Metadata Editor to the Overlay Editor. Your metadata key will appear in the Overlay Editor, surrounded by a rounded rectangle.  You can adjust the font size and background color just like a text overlay.
 
-![Dragging a Metadata Key](images/dragoverlay.png)
+![Dragging a Metadata Key](EditReady/images/dragoverlay.png)
 
 
-![Timecode Overlay](images/tcoverlay.png)
+![Timecode Overlay](EditReady/images/tcoverlay.png)
 
 # Troubleshooting
 

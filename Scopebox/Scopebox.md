@@ -15,8 +15,8 @@ ScopeBox 4 is an all-new application, building upon a decade of ScopeBox innovat
 ### CIE Plot Palette ###
 With HDR, Rec 2020, p3 and more, the world of colorspaces has gotten incredible complex.  The CIE Plot allows you to visualize gamut across multiple sets of primaries. 
 
-### Luma History Plot ###
-Traditional scopes only show you what's happening right now.  The Luma History palette continuously refreshes, showing you your luma (or RGB) history over the last 30 seconds.   
+### Luma and RGB Timetrace Plot ###
+Traditional scopes only show you what's happening right now.  The Luma and RGB Timetrace palettes continuously refresh, showing you your luma (or RGB) history over the last 30 seconds.  
 
 ### False Color ###
 One of the most highly-requested features, false color in the preview provides a visual way to identify issues, using a variety of presets.  And you can leverage the ability of ScopeBox to host multiple copies of the same palette, running both a normal color and false color preview side-by-side.
@@ -27,9 +27,9 @@ ScopeBox 4 has dramatically enhanced support for loading pre-recorded movies, in
 ### Resolve Support in ScopeLink ###
 Until now, using ScopeBox with Resolve meant running ScopeBox on a separate Mac.  Thanks to the addition of Resolve support in ScopeLink, you can run it all on the same Mac, without any additional hardware. 
 
-### Filter Overlays ###
+### Feature Insights ###
 
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+Feature Insights allow you to focus your scopes on a specific section of your signal.  Maybe you want to focus on one face, or a window in the background.  By setting a feature insight within your preview palette, all of your scopes will highlight just that portion of the signal. 
 
 # Getting Started #
 
@@ -145,6 +145,17 @@ Sources will be saved with the device name set in the sidebar (see above).
 
 You can set a default source, which will automatically be loaded (if available) when ScopeBox is launched, in the preferences.
 
+# Loading Stills #
+
+ScopeBox provides a "still-store" which can load images to be overlaid on other palettes.  You can load images via the media gallery tab in the sidebar.
+
+![Loading Stills](ScopeBox/images/StillStore.png)
+
+# Target Values #
+
+Target Values in ScopeBox allow you to define preset values that will be marked on your scopes.  From the target values tab, you can set targets using a standard color picker or via a specific numeric value.  The label you add will be shown within your scopes.
+
+![Setting Targets](ScopeBox/images/Targets.png)
 
 # Palette Overview #
 ## Working with Palettes ##
@@ -191,9 +202,9 @@ The Preview palette displays video source output and can replace a traditional f
 
 ![The Preview Palette with 4x3 mask, center marks, and title safe overlays enabled.](ScopeBox/images/PreviewWithOverlays.png)
 
-## Filter Overlays ##
+## Feature Insights ##
 
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+Feature Insights let you select just a portion of your image to focus on.  Once you enable a feature insight, your scopes will all highlight the relevant portion of your signal.  To set a feature insight, hold the option key and then click and drag on your preview palette to select a portion of the image. You can reset your feature insights using the view menu. 
 
 ## Controls ##
 When you select the preview palette, the following controls will appear in the sidebar.
@@ -229,12 +240,12 @@ Provides center cross-hairs to assist with composition.
 ### Overlays ###
 
 #### False Color ####
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+False color colorizes the preview monitor with a color mapping based on the signal's luminance value. ScopeBox ships with a number of industry standard profiles. 
 
 #### Image Overlay ####
 Overlays allow you to layer an image, movie, or liver source on top of your source. This can be used for custom guides for framing around your productions lower thirds, a background that will later be chroma keyed into the shot, or video footage you need to match framing or exposure in.
 
-After enabling the "image overlay" option, you'll be shown a list of sources. To learn about loading image sources, see the TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO  section.
+After enabling the "image overlay" option, you'll be shown a list of sources. To learn about loading image sources, see the [loading stills](#Loading-Stills) section. 
 
 Below the image well is a slider to adjust the opacity of the overlay.
 
@@ -256,9 +267,9 @@ This shows you the highest level achieved since the peak hold was reset.  Click 
 
 # Surround Meters #
 
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-
 The Surround Meters give you a way to visualize your audio signal in a surround sound context. This allows you to quickly analyze the surround components of your audio mix, even in environments that don't lend themselves to proper audio monitoring.
+
+TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
 
 ![The Surround Meter Palette](ScopeBox/images/SurroundLevels.png)
 
@@ -338,7 +349,8 @@ The default graticule style for the vectorscope a standard set of concentric cir
 ScopeBox also offers a "hue vectors" graticule style, which provides a more modern, color correct and camera matching specific overlay. This view gives more contextual information for hue adjustments across the entire range of saturations, while removing unneeded clutter more appropriate for signal-analysis and legality monitoring. The perpendicular hash marks on each line represent a 75% target
 
 ### Show Targets ###
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+
+See the [Target Values](#Target-Values) section to learn more about how to set targets.  You can enable or disable them within a given palette. 
 
 > ￼**Hue vectors graticule by [Alexis Van Hurkman](http://vanhurkman.com/wordpress/?p=2563) is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)**
 
@@ -427,7 +439,7 @@ The Luma Histogram can be toggled between "log" and "linear" scaling. In log mod
 Linear scaling causes the vertical axis to be scaled to the height of the most populated luminance level.
 
 ### HDR Overlays ###
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+HDR overlays show a lower fidelity histogram of common ST2084-specific luma ranges, along with a total coverage percentage.
 
 # RGB Histogram #
 The RGB Histogram displays the intensity of the Red, Green and Blue signals. Similar to the Luma Histogram, the leftmost column is the lowest intensity and the rightmost is the highest intensity.
@@ -464,24 +476,19 @@ There are six different channels which may be plotted on either the X or Y axis.
 G versus B, you'll be able to quickly judge whether any data will be clipped during the YUV to RGB conversion.
 
 # CIE Plot #
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+The CIE plot provides a standard display allowing you to see how your signal fits within a given colorspace. The CIE Plot by itself shows the gamut of all visible chromaticities.  Within the CIE Plot palette, you can enable additional colorspaces to determine whether your signal is within gamut for these.  ScopeBox comes preset with Rec 709, P3, and Rec 2020 primaries. You can also enable custom primaries and set your own values. 
 
-# Luma History #
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+![CIE Plot displaying Rec709 color bars with Rec 709 and P3 primaries](ScopeBox/images/cieplot.png)
+
+# Luma and RGB Timetrace #
+Traditional scopes only show you what's happening right now.  The Luma and RGB Timetrace palettes continuously refresh, showing you your luma (or RGB) history over the last 30 seconds.  You can use the timetrace to catch an excursion or to get a quick glance view of how your signal changes over time.   
 
 # Alerts #
 
-Alerts provide a way to monitor your signal, even when you don't have your eyes glued to the screen. Alerts are tied to recorders, and are enabled on a source by source basis.
+Alerts provide a way to monitor your signal, even when you don't have your eyes glued to the screen.  Alerts are enabled on a source-by-source basis using the Alert tab in the source sidebar.  Alerts only work with sources that provide timecode, including movie files. 
 
 ## Activating Alerts ##
-Alerts can be attached to any recorder. After revealing the cliplist, click the recorder bar and check the box in the "Record Alerts" section of the bar on the right.
-
-You may also select a format for alert recording. In addition to displaying in the cliplist, alerts will be saved to a file alongside your recorded output. See the "Export Formats" section below for details.
-
-## Adding Alerts ##
-Initially, there are no alerts attached to your source. To attach alerts, check the "Record Alerts" box and then click the "add alert" button and select an alert type.
-
-![Alert List](ScopeBox/images/alertList.png)
+After adding a source, switch to the Alerts tab and check the boxes for the alerts you wish to activate.  
 
 ## Alert Types ##
 Alerts generally consist of a threshold value and a label. The threshold is the level at which the alert will be trigger. Labels allow you to add multiple copies of the same basic alert to your source, and is the name that will appear in your log. For example, you may wish to be alerted when your trigger exceeds 70 IRE and when it exceeds 90 IRE.
@@ -502,16 +509,11 @@ A gamut excursion will be fired any time a color will be lost or clipped in the 
 Luma Excursions can be attached to both maximum and minimum values. This allows you to be alerted of a signal above or below a set value. If you only wish to be alerted of upper-bound excursions, set the "minimum" value to -1.
 
 ## Viewing Alerts ##
-Alerts are displayed directly within the cliplist window, and are written to a file in the same folder as your recorded output. If your source has a free running timecode source attached, alerts will be tied to that time source. Alternatively, alerts will be tied to record run time.
-
-Alerts have both a begin and end time.
+Alerts are disabled within the "alerts area" which you can enable using the button in the upper right of the window.  
 
 ## Exporting Alerts ##
-When alerts are associated with a recorded clip, they can be exported in a variety of formats. You may either export alerts for a single clip, or for all of the recordings you've done up to that point.
 
-The export controls can be accessed from the "clip" menu. To export alerts for a single clip, highlight a recording in the cliplist and then select "Export Selected" from the clip menu. Alternatively, you may click the notepad icon at the bottom of the ScopeBox window.
-
-![Exporting Alerts](ScopeBox/images/clipMenu.png)
+TODO TODO TODO
 
 ## Export Formats ##
 

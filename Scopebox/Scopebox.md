@@ -15,21 +15,21 @@ ScopeBox 4 is an all-new application, building upon a decade of ScopeBox innovat
 ### CIE Plot Palette ###
 With HDR, Rec 2020, p3 and more, the world of colorspaces has gotten incredible complex.  The CIE Plot allows you to visualize gamut across multiple sets of primaries. 
 
-### Luma and RGB Timetrace Plot ###
-Traditional scopes only show you what's happening right now.  The Luma and RGB Timetrace palettes continuously refresh, showing you your luma (or RGB) history over the last 30 seconds.  
+### Luma and RGB TimeTrace Plot ###
+Traditional scopes only show you what's happening right now.  The Luma and RGB TimeTrace palettes continuously refresh, showing you your luma (or RGB) history over the last 30 seconds.  
 
 ### False Color ###
 One of the most highly-requested features, false color in the preview provides a visual way to identify issues, using a variety of presets.  And you can leverage the ability of ScopeBox to host multiple copies of the same palette, running both a normal color and false color preview side-by-side.
 
 ### Timeline View for Movies ###
-ScopeBox 4 has dramatically enhanced support for loading pre-recorded movies, including MXF, MOV, MP4, BRAW, MTS and M2T files.  And rather than just showing you a scrub control, ScopeBox draws an interactive timeline of your luma and audio levels, making it a snap to identify problems or scan through media. 
+ScopeBox 4 has dramatically enhanced support for loading pre-recorded movies, including MXF, MOV, MP4, BRAW, MTS and M2T files.  And rather than just showing you a scrub control, ScopeBox draws an interactive timeline of your luma, YCbCR, RGB, and audio levels, making it a snap to identify problems or scan through media. 
 
 ### Resolve Support in ScopeLink ###
 Until now, using ScopeBox with Resolve meant running ScopeBox on a separate Mac.  Thanks to the addition of Resolve support in ScopeLink, you can run it all on the same Mac, without any additional hardware. 
 
 ### Feature Insights ###
 
-Feature Insights allow you to focus your scopes on a specific section of your signal.  Maybe you want to focus on one face, or a window in the background.  By setting a feature insight within your preview palette, all of your scopes will highlight just that portion of the signal. 
+Feature Insights allow you to focus your scopes on a specific section of your signal.  Maybe you want to focus on one face, or a window in the background.  By setting a feature insight within your preview palette, all of your scopes will highlight just that portion of the signal. Or, you can highlight a portion of your signal in a scope and find out exactly which part of your signal is responsible for that value. 
 
 # Getting Started #
 
@@ -44,36 +44,31 @@ If you want to uninstall ScopeBox, simply drag the application to the trash.
 ScopeBox stores its preferences in a file named "com.divergentmedia.scopebox.plist" in your (username)/Library/Preferences/ folder. Layouts and saved source settings are stored in (username)/Library/ Application Support/.
 
 ## Registering ##
-When you first launch ScopeBox, it will run as ScopeBox Lite. To enable the full feature set of ScopeBox, you must enter a serial number in the Registration dialog. You may also visit http://www.divergentmedia.com/scopebox/trial to obtain a time-limited trial key, which will allow you to try all of the features of ScopeBox before buying.
+When you first launch ScopeBox, it will run as "unregistered". To enable the full feature set of ScopeBox, you must enter a serial number in the Registration dialog. You may also visit http://www.divergentmedia.com/scopebox/trial to obtain a time-limited trial key, which will allow you to try all of the features of ScopeBox before buying.
 
-If you've already purchased ScopeBox, click the "Enter Key" button and enter your name and key exactly as it is shown in your registration information.
+If you've already purchased ScopeBox, click the "Enter Key" button and enter your name and key exactly as it is shown in your registration information.  
 
 ![Registration Window](ScopeBox/images/registration.png)
 
 ## Updating ##
-ScopeBox automatically checks for updates during startup. If you'd like to force it to check for an update, select "Check for Updates" from the ScopeBox menu.
+ScopeBox automatically checks for updates during startup. If you'd like to force it to check for an update, select "Check for Updates" from the ScopeBox menu.  You must have an active subscription or a perpetual license to get updates.  If your subscription has lapsed, you many continue to run the latest version that was covered by your subscription.
 
 You can disable automatic updates via the "General" tab of the preferences dialog.
 
 > **ScopeBox can only check for updates if you are currently connected to the internet. If your ScopeBox system is not connected, you can always download an updated copy from <http://www.divergentmedia.com/scopebox>.**
 
 # Application Overview #
-The main ScopeBox window can be broken into 2 distinct regions. On launch, the majority of the screen hosts the palette region.  The sidebar, on the right side of the window, contains all of the controls and adjustments for sources, palettes, and alerts.  The sidebar can be hidden at any time using the button in the upper right corner of the window, or using the Command-\ keyboard shortcut. 
-
-A third region, the alert timeline, can be revealed to work with timecode based alerts or prerecorded sources.
+The main ScopeBox window can be broken into 2 distinct regions. On launch, the majority of the screen hosts the palette region.  The sidebar, on the right side of the window, contains all of the controls and adjustments for sources, and palettes.  The sidebar can be hidden at any time using the button in the upper right corner of the window, or using the Command-\ keyboard shortcut. 
 
 ![A sample view of ScopeBox's main window.](ScopeBox/images/MainWindow.png)
 
 ## The Sidebar ##
-Changing the settings of one of your sources or palettes is done in the sidebar.  The sidebar will open to the "source selection" pane, where you can add a live source, a ScopeLink source, or a movie file.  The icons at the top of the sidebar allow you to toggle between palette settings, source settings, still images, predefined targets, and alerts.  Clicking the gear icon in the upper right corner of any palette allows you to adjust settings for that palette. 
+Changing the settings of one of your sources or palettes is done in the sidebar.  The sidebar will open to the "source selection" pane, where you can add a live source, a ScopeLink source, or a movie file.  The icons at the top of the sidebar allow you to toggle between palette settings, source settings, still images, and predefined targets.  Clicking the gear icon in the upper right corner of any palette allows you to adjust settings for that palette. 
 
 ## The Palette Region ##
 Once you've added a source, you're free to start inspecting the signal in a variety of ways. You do this by adding palettes to the source. Each new palette you add will give you an additional tool to quantitatively or qualitatively examine the video, audio, or timecode signal of that source.
 
 When a new palette is added, it appears in the Palette Region. This area serves as your general workspace for analyzing sources. You can add or remove palettes, change the source they monitor, or alter their size and position at any time.  Click the gear icon in the upper right corner of any palette to access its settings. 
-
-## Alert Timeline ##
-Clicking the Alert Area toggle in the upper right corner of the window reveals the alert timeline.  Here, you can see a visualization of a prerecorded movie, or information about any alerts you've configured.  
 
 
 ![Reveal the Alert Area](ScopeBox/images/alertArea.png)
@@ -147,13 +142,13 @@ You can set a default source, which will automatically be loaded (if available) 
 
 # Loading Stills #
 
-ScopeBox provides a "still-store" which can load images to be overlaid on other palettes.  You can load images via the media gallery tab in the sidebar.
+ScopeBox provides a "still-store" which can load images to be overlaid on other palettes.  You can load images via the media gallery tab in the sidebar.  This provides a convenient way to compare your signals against reference images. 
 
 ![Loading Stills](ScopeBox/images/StillStore.png)
 
 # Target Values #
 
-Target Values in ScopeBox allow you to define preset values that will be marked on your scopes.  From the target values tab, you can set targets using a standard color picker or via a specific numeric value.  The label you add will be shown within your scopes.
+Target Values in ScopeBox allow you to define preset values that will be marked on your scopes.  From the target values tab, you can set targets using a standard color picker.  The label you add will be shown within your scopes.
 
 ![Setting Targets](ScopeBox/images/Targets.png)
 
@@ -197,14 +192,19 @@ When in weighted mode, the intensity slider adjusts the brightness of the scope.
 ### Colors ###
 The color of the graticules and traces can be set in the application preferences, available under the "ScopeBox" menu.
 
+
+## Feature Insights ##
+
+Feature Insights let you select just a portion of your image or signal to focus on.  Once you enable a feature insight, your scopes and preview will all highlight the relevant portion of your signal.  To set a feature insight, hold the option key and then click and drag on a palette to select a portion of the image or signal. You can reset your feature insights using the view menu. 
+
+![Feature Insight Highlighting a Portion of the Signal](ScopeBox/images/featureInsight.png)
+
+
 # Preview Palette #
 The Preview palette displays video source output and can replace a traditional field monitor for checking focus, framing, and color calibration.
 
 ![The Preview Palette with 4x3 mask, center marks, and title safe overlays enabled.](ScopeBox/images/PreviewWithOverlays.png)
 
-## Feature Insights ##
-
-Feature Insights let you select just a portion of your image to focus on.  Once you enable a feature insight, your scopes will all highlight the relevant portion of your signal.  To set a feature insight, hold the option key and then click and drag on your preview palette to select a portion of the image. You can reset your feature insights using the view menu. 
 
 ## Controls ##
 When you select the preview palette, the following controls will appear in the sidebar.
@@ -240,7 +240,8 @@ Provides center cross-hairs to assist with composition.
 ### Overlays ###
 
 #### False Color ####
-False color colorizes the preview monitor with a color mapping based on the signal's luminance value. ScopeBox ships with a number of industry standard profiles. 
+False color colorizes the preview monitor with a color mapping based on the signal's luminance value. ScopeBox ships with the Red, Arri and ST2048 profiles. 
+
 
 #### Image Overlay ####
 Overlays allow you to layer an image, movie, or liver source on top of your source. This can be used for custom guides for framing around your productions lower thirds, a background that will later be chroma keyed into the shot, or video footage you need to match framing or exposure in.
@@ -268,8 +269,6 @@ This shows you the highest level achieved since the peak hold was reset.  Click 
 # Surround Meters #
 
 The Surround Meters give you a way to visualize your audio signal in a surround sound context. This allows you to quickly analyze the surround components of your audio mix, even in environments that don't lend themselves to proper audio monitoring.
-
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
 
 ![The Surround Meter Palette](ScopeBox/images/SurroundLevels.png)
 
@@ -401,9 +400,6 @@ Instantaneous Envelopes help ensure that you don't miss any data within your mon
 ### Peak Envelopes ###
 Peak envelopes show the maximum and minimum values for each channel over time. This allows you to look away from your scopes, and still know whether you exceeded a target threshold. The reset button will clear the peak values.
 
-### Transform ###
-The transform allows you to control how a YUV source is converted to RGB for monitoring.
-
 # YCbCr Parade #
 
 The YCbCr Parade displays individual waveform monitors for the Y, Cb and Cr components of the signal.
@@ -480,55 +476,11 @@ The CIE plot provides a standard display allowing you to see how your signal fit
 
 ![CIE Plot displaying Rec709 color bars with Rec 709 and P3 primaries](ScopeBox/images/cieplot.png)
 
-# Luma and RGB Timetrace #
-Traditional scopes only show you what's happening right now.  The Luma and RGB Timetrace palettes continuously refresh, showing you your luma (or RGB) history over the last 30 seconds.  You can use the timetrace to catch an excursion or to get a quick glance view of how your signal changes over time.   
+# Luma and RGB TimeTrace #
+Traditional scopes only show you what's happening right now.  The Luma and RGB TimeTrace palettes continuously refresh, showing you your luma (or RGB) history over the last 30 seconds.  You can use the TimeTrace to catch an excursion or to get a quick glance view of how your signal changes over time.   
 
-# Alerts #
+The signal draws in an endless loop along the X axis.  The Y axis shows a histogram of your signal.  
 
-Alerts provide a way to monitor your signal, even when you don't have your eyes glued to the screen.  Alerts are enabled on a source-by-source basis using the Alert tab in the source sidebar.  Alerts only work with sources that provide timecode, including movie files. 
-
-## Activating Alerts ##
-After adding a source, switch to the Alerts tab and check the boxes for the alerts you wish to activate.  
-
-## Alert Types ##
-Alerts generally consist of a threshold value and a label. The threshold is the level at which the alert will be trigger. Labels allow you to add multiple copies of the same basic alert to your source, and is the name that will appear in your log. For example, you may wish to be alerted when your trigger exceeds 70 IRE and when it exceeds 90 IRE.
-
-### Chroma Excursion ###
-This alert will fire when the chrominance level of your signal exceeds the selected value.
-
-### Video Slug ###
-A video slug alert will trigger if no part of your signal is above the threshold you set. This can be useful for detecting signal dropouts.
-
-### Audio Peak ###
-An audio peak alert fires for audio levels over a certain threshold. By setting this to "0 db," you'll be alerted any time you have clipped audio. By selecting a lower value, you may be able to act to prevent clipping by adjusting your audio levels.
-
-### Gamut Excursion ###
-A gamut excursion will be fired any time a color will be lost or clipped in the YUV to RGB conversion. This alert is not configurable.
-
-### Luma Excursion ###
-Luma Excursions can be attached to both maximum and minimum values. This allows you to be alerted of a signal above or below a set value. If you only wish to be alerted of upper-bound excursions, set the "minimum" value to -1.
-
-## Viewing Alerts ##
-Alerts are disabled within the "alerts area" which you can enable using the button in the upper right of the window.  
-
-## Exporting Alerts ##
-
-TODO TODO TODO
-
-## Export Formats ##
-
-There are three export formats available, depending on your workflow.
-
-### HTML ###
-The HTML export format will generate an HTML file, with associated javascript and CSS. This page is designed to be opened in the Safari browser. In addition to a preview of the clip, you will be presented with a list of alerts. Clicking each alert will seek to the point within the video where the alert was triggered.
-
-Keep in mind that the video playback capabilities of the web browser does not allow frame-accurate seeking. When necessary, ScopeBox will err on the side of seeking just before the alert time, rather than just after.
-
-### CSV ###
-The CSV export format will generate a Microsoft Excel compatible CSV spreadsheet, with an entry for each alert.
-
-### FCP and FCPX XML ###
-There are two XML options, for both Final Cut Pro 5 and later, and for Final Cut Pro X. When opened in Final Cut Pro, this XML will attempt to load the recorded files associated with each alert. Final Cut Pro will place markers within the video for each alert. This can be used to quickly find and correct issues within your source recording.
 
 # ScopeLink #
 ScopeLink allows you to monitor the signal from other applications on your computer, without any special hardware. Once installed, ScopeLink appears as an output option within supported applications, just like a traditional hardware output device. **ScopeLink requires Mac OS X 10.8 ("Mountain Lion") or later.**
@@ -587,7 +539,13 @@ Restart Final Cut Pro X to begin using ScopeLink.
 
 ### DaVinci Resolve ###
 
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+To use ScopeLink with Resolve, first add the ScopeLink OFX plugin from the Library.  
+
+![Add ScopeLink Plugin](ScopeBox/images/selectResolveNode.png)
+
+After you've added the plugin to your project, add it in your node graph so that it has both an input and an output.  ScopeLink will monitor whichever signal you feed into the ScopeLink node.
+
+![Add ScopeLink Plugin](ScopeBox/images/resolveNode.png)
 
 ### Other Applications ###
 Other applications which support either CoreMedia-based output or Adobe Transmit-based output may work with ScopeLink. Contact support if you'd like information on using a specific application with ScopeLink.

@@ -7,9 +7,10 @@
 <li><a href="#cie-plot-palette">CIE Plot Palette</a></li>
 <li><a href="#luma-and-rgb-timetrace-plot">Luma and RGB TimeTrace Plot</a></li>
 <li><a href="#false-color">False Color</a></li>
-<li><a href="#timeline-view-for-movies">Timeline View for Movies</a></li>
-<li><a href="#resolve-support-in-scopelink">Resolve Support in ScopeLink</a></li>
+<li><a href="#scopelink-support-in-resolve">ScopeLink support in Resolve</a></li>
 <li><a href="#feature-insights">Feature Insights</a></li>
+<li><a href="#hdr">HDR</a></li>
+<li><a href="#user-targets">User Targets</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#getting-started">Getting Started</a><ul>
@@ -89,7 +90,6 @@
 <li><a href="#mode-1">Mode</a></li>
 <li><a href="#instantaneous-envelopes-1">Instantaneous Envelopes</a></li>
 <li><a href="#peak-envelopes-1">Peak Envelopes</a></li>
-<li><a href="#hue-line">Hue Line</a></li>
 <li><a href="#flesh-line">Flesh Line</a></li>
 <li><a href="#grat-style">Grat Style</a></li>
 <li><a href="#show-targets">Show Targets</a></li>
@@ -141,8 +141,7 @@
 <li><a href="#installing-scopelink">Installing ScopeLink</a></li>
 <li><a href="#configuring-scopelink">Configuring ScopeLink</a><ul>
 <li><a href="#adobe-premiere-and-prelude">Adobe Premiere and Prelude</a></li>
-<li><a href="#adobe-after-effects-2014">Adobe After Effects 2014</a></li>
-<li><a href="#adobe-after-effects-legacy">Adobe After Effects (Legacy)</a></li>
+<li><a href="#adobe-after-effects-2014-and-later">Adobe After Effects 2014 and later</a></li>
 <li><a href="#final-cut-pro-x">Final Cut Pro X</a></li>
 <li><a href="#davinci-resolve">DaVinci Resolve</a></li>
 <li><a href="#other-applications">Other Applications</a></li>
@@ -153,7 +152,6 @@
 <li><a href="#saving-a-new-layout">Saving a new layout</a></li>
 <li><a href="#restoring-a-layout">Restoring a layout</a></li>
 </ul></li>
-<li><a href="#window-menu">Window Menu</a></li>
 <li><a href="#performance">Performance</a></li>
 <li><a href="#system-requirements">System Requirements</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a><ul>
@@ -175,15 +173,17 @@
 <h3 id="cie-plot-palette">CIE Plot Palette</h3>
 <p>With HDR, Rec 2020, p3 and more, the world of colorspaces has gotten incredible complex. The CIE Plot allows you to visualize gamut across multiple sets of primaries.</p>
 <h3 id="luma-and-rgb-timetrace-plot">Luma and RGB TimeTrace Plot</h3>
-<p>Traditional scopes only show you what's happening right now. The Luma and RGB TimeTrace palettes continuously refresh, showing you your luma (or RGB) history over the last 30 seconds.</p>
+<p>Traditional scopes only show you what's happening right now. The Luma and RGB TimeTrace palettes continuously refresh, showing you your luma (or RGB) history over the last 300 frames.</p>
 <h3 id="false-color">False Color</h3>
 <p>One of the most highly-requested features, false color in the preview provides a visual way to identify issues, using a variety of presets. And you can leverage the ability of ScopeBox to host multiple copies of the same palette, running both a normal color and false color preview side-by-side.</p>
-<h3 id="timeline-view-for-movies">Timeline View for Movies</h3>
-<p>ScopeBox 4 has dramatically enhanced support for loading pre-recorded movies, including MXF, MOV, MP4, BRAW, MTS and M2T files. And rather than just showing you a scrub control, ScopeBox draws an interactive timeline of your luma, YCbCR, RGB, and audio levels, making it a snap to identify problems or scan through media.</p>
-<h3 id="resolve-support-in-scopelink">Resolve Support in ScopeLink</h3>
+<h3 id="scopelink-support-in-resolve">ScopeLink support in Resolve</h3>
 <p>Until now, using ScopeBox with Resolve meant running ScopeBox on a separate Mac. Thanks to the addition of Resolve support in ScopeLink, you can run it all on the same Mac, without any additional hardware.</p>
 <h3 id="feature-insights">Feature Insights</h3>
 <p>Feature Insights allow you to focus your scopes on a specific section of your signal. Maybe you want to focus on one face, or a window in the background. By setting a feature insight within your preview palette, all of your scopes will highlight just that portion of the signal. Or, you can highlight a portion of your signal in a scope and find out exactly which part of your signal is responsible for that value.</p>
+<h3 id="hdr">HDR</h3>
+<p>Throughout the app, we've revamped scales and features to support modern HDR workflows and measurements.</p>
+<h3 id="user-targets">User Targets</h3>
+<p>User targets let you set custom values that appear as targets on your scopes. This makes it easier to match specific values between shots.</p>
 <h1 id="getting-started">Getting Started</h1>
 <h2 id="installing">Installing</h2>
 <p>ScopeBox is a self-contained application. Just drag and drop the application to your Applications folder or any other location on your hard disk, and you're ready to start using it.</p>
@@ -192,7 +192,7 @@
 <p>If you want to uninstall ScopeBox, simply drag the application to the trash.</p>
 <p>ScopeBox stores its preferences in a file named "com.divergentmedia.scopebox.plist" in your (username)/Library/Preferences/ folder. Layouts and saved source settings are stored in (username)/Library/ Application Support/.</p>
 <h2 id="registering">Registering</h2>
-<p>When you first launch ScopeBox, it will run as "unregistered". To enable the full feature set of ScopeBox, you must enter a serial number in the Registration dialog. You may also visit http://www.divergentmedia.com/scopebox/trial to obtain a time-limited trial key, which will allow you to try all of the features of ScopeBox before buying.</p>
+<p>When you first launch ScopeBox, it will run as "unregistered". To enable the full feature set of ScopeBox, you must enter a serial number in the Registration dialog. You may also visit (http://www.divergentmedia.com/scopebox/trial)[http://www.divergentmedia.com/scopebox/trial] to obtain a time-limited trial key, which will allow you to try all of the features of ScopeBox before buying.</p>
 <p>If you've already purchased ScopeBox, click the "Enter Key" button and enter your name and key exactly as it is shown in your registration information.</p>
 <figure>
 <img src="ScopeBox/images/registration.png" alt="Registration Window" /><figcaption>Registration Window</figcaption>
@@ -200,9 +200,7 @@
 <h2 id="updating">Updating</h2>
 <p>ScopeBox automatically checks for updates during startup. If you'd like to force it to check for an update, select "Check for Updates" from the ScopeBox menu. You must have an active subscription or a perpetual license to get updates. If your subscription has lapsed, you many continue to run the latest version that was covered by your subscription.</p>
 <p>You can disable automatic updates via the "General" tab of the preferences dialog.</p>
-<blockquote>
-<p><strong>ScopeBox can only check for updates if you are currently connected to the internet. If your ScopeBox system is not connected, you can always download an updated copy from <a href="http://www.divergentmedia.com/scopebox" class="uri">http://www.divergentmedia.com/scopebox</a>.</strong></p>
-</blockquote>
+<p>ScopeBox can only check for updates if you are currently connected to the internet. If your ScopeBox system is not connected, you can always download an updated copy from <a href="http://www.divergentmedia.com/scopebox" class="uri">http://www.divergentmedia.com/scopebox</a>.</p>
 <h1 id="application-overview">Application Overview</h1>
 <p>The main ScopeBox window can be broken into 2 distinct regions. On launch, the majority of the screen hosts the palette region. The sidebar, on the right side of the window, contains all of the controls and adjustments for sources, and palettes. The sidebar can be hidden at any time using the button in the upper right corner of the window, or using the Command- keyboard shortcut.</p>
 <figure>
@@ -213,9 +211,6 @@
 <h2 id="the-palette-region">The Palette Region</h2>
 <p>Once you've added a source, you're free to start inspecting the signal in a variety of ways. You do this by adding palettes to the source. Each new palette you add will give you an additional tool to quantitatively or qualitatively examine the video, audio, or timecode signal of that source.</p>
 <p>When a new palette is added, it appears in the Palette Region. This area serves as your general workspace for analyzing sources. You can add or remove palettes, change the source they monitor, or alter their size and position at any time. Click the gear icon in the upper right corner of any palette to access its settings.</p>
-<figure>
-<img src="ScopeBox/images/alertArea.png" alt="Reveal the Alert Area" /><figcaption>Reveal the Alert Area</figcaption>
-</figure>
 <h1 id="dealing-with-sources">Dealing with Sources</h1>
 <h2 id="adding-a-source">Adding a Source</h2>
 <p>The Source menu allows you to add new sources. In addition, new sources can be added via the sources tab in the sidebar. Click the "Add new source" button.</p>
@@ -255,9 +250,7 @@
 <p>It's often helpful to preview a signal with adjustments applied, to get a sense of how an image will look after color correction is applied or other changes are made. For example, when shooting in the log space, you may wish to preview the image in the linear space. The Preview Adjustments section of the source settings allow you to apply these adjustments via LUTs (look up tables)</p>
 <p>ScopeBox supports two LUT formats, cube (1d and 3d) and 3dl. To apply a LUT, check the Preview Adjustments box and then click Set Path. This will allow you to load a LUT in one of the supported formats. You may easily toggle the LUT on and off by checking the Preview Adjustments box.</p>
 <p>LUTs impact all of the palettes, including the preview and any scopes. LUTs <strong>do not</strong> impact recorded files. LUTs are automatically reloaded if they contents of the LUT file changes on disk.</p>
-<blockquote>
-<p><strong>We support a variety of LUT formats in ScopeBox, but many production pipelines use custom LUTs. If you've got a LUT that isn't working with ScopeBox, send us a copy at <a href="mailto:support@divergentmedia.com" class="email">support@divergentmedia.com</a>, along with a brief description of what the LUT is intended to do.</strong></p>
-</blockquote>
+<p>We support a variety of LUT formats in ScopeBox, but many production pipelines use custom LUTs. If you've got a LUT that isn't working with ScopeBox, send us a copy at <a href="mailto:support@divergentmedia.com" class="email">support@divergentmedia.com</a>, along with a brief description of what the LUT is intended to do.</p>
 <p>The preview adjustments section also allows you to adjust the matrix, transfer and primaries used for displaying and processing your source. You can also use this section to rotate and flip your image.</p>
 <h2 id="saving-and-recalling-sources">Saving and Recalling Sources</h2>
 <p>Once you've adjusted all of your source settings, you can save a preset. Highlight the source in the source settings tab, and then select "Save" from the Source menu. This will save all of the settings for the source.</p>
@@ -339,7 +332,7 @@
 <h4 id="false-color-1">False Color</h4>
 <p>False color colorizes the preview monitor with a color mapping based on the signal's luminance value. ScopeBox ships with the Red, Arri and ST2048 profiles.</p>
 <h4 id="image-overlay">Image Overlay</h4>
-<p>Overlays allow you to layer an image, movie, or liver source on top of your source. This can be used for custom guides for framing around your productions lower thirds, a background that will later be chroma keyed into the shot, or video footage you need to match framing or exposure in.</p>
+<p>Overlays allow you to layer an image, movie, or live source on top of your source. This can be used for custom guides for framing around your productions lower thirds, a background that will later be chroma keyed into the shot, or video footage you need to match framing or exposure in.</p>
 <p>After enabling the "image overlay" option, you'll be shown a list of sources. To learn about loading image sources, see the <a href="#Loading-Stills">loading stills</a> section.</p>
 <p>Below the image well is a slider to adjust the opacity of the overlay.</p>
 <h1 id="audio-meters">Audio Meters</h1>
@@ -349,7 +342,7 @@
 </figure>
 <h2 id="controls-1">Controls</h2>
 <h3 id="channel-count">Channel Count</h3>
-<p>By default the Audio Meter will show all channels currently reported by a source. However, many devices report a fixed number of output channels, which can waste valuable screen space displaying empty channels. If you're shooting with a camera that sends eight channels to ScopeBox, but are only using two, you can set channel count to 2 to only present the first two channels.</p>
+<p>By default the Audio Meter will show all channels currently reported by a source. However, many devices report a fixed number of output channels, which can waste valuable screen space displaying empty channels. If your capture device always sends eight channels to ScopeBox, but you are only using two, you can set channel count to 2 to only present the first two channels.</p>
 <h3 id="scale">Scale</h3>
 <p>Different source formats require different peak audio levels. This level is often referred to as Unity. When working with bars and tone, or when trying to set your mic volumes at the proper levels, you want to know exactly where unity lies in the Audio Meter. ScopeBox provides a set of Scale markers for each of the three major unity levels found on professional video devices -12, -14 and -20 dB.</p>
 <h3 id="peak-hold">Peak Hold</h3>
@@ -371,17 +364,17 @@
 <p>The Mode dropdown allows you to choose the method ScopeBox uses to render your scope. Each mode offers you different information:</p>
 <p><em>Weighted</em> mode looks more like a traditional raster scope and expresses the number of pixels at a given value by varying the brightness.</p>
 <p><em>Mono</em> displays every data point at full intensity, which can be useful in ensuring complete legality. With weighted views it is possible to miss a small pixel region that is out of range.</p>
-<p><em>Colorize</em> replaces the traditional green in a scope and with the actual color that it represents. For example, if someone is wearing a bright red shirt, there will be a bright red streak where the scope renders those pixels.</p>
+<p><em>Colorize</em> replaces the traditional monochrome tone in a scope with the actual color that it represents. For example, if someone is wearing a bright red shirt, there will be a bright red streak where the scope renders those pixels.</p>
 <h3 id="zoom-blacks">Zoom Blacks</h3>
 <p>Often colorists want to get a detailed look at the darkest parts of a signal. The "Zoom Blacks" slider magnifies just the lower values of the signal.</p>
 <h3 id="filter">Filter</h3>
 <p>The Filter dropdown allows you to select between the two commonly found filter types found on hardware waveform monitors - <em>Luma</em> and <em>Chroma</em>. Luma is the default, causing the waveform to display only the luminance (Y) channel of your video. Chroma will display only the chrominance (C) channel of your video.</p>
 <h3 id="instantaneous-envelopes">Instantaneous Envelopes</h3>
-<p>Instantaneous Envelopes help ensure that you don't miss any data within your waveform monitor, even when it's just a single pixel. Checking the box will cause two bounding lines to be added to your waveform, one showing the maximum values for your waveform, and one showing the minimum values for each vertical line.</p>
+<p>Instantaneous Envelopes help ensure that you don't miss any data within your waveform monitor, even when it's just a single pixel. Checking the box will cause two bounding lines to be added to your trace, one showing the maximum values for your waveform, and one showing the minimum values for each vertical line.</p>
 <h3 id="peak-envelopes">Peak Envelopes</h3>
 <p>Peak envelopes show the maximum and minimum values for your waveform over time. This allows you to look away from your scopes, and still know whether you exceeded a target threshold. The reset button will clear the peak values.</p>
 <h3 id="scale-1">Scale</h3>
-<p>There are four different Scale options available for measuring your waveform. These are IRE (the traditional scale for a waveform monitor), 8 bit, 10 bit and mV (millivolt). The 8 bit and 10 bit options allow you to measure your waveform according to the actual sample values in the signal. Millivolt allows you to compare against the signal shown by a traditional hardware waveform monitor or oscilloscope.</p>
+<p>There are five different Scale options available for measuring your waveform. These are IRE (the traditional scale for a waveform monitor), 8 bit, 10 bit and mV (millivolt). The 8 bit and 10 bit options allow you to measure your waveform according to the actual sample values in the signal. Millivolt allows you to compare against the signal shown by a traditional hardware waveform monitor or oscilloscope. ST2084 is the Dolby PQ Standard scale.</p>
 <h1 id="vectorscope">Vectorscope</h1>
 <p>The Vectorscope displays chrominance (color) information. Saturation is indicated by distance from the center while the position around the circle indicates hue.</p>
 <figure>
@@ -394,23 +387,21 @@
 <p>The colorspace option provides three different colorspaces with which to view the vectorscope. These are Rec. 601, Rec. 709 and Rec2020/2100. By default, ScopeBox will automatically set the colorspace based on your source. These colorspaces will adjust the color targets and scaling of the vectorscope.</p>
 <h3 id="mode-1">Mode</h3>
 <p>The Mode dropdown allows you to choose the method ScopeBox uses to render your scope. Each mode offers you different information:</p>
-<p><em>Weighted</em> mode looks like a traditional scope and expresses the number of pixels at a given value by varying the brightness. <em>Mono</em> mode displays every data point at full intensity, which can be useful in ensuring complete legality. With weighted views it is possible to miss a small pixel region that is out of range. <em>Colorize</em> mode replaces the traditional green in a scope and with the actual color that it represents. For example, if someone is wearing a bright red shirt, there will be a bright red streak where the scope renders those pixels.</p>
+<p><em>Weighted</em> mode looks like a traditional scope and expresses the number of pixels at a given value by varying the brightness.</p>
+<p><em>Mono</em> mode displays every data point at full intensity, which can be useful in ensuring complete legality. With weighted views it is possible to miss a small pixel region that is out of range.</p>
+<p><em>Colorize</em> mode replaces the traditional green in a scope and with the actual color that it represents. For example, if someone is wearing a bright red shirt, there will be a bright red streak where the scope renders those pixels.</p>
 <h3 id="instantaneous-envelopes-1">Instantaneous Envelopes</h3>
 <p>Instantaneous Envelopes help ensure that you don't miss any data within your vectorscope, even when it's just a single pixel. Checking the box will cause draw a boundary around the maximum values of your vectorscope.</p>
 <h3 id="peak-envelopes-1">Peak Envelopes</h3>
-<p>Peak envelopes show the maximum and minimum values for your vectorscope over time. This allows you to look away from your scopes, and still know whether you exceeded a target threshold. The reset button will clear the peak values.</p>
-<h3 id="hue-line">Hue Line</h3>
-<p>The Hue Line can be thought of as a configurable target line. After enabling this option, you can click and drag the hue line to place it at any point on the vectorscope. You can also use the "hue" and "power" sliders to alter the line. This gives you a convenient reference mark for color correction or matching shots.</p>
+<p>Peak envelopes show the maximum values for your vectorscope over time. This allows you to look away from your scopes, and still know whether you exceeded a target threshold. The reset button will clear the peak values.</p>
 <h3 id="flesh-line">Flesh Line</h3>
 <p>The Flesh Line is an industry standard reference line along which skin tones will generally fall. It's most useful as a static reference between scenes or cameras.</p>
 <h3 id="grat-style">Grat Style</h3>
 <p>The default graticule style for the vectorscope a standard set of concentric circles, representing saturation.</p>
-<p>ScopeBox also offers a "hue vectors" graticule style, which provides a more modern, color correct and camera matching specific overlay. This view gives more contextual information for hue adjustments across the entire range of saturations, while removing unneeded clutter more appropriate for signal-analysis and legality monitoring. The perpendicular hash marks on each line represent a 75% target</p>
+<p>ScopeBox also offers a "hue vectors" graticule style, which provides a more modern, color correct and camera matching specific overlay. This view gives more contextual information for hue adjustments across the entire range of saturations, while removing unneeded clutter more appropriate for signal-analysis and legality monitoring. The perpendicular hash marks on each line represent a 75% target.</p>
 <h3 id="show-targets">Show Targets</h3>
 <p>See the <a href="#Target-Values">Target Values</a> section to learn more about how to set targets. You can enable or disable them within a given palette.</p>
-<blockquote>
-<p>￼<strong>Hue vectors graticule by <a href="http://vanhurkman.com/wordpress/?p=2563">Alexis Van Hurkman</a> is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></strong></p>
-</blockquote>
+<p>Hue vectors graticule by <a href="http://vanhurkman.com/wordpress/?p=2563">Alexis Van Hurkman</a> is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
 <h1 id="hml-balance">HML Balance</h1>
 <p>The HML Balance palette can be thought of as three distinct vectorscopes, displaying information about the "high," "mid," and "low" components of your signal. This can be helpful for identifying color casts in specific luminance regions of your image, like shadows or highlights.</p>
 <p>Because the crosspoints between the three vectorscopes are configurable, this palette can be filtered in a variety of ways to allow you to focus on just one component of your signal.</p>
@@ -440,15 +431,15 @@
 <p><em>Weighted</em> mode looks like a traditional scope and expresses the number of pixels at a given value by varying the brightness.</p>
 <p><em>Mono</em> mode displays every data point at full intensity, which can be useful in ensuring complete legality. With weighted views it is possible to miss a small pixel region that is out of range.</p>
 <h3 id="instantaneous-envelopes-2">Instantaneous Envelopes</h3>
-<p>Instantaneous Envelopes help ensure that you don't miss any data within your monitor, even when it's just a single pixel. Checking the box will cause two bounding lines to be added to your waveform, one showing the maximum values for your waveform, and one showing the minimum values for each vertical line.</p>
+<p>Instantaneous Envelopes help ensure that you don't miss any data within your monitor, even when it's just a single pixel. Checking the box will cause two bounding lines to be added to your trace, one showing the maximum values for your trace, and one showing the minimum values for each vertical line.</p>
 <h3 id="peak-envelopes-2">Peak Envelopes</h3>
 <p>Peak envelopes show the maximum and minimum values for each channel over time. This allows you to look away from your scopes, and still know whether you exceeded a target threshold. The reset button will clear the peak values.</p>
 <h1 id="ycbcr-parade">YCbCr Parade</h1>
 <p>The YCbCr Parade displays individual waveform monitors for the Y, Cb and Cr components of the signal.</p>
 <figure>
-<img src="ScopeBox/images/YUVParade.png" alt="The YUV Parade Palette" /><figcaption>The YUV Parade Palette</figcaption>
+<img src="ScopeBox/images/YUVParade.png" alt="The YCbCr Parade Palette" /><figcaption>The YCbCr Parade Palette</figcaption>
 </figure>
-<p>The YUV Parade is useful for signal chain diagnosis since most video devices process in the YUV colorspace.</p>
+<p>The YCbCr Parade is useful for signal chain diagnosis since most video devices process in the YUV colorspace.</p>
 <h2 id="controls-6">Controls</h2>
 <h3 id="mode-3">Mode</h3>
 <p>The Mode dropdown allows you to choose the method ScopeBox uses to render your scope. Each mode offers you different information.</p>
@@ -487,23 +478,26 @@
 <img src="ScopeBox/images/Timecode.png" alt="The Timecode Palette" /><figcaption>The Timecode Palette</figcaption>
 </figure>
 <h1 id="channel-plot">Channel Plot</h1>
-<p>The channel plot allows you to map two channels of a video signal on an X/Y axis. The box drawn within the scope helps you determine when your signal will be clipped by a colorspace conversion (gammut errors).</p>
+<p>The channel plot allows you to map two channels of a video signal on an X/Y axis. The box drawn within the scope helps you determine when your signal will be clipped by a colorspace conversion (gamut errors).</p>
 <figure>
 <img src="ScopeBox/images/ChannelPlot.png" alt="The Channel Plot Palette" /><figcaption>The Channel Plot Palette</figcaption>
 </figure>
 <h2 id="controls-9">Controls</h2>
 <h3 id="axis-controls">Axis Controls</h3>
-<p>There are six different channels which may be plotted on either the X or Y axis. These are Y, Cb, Cr and R,G,B. The channel plot is primarily useful when plotting values within a single color format. For example, you'd generally want to plot R against G or B, rather than against Y,Cb,Cr. By plotting R versus G, and in a second palette, G versus B, you'll be able to quickly judge whether any data will be clipped during the YUV to RGB conversion.</p>
+<p>There are six different channels which may be plotted on either the X or Y axis. These are Y, Cb, Cr; R,G,B; X Y Z; and x y. The channel plot is primarily useful when plotting values within a single color format. For example, you'd generally want to plot R against G or B, rather than against Y,Cb,Cr. By plotting R versus G, and in a second palette, G versus B, you'll be able to quickly judge whether any data will be clipped during the YCbCr to RGB conversion.</p>
 <h1 id="cie-plot">CIE Plot</h1>
 <p>The CIE plot provides a standard display allowing you to see how your signal fits within a given colorspace. The CIE Plot by itself shows the gamut of all visible chromaticities. Within the CIE Plot palette, you can enable additional colorspaces to determine whether your signal is within gamut for these. ScopeBox comes preset with Rec 709, P3, and Rec 2020 primaries. You can also enable custom primaries and set your own values.</p>
 <figure>
 <img src="ScopeBox/images/cieplot.png" alt="CIE Plot displaying Rec709 color bars with Rec 709 and P3 primaries" /><figcaption>CIE Plot displaying Rec709 color bars with Rec 709 and P3 primaries</figcaption>
 </figure>
 <h1 id="luma-and-rgb-timetrace">Luma and RGB TimeTrace</h1>
-<p>Traditional scopes only show you what's happening right now. The Luma and RGB TimeTrace palettes continuously refresh, showing you your luma (or RGB) history over the last 30 seconds. You can use the TimeTrace to catch an excursion or to get a quick glance view of how your signal changes over time.</p>
-<p>The signal draws in an endless loop along the X axis. The Y axis shows a histogram of your signal.</p>
+<p>Traditional scopes only show you what's happening right now. The Luma and RGB TimeTrace palettes continuously refresh, showing you your luma (or RGB) history over the last 300 frames. You can use the TimeTrace to catch an excursion or to get a quick glance view of how your signal changes over time.</p>
+<p>The signal draws in an endless loop along the X axis. The Y axis shows a histogram of your signal, each line being one frame of video, with black on the bottom and white at the top.</p>
+<figure>
+<img src="ScopeBox/images/timetrace.png" alt="TimeTrace showing Luma" /><figcaption>TimeTrace showing Luma</figcaption>
+</figure>
 <h1 id="scopelink">ScopeLink</h1>
-<p>ScopeLink allows you to monitor the signal from other applications on your computer, without any special hardware. Once installed, ScopeLink appears as an output option within supported applications, just like a traditional hardware output device. <strong>ScopeLink requires Mac OS X 10.8 ("Mountain Lion") or later.</strong></p>
+<p>ScopeLink allows you to monitor the signal from other applications on your computer, without any special hardware. Once installed, ScopeLink appears as an output option within supported applications, just like a traditional hardware output device.</p>
 <p>Within ScopeBox, you can add the ScopeLink device from the source menu, just like any other source. Select the application you'll be using with ScopeLink.</p>
 <figure>
 <img src="ScopeBox/images/scopelinkSource.png" alt="Adding a ScopeLink Source" /><figcaption>Adding a ScopeLink Source</figcaption>
@@ -520,19 +514,12 @@
 </figure>
 <p>Check the box next to the ScopeLink device. You may also activate other devices if you wish. Click "OK," and then restart the application.</p>
 <p>When used with Adobe Premiere Pro or Adobe Prelude, ScopeLink will transmit 8bit Rec. 709 signals, and ScopeBox will default to viewing within the Rec. 709 colorspace.</p>
-<h3 id="adobe-after-effects-2014">Adobe After Effects 2014</h3>
-<p>To use ScopeLink with Adobe After Effects 2014, begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Enable Mercury Transmit, then set ScopeLink as the Video Device. We recommend unchecking "disable video output when in background".</p>
+<h3 id="adobe-after-effects-2014-and-later">Adobe After Effects 2014 and later</h3>
+<p>To use ScopeLink with Adobe After Effects 2014 and later, begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Enable Mercury Transmit, then set ScopeLink as the Video Device. We recommend unchecking "disable video output when in background".</p>
 <figure>
 <img src="ScopeBox/images/AfterEffects2014.png" alt="Configuring Adobe After Effects 2014" /><figcaption>Configuring Adobe After Effects 2014</figcaption>
 </figure>
 <p>Click "OK" and then relaunch After Effects.</p>
-<h3 id="adobe-after-effects-legacy">Adobe After Effects (Legacy)</h3>
-<p>To use ScopeLink with pre-2014 versions of Adobe After Effects , begin by launching After Effects. Select "Preferences" from the "After Effects" menu, and then "View Preview." Set ScopeLink as the Output Device and Output Mode. We recommend checking all of the boxes in the "output during" section.</p>
-<figure>
-<img src="ScopeBox/images/AfterEffects.png" alt="Configuring Adobe After Effects (Legacy)" /><figcaption>Configuring Adobe After Effects (Legacy)</figcaption>
-</figure>
-<p>Click "OK" and then relaunch After Effects.</p>
-<p>When used with pre-2014 versions of After Effects, ScopeLink will use the CCIR 601 colorspace for standard definition frame sizes, and Rec. 709 for high definition frame sizes.</p>
 <h3 id="final-cut-pro-x">Final Cut Pro X</h3>
 <p>Launch Final Cut Pro X and open the Preferences. Select ScopeLink in the "A/V Output" dropdown.</p>
 <figure>
@@ -548,26 +535,23 @@
 <figure>
 <img src="ScopeBox/images/selectResolveNode.png" alt="Add ScopeLink Plugin" /><figcaption>Add ScopeLink Plugin</figcaption>
 </figure>
-<p>After you've added the plugin to your project, add it in your node graph so that it has both an input and an output. ScopeLink will monitor whichever signal you feed into the ScopeLink node.</p>
+<p>After you've added the plugin to your project, add it in your node graph so that it has both an input and an output. ScopeLink will monitor whichever signal you feed into the ScopeLink node. Users may wish to add the OFX as a timeline node to view scopes across clips. Note that ScopeLink will monitor the image before an output postprocessing is applied.</p>
 <figure>
 <img src="ScopeBox/images/resolveNode.png" alt="Add ScopeLink Plugin" /><figcaption>Add ScopeLink Plugin</figcaption>
 </figure>
 <h3 id="other-applications">Other Applications</h3>
-<p>Other applications which support either CoreMedia-based output or Adobe Transmit-based output may work with ScopeLink. Contact support if you'd like information on using a specific application with ScopeLink.</p>
+<p>Other applications which support either CoreMedia-based output, OFX, or Adobe Transmit-based output may work with ScopeLink. Contact support if you'd like information on using a specific application with ScopeLink.</p>
 <h2 id="scopelink-settings">ScopeLink Settings</h2>
-<p>Depending on the application hosting ScopeLink, there are a variety of settings you may adjust. After adding a ScopeLink source, click on the source palette to highlight it. In some applications, you'll be able to set frame size, colorspace and frame format.</p>
+<p>Depending on the application hosting ScopeLink, there are a variety of settings you may adjust. After adding a ScopeLink source, click the source settings in the sidebar. In some applications, you'll be able to set frame size, colorspace and frame format.</p>
 <p>These changes alter the type of frame being sent by the host application. After changing these settings, you'll need to restart the host application.</p>
 <p>Depending on your host application, selecting a non-native format (for example, requesting RGB frames from a YCbCr sequence) may increase system overhead.</p>
 <h1 id="view-menu">View Menu</h1>
-<p>The View menu allows you to customize the look and feel of the main ScopeBox window. Each of the major sections of the window - the source bar, sidebar, and the clip list - can be shown or hidden from the View menu. In addition, you can save and recall preset palette layouts and configurations.</p>
+<p>The View menu allows you to customize the look and feel of the main ScopeBox window. Each of the major sections of the window can be shown or hidden from the View menu. In addition, you can save and recall preset palette layouts and configurations. You can also choose to make the application fullscreen.</p>
 <h2 id="saving-a-new-layout">Saving a new layout</h2>
 <p>To save a custom layout, arrange the palettes as desired and select "Save Custom Layout...". You will be prompted to name your layout.</p>
 <p>After clicking OK, you will find your newly saved layout in the Layouts menu.</p>
 <h2 id="restoring-a-layout">Restoring a layout</h2>
 <p>Choose any of the layouts found in the custom layout section to restore the main window to this configuration. You can set a default layout, which will be loaded every time ScopeBox is launched, via the preferences. If you ever wish to override this default, simply hold the shift key while launching ScopeBox.</p>
-<h1 id="window-menu">Window Menu</h1>
-<p>The Window menu provides the Toggle Fullscreen option. Fullscreen mode hides the dock, menu bar, and all other applications, making ScopeBox the only visible application.</p>
-<p>When in fullscreen mode, the menu bar is revealed when the cursor is at the top of the screen.</p>
 <h1 id="performance">Performance</h1>
 <p>ScopeBox is a high end application and requires a lot of system resources to run properly. The application uses a number of techniques to actively monitor video processing and allocate CPU resources to ensure video is captured without frame drops.</p>
 <p>If the sources often show the drop frame warning icon, there are a number of options for increasing available resources and decreasing resource demand.</p>
@@ -575,7 +559,8 @@
 <li>Quit other applications</li>
 <li>Lower the preview level of open sources</li>
 <li>Lower the palette count</li>
-<li>Close RGB Histogram and RGB Parade palettes</li>
+<li>Close RGB Histogram and RGB Parade palettes, as well as CIE</li>
+<li>Turn on subsampling, within the source settings</li>
 </ul>
 <p>If none of these actions work then you may need more RAM, a faster video card or a faster machine.</p>
 <h1 id="system-requirements">System Requirements</h1>
@@ -583,9 +568,8 @@
 <ul>
 <li>Intel-base Macintosh</li>
 <li>Graphics card with support for Metal.</li>
-<li>4 GB of RAM.</li>
-<li>75 MB of disk space.</li>
-<li>External drive for recording.</li>
+<li>8 GB of RAM.</li>
+<li>120 MB of disk space.</li>
 <li>Mac OS X 10.12.5 or later.</li>
 </ul>
 <blockquote>

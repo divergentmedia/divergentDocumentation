@@ -25,8 +25,14 @@ $endif$
   \fi
   \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
   \newcommand{\euro}{€}
-  \setmainfont[Path=\string./CommonFiles/]{ACaslonPro-Regular.otf}
-  \setsansfont[Path=\string./CommonFiles/]{MyriadPro-BoldCond.otf}
+  \setmainfont[Path=\string./CommonFiles/,
+  BoldFont=ACaslonPro-Bold.otf,
+  ItalicFont=ACaslonPro-Italic.otf,
+  BoldItalicFont=ACaslonPro-BoldItalic.otf]{ACaslonPro-Regular.otf}
+  \setsansfont[Path=\string./CommonFiles/,
+  BoldFont=MyriadPro-BoldCond.otf,
+  ItalicFont=MyriadPro-CondIt.otf,
+  BoldItalicFont=MyriadPro-BoldCondIt.otf]{MyriadPro-Cond.otf}
 $if(monofont)$
     \setmonofont{$monofont$}
 $endif$
